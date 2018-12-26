@@ -1,0 +1,1680 @@
+
+<!DOCTYPE html>
+
+<html class="Mrphs-html" dir="ltr" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Course : My Workspace : 主页</title>
+<!--[if (lt IE 9)]>
+  <link href="/library/skin/morpheus-default/tool-ie.css?version=5c5a648" rel="stylesheet">
+<![endif]-->
+<link href="/library/skin/morpheus-default/tool.css?version=5c5a648" media="screen, tty, tv, handheld, projection" rel="stylesheet"/>
+<link href="/library/skin/morpheus-default/print.css?version=5c5a648" media="print" rel="stylesheet"/>
+<link href="/library/webjars/jquery-ui/1.11.3/jquery-ui.min.css?version=5c5a648" rel="stylesheet">
+<link href="/library/js/jquery/cluetip/1.2.10/css/jquery.cluetip.css?version=5c5a648" rel="stylesheet"/>
+<link href="/library/js/jquery/qtip/jquery.qtip-latest.min.css?version=5c5a648" rel="stylesheet"/>
+<link href="/library/webjars/pnotify/2.1.0/pnotify.core.min.css?version=5c5a648" rel="stylesheet"/>
+<script src="/library/skin/morpheus-default/js/lib/modernizr.js?version=5c5a648"></script>
+<script>                                     var portal = {
+                "chat": {
+                    "enabled": true,
+                    "pollInterval": 5000,
+            "video" : {
+            "enabled": true
+            }
+                },
+                "loggedIn": true,
+                "portalPath": "http://course.ucas.ac.cn/portal",
+                "loggedOutUrl": "http://sep.ucas.ac.cn",
+                "siteId": "~7d2bdab5-d0bf-4e36-a0ee-86b237ee231f",
+                "siteTitle": "我的工作空间",
+                "shortDescription" : "",
+                "locale": "zh-CN",
+                "user": {
+                    "id": "7d2bdab5-d0bf-4e36-a0ee-86b237ee231f",
+                    "eid": "2016k8009915044"
+                },
+                "timeoutDialog" : {
+                "enabled": true,
+                "seconds": 600
+                },
+                "toggle" : {
+                    "allowauto": false,
+                    "tools": false,
+                    "sitenav": false // This is not allowed in morpheus
+                },
+                "pageScriptPath" : "/library/js/",
+                "portalCDNQuery" : "?version=5c5a648"
+            };
+        </script>
+<!-- inlined tool header contribution -->
+<!-- end inlined tool header contribution -->
+</link></head>
+<body class="workspace">
+<noscript>
+<span class="Mrphs-noJs js-warn-no-js" id="portal_js_warn">Sakai需要JavaScript来提供更好的效果，请在您的浏览器中启用JavaScript</span>
+</noscript>
+<script src="/library/js/headscripts.js?version=5c5a648" type="text/javascript"></script>
+<script type="text/javascript">var sakai = sakai || {}; sakai.editor = sakai.editor || {}; sakai.editor.editors = sakai.editor.editors || {}; sakai.editor.editors.ckeditor = sakai.editor.editors.ckeditor || {}; sakai.locale = sakai.locale || {};
+sakai.locale.userCountry = 'CN';
+sakai.locale.userLanguage = 'zh';
+sakai.locale.userLocale = 'zh_CN';
+sakai.editor.collectionId = '/user/7d2bdab5-d0bf-4e36-a0ee-86b237ee231f/';
+sakai.editor.enableResourceSearch = false;
+sakai.editor.siteToolSkin = '/library/skin/morpheus-default/tool.css';
+sakai.editor.sitePrintSkin = '/library/skin/morpheus-default/print.css';
+sakai.editor.editors.ckeditor.browser = 'elfinder';
+</script>
+<script type="text/javascript">var CKEDITOR_BASEPATH='/library/webjars/ckeditor/4.5.7/full/';
+</script>
+<script src="/library/webjars/ckeditor/4.5.7/full/ckeditor.js?version=5c5a648" type="text/javascript"></script>
+<script src="/library/editor/ckeditor.launch.js?version=5c5a648" type="text/javascript"></script>
+<div class="Mrphs-portalWrapper">
+<nav class="Mrphs-skipNav" id="skipNav">
+<ul class="Mrphs-skipNav__menu" role="menu">
+<li class="Mrphs-skipNav__menuitem Mrphs-skipNav__menuitem--content" role="menuitem">
+<a accesskey="c" class="Mrphs-skipNav__link" href="#tocontent" title="跳转到内容">
+                跳转到内容
+                <span class="accesibility_key">[c]</span>
+</a>
+</li>
+<li class="Mrphs-skipNav__menuitem Mrphs-skipNav__menuitem--tools" role="menuitem">
+<a accesskey="l" class="Mrphs-skipNav__link js-toggle-tools-nav" href="#totoolmenu" title="跳转到工具列表">
+<i class="fa fa-cubes tools-icon"></i>
+                工具
+                <span class="accesibility_key">[l]</span>
+</a>
+</li>
+<li class="Mrphs-skipNav__menuitem Mrphs-skipNav__menuitem--worksite" role="menuitem">
+<a accesskey="w" class="Mrphs-skipNav__link js-toggle-sites-nav" href="#sitetabs" id="more-sites-menu" title="跳转到工作站点列表">
+<i class="fa fa-th all-sites-icon"></i> 我的课程
+                <span class="accesibility_key">[w]</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="Mrphs-mainHeader is-maximized">
+<div class="Mrphs-topHeader">
+<header class="Mrphs-headerLogo" role="banner">
+<span class="Mrphs-headerLogo--institution"></span>
+<span class="Mrphs-headerLogo--banner"></span>
+</header>
+<!-- START VM includeTabs.vm -->
+<div class="siteNavWrap workspace Mrphs-container Mrphs-container--navs" id="Mrphs-sites-nav">
+<nav aria-labelledby="sitetabs" class="Mrphs-sitesNav" data-max-tools-anchor="查看所有…" data-max-tools-int="10" id="linkNav" role="navigation">
+<h1 class="skip" id="sitetabs" tabindex="-1">工作站点从此处开始</h1>
+<div id="show-all-sites" tabindex="-1"><i class="fa fa-angle-double-left"></i><span>-其他站点-</span></div>
+<div id="topnav_container">
+<ul aria-label="工作站点从此处开始" class="Mrphs-sitesNav__menu" id="topnav" role="menubar">
+<li class="Mrphs-sitesNav__menuitem Mrphs-sitesNav__menuitem--myworkspace is-selected ">
+<a class="link-container" href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044" role="menuitem" title="我的工作空间">
+<i class="fa fa-home"></i>
+<span class="Mrphs-sitesNav__menuitem--myworkspace-label">我的工作空间</span>
+<span class="Mrphs-sitesNav__drop" data-site-id="~7d2bdab5-d0bf-4e36-a0ee-86b237ee231f" tabindex="-1"></span>
+</a>
+</li>
+</ul>
+</div>
+</nav> <!-- /Mrphs-sitesNav -->
+</div> <!-- /end of div.tabsCssClass -->
+<!-- END VM includeTabs.vm -->
+<nav class="Mrphs-loginNav" id="mastLogin">
+<div class="Mrphs-sitesNav__menuitem view-all-sites-btn2">
+<a aria-haspopup="true" href="/library/doc/guide.pdf" role="menuitem" target="_blank" title="课程网站快速指南">
+<i class="fa fa-question-circle all-sites-icon"></i> <span class="all-sites-label">课程网站快速指南</span>
+</a>
+</div>
+<div class="Mrphs-sitesNav__menuitem view-all-sites-btn">
+<a aria-haspopup="true" href="javascript:void(0);" role="menuitem" title="查看所有课程">
+<i class="fa fa-th all-sites-icon"></i> <span class="all-sites-label">我的课程</span>
+</a>
+</div>
+<ul class="Mrphs-userNav" id="loginLinks">
+<li aria-haspopup="true" class="Mrphs-userNav__popup js-toggle-user-nav">
+<div class="has-avatar Mrphs-userNav__submenuitem--userlink current-site " id="loginUser" role="menuitem">
+<a class="Mrphs-userNav__drop-btn Mrphs-userNav__submenuitem--profilepicture" href="javascript:void(0);" style="background-image:url(/direct/profile/7d2bdab5-d0bf-4e36-a0ee-86b237ee231f/image/thumb)" tabindex="-1"></a>
+<a class="Mrphs-userNav__drop-btn Mrphs-userNav__submenuitem--username" href="javascript:void(0);">赵洵</a>
+</div>
+<ul class="Mrphs-userNav__subnav is-hidden" role="menu">
+<li class="Mrphs-userNav__submenuitem Mrphs-userData">
+<div class="Mrphs-userNav__submenuitem--profile-and-image">
+<div class="has-avatar">
+<a class="Mrphs-userNav__submenuitem--profilelink" href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/tool-reset/dccb79a2-5d93-4e54-a4bb-9d233787a13f">
+<span class="Mrphs-userNav__submenuitem--profilepicture" style="background-image:url(/direct/profile/7d2bdab5-d0bf-4e36-a0ee-86b237ee231f/image/thumb)" tabindex="-1"></span>
+</a>
+</div>
+<div class="Mrphs-userNav__submenuitem--profile">
+<a href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/tool-reset/dccb79a2-5d93-4e54-a4bb-9d233787a13f" role="menuitem">
+<span>个人资料</span>
+</a>
+</div>
+</div>
+<div class="Mrphs-userNav__submenuitem--fullname-and-id">
+<div class="Mrphs-userNav__submenuitem--fullname">
+                                            赵洵
+                                        </div>
+<div class="Mrphs-userNav__submenuitem--displayid">
+                                            2016k8009915044
+                                        </div>
+</div>
+</li>
+<li class="Mrphs-userNav__submenuitem Mrphs-userNav__submenuitem-indented">
+<a class="Mrphs-userNav__submenuitem--prefs" href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/page/b1f4782f-8412-4305-bace-2670c9f85776" role="menuitem">
+<span>用户偏好</span>
+</a>
+</li>
+<li class="Mrphs-userNav__submenuitem Mrphs-userNav__submenuitem-indented">
+<a class="Mrphs-userNav__submenuitem--newsite" href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/tool-reset/adce9d71-d7b5-44d0-b42a-2c390b3650a3?panel=Shortcut&amp;sakai_action=doNew_site" id="addNewSiteLink" role="menuitem">
+<span>+ 添加新课程</span>
+</a>
+</li>
+<li class="Mrphs-userNav__submenuitem Mrphs-userNav__submenuitem-indented">
+<a class="Mrphs-userNav__submenuitem--tutorial" href="#" id="tutorialLink" onclick="startTutorial({});" role="menuitem">
+<span>教程</span>
+</a>
+</li>
+<li class="Mrphs-userNav__logout Mrphs-userNav__submenuitem-indented">
+<div class="Mrphs-loginUser" id="loginLinksImage" role="menu" tabindex="999">
+<p class="Mrphs-loginUser__menuitem" role="menuitem">
+<a class="Mrphs-loginUser__message" data-warning="" href="http://course.ucas.ac.cn/portal/logout" id="loginLink1" target="_top" title="注销">
+<i class="login-Icon"></i>
+<span class="Mrphs-login-Message">注销</span>
+</a>
+</p>
+</div> </li>
+</ul>
+</li>
+</ul> <!-- end of nav#loginLinks-->
+</nav>
+</div>
+</div>
+<div id="maxToolsText" style="display: none">查看所有…</div>
+<div id="maxToolsInt" style="display: none">10</div>
+<div id="refreshNotificationText" style="display: none"><a href="javascript:location.reload()">重新载入</a> 来查看更新的偏好站点</div>
+<div id="addToFavoritesText" style="display: none">加入偏好站点</div>
+<div id="removeFromFavoritesText" style="display: none">从偏好站点移除</div>
+<div class="outscreen" id="selectSiteModal">
+<ul id="otherSitesMenu">
+<li><a href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/tool-reset/adce9d71-d7b5-44d0-b42a-2c390b3650a3" id="allSites"><span>查看所有课程</span></a></li>
+<li><a href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/tool-reset/adce9d71-d7b5-44d0-b42a-2c390b3650a3?panel=Shortcut&amp;sakai_action=doNew_site&amp;" id="newSite"><span>+ 添加新课程</span></a></li>
+<li><a href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/page/b1f4782f-8412-4305-bace-2670c9f85776"><span>用户偏好</span></a></li>
+<li class="otherSitesMenuClose"><a href="javascript:void(0);"><i class="fa fa-times"></i></a></li>
+</ul>
+<div id="selectSite">
+<!-- View all sites, add new site, preferences -->
+<ul class="tab-bar">
+<li class="tab-btn active" data-tab-target="otherSitesCategorWrap"><h2 class="favorites-tab-label">我的课程</h2></li>
+<li class="organizeFavorites tab-btn" data-tab-target="organizeFavorites">
+<h2 class="favorites-tab-label"><span class="favorites-desktop">管理偏好课程</span><span class="favorites-mobile">偏好站点</span> <span class="favoriteCount"></span></h2></li>
+</ul>
+<div class="tab-pane">
+<div class="tab-box" id="otherSitesCategorWrap">
+<div id="otherSiteSearch">
+<label class="sr-only" for="txtSearch">在课程列表中搜索"</label>
+<input id="txtSearch" maxlength="50" name="txtSearch" placeholder=" 在课程列表中搜索" type="text"/>
+<a class="other-site-search-clear" href="javascript:void(0);" id="otherSiteSearchClear"></a>
+</div>
+<div class="is-hidden" id="noSearchResults">没有找到任何结果</div>
+<div class="moresites-left-col">
+<div class="fav-sites-term">
+<h3 class="favorites-term-header">2018—2019学年(秋)第一学期</h3>
+<ul class="otherSitesCategorList favoriteSiteList">
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="150021" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/150021" title="人体生理学18-19秋季">
+<span class="fullTitle">人体生理学18-19秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="150021"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="149531" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/149531" title="微生物学18-19秋季">
+<span class="fullTitle">微生物学18-19秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="149531"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="149503" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/149503" title="有机化学实验（生物专业）18-19秋季">
+<span class="fullTitle">有机化学实验（生物专业）18-19秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="149503"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="149524" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/149524" title="生物信息学18-19秋季">
+<span class="fullTitle">生物信息学18-19秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="149524"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="149529" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/149529" title="生物化学与分子生物学实验18-19秋季">
+<span class="fullTitle">生物化学与分子生物学实验18-19秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="149529"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="149530" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/149530" title="神经生物学18-19秋季">
+<span class="fullTitle">神经生物学18-19秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="149530"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="149527" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/149527" title="细胞生物学实验18-19秋季">
+<span class="fullTitle">细胞生物学实验18-19秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="149527"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="149525" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/149525" title="细胞生物学18-19秋季">
+<span class="fullTitle">细胞生物学18-19秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="149525"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="149523" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/149523" title="遗传学18-19秋季">
+<span class="fullTitle">遗传学18-19秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="149523"><i class="fa fa-chevron-down"></i></a>
+</li>
+</ul>
+</div>
+<div class="fav-sites-term">
+<h3 class="favorites-term-header">2017—2018学年(春)第二学期</h3>
+<ul class="otherSitesCategorList favoriteSiteList">
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="142160" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/142160" title="传媒鉴赏17-18春季">
+<span class="fullTitle">传媒鉴赏17-18春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="142160"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="142131" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/142131" title="体育Ⅳ（网球）17-18春季">
+<span class="fullTitle">体育Ⅳ（网球）17-18春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="142131"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="141981" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/141981" title="分子生物学17-18春季">
+<span class="fullTitle">分子生物学17-18春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="141981"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="141943" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/141943" title="原子物理学17-18春季">
+<span class="fullTitle">原子物理学17-18春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="141943"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="141982" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/141982" title="心理学导论17-18春季">
+<span class="fullTitle">心理学导论17-18春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="141982"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="142631" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/142631" title="毛泽东思想和中国特色社会主义理论体系概论17-18春季">
+<span class="fullTitle">毛泽东思想和中国特色社会主义理论体系概论1 ...</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="142631"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="141993" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/141993" title="生命科学领域信息检索与分析17-18春季">
+<span class="fullTitle">生命科学领域信息检索与分析17-18春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="141993"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="141978" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/141978" title="生物化学17-18春季">
+<span class="fullTitle">生物化学17-18春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="141978"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="142069" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/142069" title="科学前沿进展名家系列讲座IV17-18春季">
+<span class="fullTitle">科学前沿进展名家系列讲座IV17-18春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="142069"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="142166" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/142166" title="第二外语（法）17-18春季">
+<span class="fullTitle">第二外语（法）17-18春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="142166"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="141979" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/141979" title="进化生物学17-18春季">
+<span class="fullTitle">进化生物学17-18春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="141979"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="142140" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/142140" title="青年心理健康：心理自助书籍导读17-18春季">
+<span class="fullTitle">青年心理健康：心理自助书籍导读17-18春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="142140"><i class="fa fa-chevron-down"></i></a>
+</li>
+</ul>
+</div>
+<div class="fav-sites-term">
+<h3 class="favorites-term-header">2017—2018学年(秋)第一学期</h3>
+<ul class="otherSitesCategorList favoriteSiteList">
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="137126" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/137126" title="世界文学与写作17-18秋季">
+<span class="fullTitle">世界文学与写作17-18秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="137126"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="137090" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/137090" title="体育Ⅲ（网球）17-18秋季">
+<span class="fullTitle">体育Ⅲ（网球）17-18秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="137090"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="136933" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/136933" title="光学17-18秋季">
+<span class="fullTitle">光学17-18秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="136933"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="136984" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/136984" title="分析化学17-18秋季">
+<span class="fullTitle">分析化学17-18秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="136984"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="136938" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/136938" title="基础物理实验17-18秋季">
+<span class="fullTitle">基础物理实验17-18秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="136938"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="137067" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/137067" title="大学英语IV17-18秋季">
+<span class="fullTitle">大学英语IV17-18秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="137067"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="136987" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/136987" title="普通生物学实验17-18秋季">
+<span class="fullTitle">普通生物学实验17-18秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="136987"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="136971" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/136971" title="有机化学17-18秋季">
+<span class="fullTitle">有机化学17-18秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="136971"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="136904" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/136904" title="概率论与数理统计17-18秋季">
+<span class="fullTitle">概率论与数理统计17-18秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="136904"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="136986" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/136986" title="生命科学导论17-18秋季">
+<span class="fullTitle">生命科学导论17-18秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="136986"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="137043" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/137043" title="科学前沿进展名家系列讲座III17-18秋季">
+<span class="fullTitle">科学前沿进展名家系列讲座III17-18秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="137043"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="137109" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/137109" title="科学哲学17-18秋季">
+<span class="fullTitle">科学哲学17-18秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="137109"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="137112" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/137112" title="走近心理学17-18秋季">
+<span class="fullTitle">走近心理学17-18秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="137112"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="137046" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/137046" title="马克思主义基本原理17-18秋季">
+<span class="fullTitle">马克思主义基本原理17-18秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="137046"><i class="fa fa-chevron-down"></i></a>
+</li>
+</ul>
+</div>
+<div class="fav-sites-term">
+<h3 class="favorites-term-header">2016—2017学年(夏)第三学期</h3>
+<ul class="otherSitesCategorList favoriteSiteList">
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="135008" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/135008" title="概率论与数理统计-预选16-17夏季">
+<span class="fullTitle">概率论与数理统计-预选16-17夏季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="135008"><i class="fa fa-chevron-down"></i></a>
+</li>
+</ul>
+</div>
+<div class="fav-sites-term">
+<h3 class="favorites-term-header">2016—2017学年(春)第二学期</h3>
+<ul class="otherSitesCategorList favoriteSiteList">
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="132369" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/132369" title="体育Ⅱ（网球）16-17春季">
+<span class="fullTitle">体育Ⅱ（网球）16-17春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="132369"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="131537" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/131537" title="化学原理16-17春季">
+<span class="fullTitle">化学原理16-17春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="131537"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="132015" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/132015" title="大学写作16-17春季">
+<span class="fullTitle">大学写作16-17春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="132015"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="131593" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/131593" title="大学英语Ⅱ-0416-17春季">
+<span class="fullTitle">大学英语Ⅱ-0416-17春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="131593"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="131667" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/131667" title="学术口语16-17春季">
+<span class="fullTitle">学术口语16-17春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="131667"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="131571" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/131571" title="形势与政策16-17春季">
+<span class="fullTitle">形势与政策16-17春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="131571"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="132162" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/132162" title="微积分Ⅱ-B16-17春季">
+<span class="fullTitle">微积分Ⅱ-B16-17春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="132162"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="131570" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/131570" title="思想道德修养与法律基础16-17春季">
+<span class="fullTitle">思想道德修养与法律基础16-17春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="131570"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="132578" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/132578" title="热学16-17春季">
+<span class="fullTitle">热学16-17春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="132578"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="132580" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/132580" title="电磁学16-17春季">
+<span class="fullTitle">电磁学16-17春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="132580"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="131632" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/131632" title="社会心理学精要16-17春季">
+<span class="fullTitle">社会心理学精要16-17春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="131632"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="131567" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/131567" title="科学前沿进展名家系列讲座Ⅱ16-17春季">
+<span class="fullTitle">科学前沿进展名家系列讲座Ⅱ16-17春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="131567"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="131500" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/131500" title="线性代数Ⅱ-B16-17春季">
+<span class="fullTitle">线性代数Ⅱ-B16-17春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="131500"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="131569" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/131569" title="艺术与人文修养系列讲座16-17春季">
+<span class="fullTitle">艺术与人文修养系列讲座16-17春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="131569"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="133154" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/133154" title="计算机科学导论实验16-17春季">
+<span class="fullTitle">计算机科学导论实验16-17春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="133154"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="131555" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/131555" title="计算机科学导论16-17春季">
+<span class="fullTitle">计算机科学导论16-17春季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="131555"><i class="fa fa-chevron-down"></i></a>
+</li>
+</ul>
+</div>
+<div class="fav-sites-term">
+<h3 class="favorites-term-header">2016—2017学年(秋)第一学期</h3>
+<ul class="otherSitesCategorList favoriteSiteList">
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="126584" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/126584" title="中国文化与心理健康要素16-17秋季">
+<span class="fullTitle">中国文化与心理健康要素16-17秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="126584"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="126531" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/126531" title="中国近现代史纲要16-17秋季">
+<span class="fullTitle">中国近现代史纲要16-17秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="126531"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="126563" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/126563" title="体育Ⅰ（网球）16-17秋季">
+<span class="fullTitle">体育Ⅰ（网球）16-17秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="126563"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="126556" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/126556" title="军事理论16-17秋季">
+<span class="fullTitle">军事理论16-17秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="126556"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="126553" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/126553" title="军事训练16-17秋季">
+<span class="fullTitle">军事训练16-17秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="126553"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="126595" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/126595" title="创意写作16-17秋季">
+<span class="fullTitle">创意写作16-17秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="126595"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="126908" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/126908" title="力学16-17秋季">
+<span class="fullTitle">力学16-17秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="126908"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="126878" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/126878" title="发现生命奥秘16-17秋季">
+<span class="fullTitle">发现生命奥秘16-17秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="126878"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="126538" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/126538" title="大学英语I16-17秋季">
+<span class="fullTitle">大学英语I16-17秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="126538"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="126484" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/126484" title="微积分I-B16-17秋季">
+<span class="fullTitle">微积分I-B16-17秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="126484"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="126528" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/126528" title="科学前沿进展名家系列讲座I16-17秋季">
+<span class="fullTitle">科学前沿进展名家系列讲座I16-17秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="126528"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="127307" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/127307" title="科学家的社会角色16-17秋季">
+<span class="fullTitle">科学家的社会角色16-17秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="127307"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="126476" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/126476" title="线性代数I-B16-17秋季">
+<span class="fullTitle">线性代数I-B16-17秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="126476"><i class="fa fa-chevron-down"></i></a>
+</li>
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="126530" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/126530" title="艺术与人文修养系列讲座16-17秋季">
+<span class="fullTitle">艺术与人文修养系列讲座16-17秋季</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="126530"><i class="fa fa-chevron-down"></i></a>
+</li>
+</ul>
+</div>
+</div>
+<div class="moresites-right-col">
+<div class="fav-sites-term">
+<h3 class="favorites-term-header">其他站点</h3>
+<ul class="otherSitesCategorList favoriteSiteList">
+<!-- anchor "my workspace" to the top of the list -->
+<li class="fav-sites-entry is-selected my-workspace ">
+<div class="fav-title fav-title-myworkspace ">
+<a href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044" title="My Workspace">
+<i class="fa fa-home"></i><span class="fullTitle">我的工作空间</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="~7d2bdab5-d0bf-4e36-a0ee-86b237ee231f"><i class="fa fa-chevron-down"></i></a>
+</li>
+</ul>
+</div>
+<div class="fav-sites-term">
+<h3 class="favorites-term-header">项目站点</h3>
+<ul class="otherSitesCategorList favoriteSiteList">
+<!-- anchor "my workspace" to the top of the list -->
+<li class="fav-sites-entry ">
+<a class="site-favorite-btn" data-site-id="456b4e0c-779c-4efd-82f6-6c96b7a0b21c" href="javascript:void(0);"></a>
+<div class="fav-title ">
+<a href="http://course.ucas.ac.cn/portal/site/456b4e0c-779c-4efd-82f6-6c96b7a0b21c" title="科学游泳社">
+<span class="fullTitle">科学游泳社</span>
+</a>
+</div>
+<a class="toolMenus" href="#" id="456b4e0c-779c-4efd-82f6-6c96b7a0b21c"><i class="fa fa-chevron-down"></i></a>
+</li>
+</ul>
+</div>
+</div>
+</div><!--  end of #otherSitesCategorWrap -->
+<div class="tab-box" id="organizeFavorites" style="display: none">
+<h2 class="heading">管理偏好课程</h2>
+<ul class="organizeFavoritesList favoriteSiteList" id="organizeFavoritesList">
+</ul>
+<!-- Items are put here when unfavorited from the "organize" screen -->
+<ul class="favoriteSiteList" id="organizeFavoritesPurgatoryList">
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- START VM includePageWithNav.vm -->
+<nav class="Mrphs-siteHierarchy">
+<span class="Mrphs-hierarchy--siteName" title="我的工作空间">
+<a href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/page-reset/d27d65a0-0d8c-477e-991c-0182caae8478">我的工作空间</a>
+</span>
+<span class="Mrphs-hierarchy--siteNameSeparator Mrphs-hierarchy--separator"><i class="fa fa-lg fa-angle-right"></i></span>
+<a class="Mrphs-hierarchy-item Mrphs-hierarchy--toolName" href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/page-reset/d27d65a0-0d8c-477e-991c-0182caae8478" title="重置">
+<span aria-hidden="true" class="Mrphs-breadcrumb--reset-icon fa fa-share"></span>
+<span class="Mrphs-breadcrumb--icon icon-sakai--sakai-motd "></span>
+<span>主页</span>
+</a>
+</nav>
+<div id="pageBody">
+<!-- START VM includePageNav.vm -->
+<div class="Mrphs-container Mrphs-container--nav-tools" id="toolMenuWrap">
+<h1 class="skip" id="totoolmenu" tabindex="-1">工具从此处开始</h1>
+<!--Added this check in to make sure that we just don't have an empty img element in the page. -->
+<div id="toolSubsitesContainer">
+<nav aria-label="工具从此处开始" class="Mrphs-toolsNav__menu" id="toolMenu" role="navigation">
+<ul>
+<li class="Mrphs-toolsNav__menuitem Mrphs-collapseTools js-toggle-nav">
+<i class="fa fa-lg fa-angle-double-left"></i>
+</li>
+<li class="Mrphs-toolsNav__menuitem is-current">
+<a class="Mrphs-toolsNav__menuitem--link " href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/page-reset/d27d65a0-0d8c-477e-991c-0182caae8478" role="presentation" title="主页">
+<span class="Mrphs-toolsNav__menuitem--icon icon-sakai--sakai-motd icon-active"></span>
+<span class="Mrphs-toolsNav__menuitem--title">主页</span>
+</a>
+</li>
+<li>
+<a class="Mrphs-toolsNav__menuitem--link " href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/tool/dccb79a2-5d93-4e54-a4bb-9d233787a13f" title="个人资料 - 个人资料工具">
+<span class="Mrphs-toolsNav__menuitem--icon icon-sakai--sakai-profile2 "></span>
+<span class="Mrphs-toolsNav__menuitem--title">个人资料</span>
+</a>
+</li>
+<li>
+<a class="Mrphs-toolsNav__menuitem--link " href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/tool/48b5b231-83a7-4113-8e34-9113001c52a2" title="我的课程 - 查看或加入站点">
+<span class="Mrphs-toolsNav__menuitem--icon icon-sakai--sakai-membership "></span>
+<span class="Mrphs-toolsNav__menuitem--title">我的课程</span>
+</a>
+</li>
+<li>
+<a class="Mrphs-toolsNav__menuitem--link " href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/tool/f3020d8f-3dfa-445e-b5bf-cc7db2b7e7c2" title="日程 - 发布和查看事件，截止日期等">
+<span class="Mrphs-toolsNav__menuitem--icon icon-sakai--sakai-schedule "></span>
+<span class="Mrphs-toolsNav__menuitem--title">日程</span>
+</a>
+</li>
+<li>
+<a class="Mrphs-toolsNav__menuitem--link " href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/tool/768d1666-6fca-4823-b53e-e27e9c6b4d95" title="资源 - 上传、下载课件，发布文档，网址等信息">
+<span class="Mrphs-toolsNav__menuitem--icon icon-sakai--sakai-resources "></span>
+<span class="Mrphs-toolsNav__menuitem--title">资源</span>
+</a>
+</li>
+<li>
+<a class="Mrphs-toolsNav__menuitem--link " href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/tool/e8014495-871a-4ab1-8654-792bc58c180d" title="通知 - 通知公告工具，发布和站点相关的消息">
+<span class="Mrphs-toolsNav__menuitem--icon icon-sakai--sakai-announcements "></span>
+<span class="Mrphs-toolsNav__menuitem--title">通知</span>
+</a>
+</li>
+<li>
+<a class="Mrphs-toolsNav__menuitem--link " href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/tool/adce9d71-d7b5-44d0-b42a-2c390b3650a3" title="站点设置 - 创建新站点或修改已有站点">
+<span class="Mrphs-toolsNav__menuitem--icon icon-sakai--sakai-sitesetup "></span>
+<span class="Mrphs-toolsNav__menuitem--title">站点设置</span>
+</a>
+</li>
+<li>
+<a class="Mrphs-toolsNav__menuitem--link " href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/tool/e16c4382-2d6b-40c9-ad3e-7cce89becd6c" title="用户偏好 - 查看和修改用户偏好的工具">
+<span class="Mrphs-toolsNav__menuitem--icon icon-sakai--sakai-preferences "></span>
+<span class="Mrphs-toolsNav__menuitem--title">用户偏好</span>
+</a>
+</li>
+<li>
+<a class="Mrphs-toolsNav__menuitem--link " href="http://course.ucas.ac.cn/portal/site/%7E2016k8009915044/tool/e7a55a27-6480-4fe1-8c9d-a630f7fb57a9" title="账户信息 - 查看和修改我的个人信息">
+<span class="Mrphs-toolsNav__menuitem--icon icon-sakai--sakai-singleuser "></span>
+<span class="Mrphs-toolsNav__menuitem--title">账户信息</span>
+</a>
+</li>
+<li class="Mrphs-toolsNav__menuitem--help">
+<a accesskey="6" class="Mrphs-toolsNav__menuitem--link" href="http://course.ucas.ac.cn/portal/help/main" onclick="openWindow('http://course.ucas.ac.cn/portal/help/main', 'Help', 'resizable=yes,toolbar=no,scrollbars=yes,menubar=yes,width=1024,height=768'); return false" target="_blank" title="帮助">
+<span class="Mrphs-toolsNav__menuitem--icon icon-sakai--help"> </span>
+<span class="Mrphs-toolsNav__menuitem--title">帮助</span>
+<span class="skip">在新窗口打开</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<!-- END VM includePageNav.vm -->
+<div class="Mrphs-pagebody">
+<!-- START VM includePageBody.vm -->
+<h1 class="skip" id="tocontent" tabindex="-1">内容从这里开始</h1>
+<main class="Mrphs-mainContent Mrphs-multipleTools " id="content" role="main">
+<div class="Mrphs-pageColumns Mrphs-pageColumns--first" id="col1of2">
+<!-- start Tool Container -->
+<div class="Mrphs-container Mrphs-sakai-motd">
+<!-- start Tool Header -->
+<nav class="Mrphs-toolTitleNav Mrphs-container--toolTitleNav">
+<h2 class="Mrphs-toolTitleNav__title"><span class="Mrphs-toolTitleNav__text">系统公告</span><span class="Mrphs-toolTitleNav__addLeft"></span></h2>
+<div class="Mrphs-toolTitleNav__button_container">
+<span class="Mrphs-toolTitleNav__addRight"></span>
+<a class="Mrphs-toolTitleNav__link Mrphs-toolTitleNav__link--directurl" href="#Main06713136xdce1x4111x91fcx8e6416970d20_directurl" rel="#Main06713136xdce1x4111x91fcx8e6416970d20_directurl" title="工具链接">
+<span class="Mrphs-itemTitle">链接</span>
+</a>
+<div class="Mrphs-directUrl Mrphs-directUrl__dropDown" id="Main06713136xdce1x4111x91fcx8e6416970d20_directurl">
+<i class="fa fa-times dropDown_close"></i>
+<input class="Mrphs-directUrl__checkbox" id="directToolUrl-1" onclick="toggleShortUrlOutput('http://course.ucas.ac.cn/portal/directtool/06713136-dce1-4111-91fc-8e6416970d20/', this, 'Main06713136xdce1x4111x91fcx8e6416970d20_urlholder');" type="checkbox"/><label for="directToolUrl-1">短链接</label>
+<textarea class="Mrphs-directUrl__textarea Main06713136xdce1x4111x91fcx8e6416970d20_urlholder">http://course.ucas.ac.cn/portal/directtool/06713136-dce1-4111-91fc-8e6416970d20/</textarea>
+</div>
+<a class="Mrphs-toolTitleNav__link Mrphs-toolTitleNav__link--help-popup" href="http://course.ucas.ac.cn/portal/help/main?help=sakai.motd" onclick="openWindow('http://course.ucas.ac.cn/portal/help/main?help=sakai.motd', 'Help', 'resizable=yes,toolbar=no,scrollbars=yes,menubar=yes,width=1024,height=768'); return false" target="_blank" title="系统公告的帮助">
+<span class="Mrphs-itemTitle">帮助</span>
+<span class="skip">在新窗口打开</span>
+</a>
+</div>
+</nav>
+<!-- END Tool Header -->
+<!-- START Tool Body -->
+<div class="Mrphs-toolBody Mrphs-toolBody--sakai-motd">
+<iframe allowfullscreen="allowfullscreen" class="portletMainIframe" frameborder="0" height="475" id="Main06713136xdce1x4111x91fcx8e6416970d20" marginheight="0" marginwidth="0" name="Main06713136xdce1x4111x91fcx8e6416970d20" scrolling="auto" src="http://course.ucas.ac.cn/portal/tool/06713136-dce1-4111-91fc-8e6416970d20?panel=Main" title="系统公告 " width="100%">
+</iframe>
+</div>
+<!-- end Tool Body -->
+</div>
+<!-- end Tool Container -->
+<!-- start Tool Container -->
+<div class="Mrphs-container Mrphs-sakai-iframe-myworkspace">
+<!-- start Tool Header -->
+<nav class="Mrphs-toolTitleNav Mrphs-container--toolTitleNav">
+<h2 class="Mrphs-toolTitleNav__title"><span class="Mrphs-toolTitleNav__text">显示我的工作空间</span><span class="Mrphs-toolTitleNav__addLeft"></span></h2>
+<div class="Mrphs-toolTitleNav__button_container">
+<a accesskey="e" class="Mrphs-toolTitleNav__link Mrphs-toolTitleNav__link--edit" href="http://course.ucas.ac.cn/portal?org.sakaiproject.portal.pluto.PORTLET_STATE=I1Nha2FpIFBvcnRsZXQgU3RhdGUKI01vbiBPY3QgMDEgMTc6MDE6NTMgQ1NUIDIwMTgKby5zLnAuci5zLkFDVElPTj1mYWxzZQpvLnMucC5yLnMuSUQ9NDdkNzMyOTktNmVhZC00MmM1LWI2OTYtY2U0MDJhYjk5MDgwCm8ucy5wLnIucy5XSU5ET1dfU1RBVEU9bm9ybWFsCm8ucy5wLnIucy5TRUNVUkU9ZmFsc2UKby5zLnAuci5zLlBPUlRMRVRfTU9ERT1lZGl0Cg__" id="jsr-edit" title="编辑">
+<span class="Mrphs-itemTitle">编辑</span>
+</a>
+<span class="Mrphs-toolTitleNav__addRight"></span>
+<a class="Mrphs-toolTitleNav__link Mrphs-toolTitleNav__link--directurl" href="#_self_directurl" rel="#_self_directurl" title="工具链接">
+<span class="Mrphs-itemTitle">链接</span>
+</a>
+<div class="Mrphs-directUrl Mrphs-directUrl__dropDown" id="_self_directurl">
+<i class="fa fa-times dropDown_close"></i>
+<input class="Mrphs-directUrl__checkbox" id="directToolUrl-2" onclick="toggleShortUrlOutput('http://course.ucas.ac.cn/portal/directtool/47d73299-6ead-42c5-b696-ce402ab99080/', this, '_self_urlholder');" type="checkbox"/><label for="directToolUrl-2">短链接</label>
+<textarea class="Mrphs-directUrl__textarea _self_urlholder">http://course.ucas.ac.cn/portal/directtool/47d73299-6ead-42c5-b696-ce402ab99080/</textarea>
+</div>
+<a class="Mrphs-toolTitleNav__link Mrphs-toolTitleNav__link--help-popup" href="http://course.ucas.ac.cn/portal/help/main?help=sakai.iframe.myworkspace" onclick="openWindow('http://course.ucas.ac.cn/portal/help/main?help=sakai.iframe.myworkspace', 'Help', 'resizable=yes,toolbar=no,scrollbars=yes,menubar=yes,width=1024,height=768'); return false" target="_blank" title="显示我的工作空间的帮助">
+<span class="Mrphs-itemTitle">帮助</span>
+<span class="skip">在新窗口打开</span>
+</a>
+</div>
+</nav>
+<!-- END Tool Header -->
+<!-- START Tool Body -->
+<div class="Mrphs-toolBody Mrphs-toolBody--sakai-iframe-myworkspace">
+<div class="portletBody">
+<script type="text/javascript">
+var needJQuery = true;
+if ( window.jQuery ) {
+       tver = jQuery.fn.jquery;
+       if ( tver.indexOf('1.11.') == 0 ) {
+               window.console && console.log('PortletIFrame PortalUtils.includeLatestJquery() detected jQuery '+tver);
+               needJQuery = false;
+       } else {
+               var overrideJQuery = true;
+               window.console && console.log('PortletIFrame PortalUtils.includeLatestJquery() found jQuery '+tver);
+       }
+}
+if ( needJQuery ) {
+   document.write('\x3Cscript type="text/javascript" src="/library/webjars/jquery/1.11.3/jquery.min.js?version=5c5a648">'+'\x3C/script>')
+   document.write('\x3Cscript type="text/javascript" src="/library/webjars/jquery-migrate/1.4.0/jquery-migrate.min.js?version=5c5a648">'+'\x3C/script>')
+   document.write('\x3Cscript type="text/javascript" src="/library/webjars/bootstrap/3.3.6/js/bootstrap.min.js?version=5c5a648">'+'\x3C/script>')
+   document.write('\x3Cscript type="text/javascript" src="/library/webjars/jquery-ui/1.11.3/jquery-ui.min.js?version=5c5a648">'+'\x3C/script>')
+   document.write('\x3Clink rel="stylesheet" href="/library/webjars/jquery-ui/1.11.3/jquery-ui.min.css?version=5c5a648"/>')
+} else { 
+   window.console && console.log('jQuery already loaded '+jQuery.fn.jquery+' in '+'PortletIFrame');
+   if (typeof jQuery.migrateWarnings == 'undefined') {
+           document.write('\x3Cscript type="text/javascript" src="/library/webjars/jquery/jquery-migrate-1.4.0.min.js?version=5c5a648">'+'\x3C/script>')
+           window.console && console.log('Adding jQuery migrate');
+   }
+   if ( typeof jQuery.fn.popover == 'undefined') {
+           document.write('\x3Cscript type="text/javascript" src="/library/webjars/bootstrap/3.3.6/js/bootstrap.min.js?version=5c5a648">'+'\x3C/script>')
+           window.console && console.log('Adding Bootstrap');
+   }
+   if (typeof jQuery.ui == 'undefined') {
+           document.write('\x3Cscript type="text/javascript" src="/library/webjars/jquery-ui/1.11.3/jquery-ui.min.js?version=5c5a648">'+'\x3C/script>')
+           document.write('\x3Clink rel="stylesheet" href="/library/webjars/jquery-ui/1.11.3/jquery-ui.min.css?version=5c5a648"/>')
+           window.console && console.log('Adding jQuery UI');
+   }
+}
+</script>
+<script type="text/javascript">
+if ( needJQuery ) {
+       window.console && console.log('PortletIFrame PortalUtils.includeLatestJquery() loaded jQuery+migrate+Bootstrap+UI '+$.fn.jquery);
+}
+$PBJQ = jQuery;
+</script>
+<script language="JavaScript" type="text/javascript">
+$(document).ready(function() {
+$('.closeMe a').click(function(e){
+    e.preventDefault();
+    $(this).closest('.alertMessage').fadeOut('slow')
+});
+})
+
+if ( '/library/content/myworkspace_info_zh_CN.html'.indexOf('http://') == 0 || '/library/content/myworkspace_info_zh_CN.html'.indexOf('https://') == 0 ) {
+
+    function timeout47d73299_6ead_42c5_b696_ce402ab99080() { 
+        var myframe = $("#id47d73299_6ead_42c5_b696_ce402ab99080");
+        var loaded = false;
+        window.console && console.log("/library/content/myworkspace_info_zh_CN.html timeout check...");
+        try {
+            var iframeLoc = myframe.get(0).contentWindow.location;
+            iframeLoc = String(iframeLoc);
+            var windowLoc = String(window.location);
+            window.console && console.log("iframe.location="+windowLoc);
+            var ipos = -1;
+            var slashcount = 0;
+            for (var i=0; i<windowLoc.length; i++ ) {
+                if ( windowLoc[i] == '/' ) slashcount++;
+                if ( slashcount == 3 ) {
+                    ipos = i;
+                    break;
+                }
+            }
+            if ( ipos == -1 ) {
+                loaded = false;
+            } else { 
+                var prefix = windowLoc.substring(0, ipos);
+                window.console && console.log("iframe.prefix="+prefix);
+                loaded = iframeLoc.indexOf(prefix) == 0;
+            }
+        } catch(ex) {  // This is an expected/normal/hoped for occurance
+            loaded = true;
+        }
+        if ( ! loaded ) {
+            $('#alert47d73299_6ead_42c5_b696_ce402ab99080').show();
+        } else {
+            window.console && console.log('/library/content/myworkspace_info_zh_CN.html load success');
+        }
+
+    }
+
+    var timer47d73299_6ead_42c5_b696_ce402ab99080 = false;
+    $(document).ready(function() {
+        timer47d73299_6ead_42c5_b696_ce402ab99080 = window.setTimeout("timeout47d73299_6ead_42c5_b696_ce402ab99080()",8000);
+    });
+} else {
+    window.console && console.log('/library/content/myworkspace_info_zh_CN.html does not start with http:// or https://');
+}
+</script>
+<div class="alertMessage specialLink" id="alert47d73299_6ead_42c5_b696_ce402ab99080" style="display:none">警告： 
+本页面载入时发生错误。
+<a href="/library/content/myworkspace_info_zh_CN.html" onclick="window.open('/library/content/myworkspace_info_zh_CN.html','_blank'); return false;" target="_blank">在新窗口中重新显示页面。</a>
+<p class="closeMe"><a href="#" style="text-decoration:none !important;font-size:110%;color:#c00 !important" title="Click to dismiss">x <span class="skip">Click to dismiss</span></a></p>
+</div>
+<div class="wcwomenu"> <iframe frameborder="0" id="id47d73299_6ead_42c5_b696_ce402ab99080" marginheight="0" marginwidth="0" scrolling="auto" src="/library/content/myworkspace_info_zh_CN.html" style="width:100%;padding:0 !important; height:1200px" title="我的工作空间说明信息" width="100%">
+</iframe>
+<script>
+window.addEventListener('message', function(e) {
+  try {
+    var message = JSON.parse(e.data);
+    var idval = 'id47d73299_6ead_42c5_b696_ce402ab99080';
+    if ( message.subject == 'lti.frameResize' ) {
+      var height = message.height;
+      document.getElementById(idval).height = height;
+      console.log('Reveived lti.frameResize height='+height);
+    }
+  } catch (error) {
+   console.log('lti.frameResize of '+idval+' failed height='+height);
+   console.log(e.data);
+  }
+});
+</script>
+</div>
+</div>
+</div>
+<!-- end Tool Body -->
+</div>
+<!-- end Tool Container -->
+</div>
+<div class="Mrphs-pageColumns Mrphs-pageColumns--second" id="col2of2">
+<!-- start Tool Container -->
+<div class="Mrphs-container Mrphs-sakai-summary-calendar">
+<!-- start include tool -->
+<!-- start Tool Col2 -->
+<!-- start Tool Header -->
+<nav class="Mrphs-toolTitleNav Mrphs-container Mrphs-container--toolTitleNav">
+<h2 class="Mrphs-toolTitleNav__title">日程</h2>
+<div class="Mrphs-toolTitleNav__button_container">
+<a class="Mrphs-toolTitleNav__link Mrphs-toolTitleNav__link--directurl" href="#Main7c3bfaccxc1c3x4a93x8cdfxb73003561a53_directurl" rel="#Main7c3bfaccxc1c3x4a93x8cdfxb73003561a53_directurl" title="工具链接">
+<span class="Mrphs-itemTitle">链接</span>
+</a>
+<div class="Mrphs-directUrl Mrphs-directUrl__dropDown" id="Main7c3bfaccxc1c3x4a93x8cdfxb73003561a53_directurl">
+<i class="fa fa-times dropDown_close"></i>
+<input class="Mrphs-directUrl__checkbox" id="directToolUrl-3" onclick="toggleShortUrlOutput('http://course.ucas.ac.cn/portal/directtool/7c3bfacc-c1c3-4a93-8cdf-b73003561a53/', this, 'Main7c3bfaccxc1c3x4a93x8cdfxb73003561a53_urlholder');" type="checkbox"/><label for="directToolUrl-3">短链接</label>
+<textarea class="Mrphs-directUrl__textarea Main7c3bfaccxc1c3x4a93x8cdfxb73003561a53_urlholder">http://course.ucas.ac.cn/portal/directtool/7c3bfacc-c1c3-4a93-8cdf-b73003561a53/</textarea>
+</div>
+<a class="Mrphs-toolTitleNav__link Mrphs-toolTitleNav__link--help-popup" href="http://course.ucas.ac.cn/portal/help/main?help=sakai.summary.calendar" onclick="openWindow('http://course.ucas.ac.cn/portal/help/main?help=sakai.summary.calendar', 'Help',  'resizable=yes,toolbar=no,scrollbars=yes,menubar=yes,width=1024,height=768'); return false" target="_blank" title="日程的帮助">
+<span class="Mrphs-itemTitle">帮助</span>
+<span class="skip">在新窗口打开</span>
+</a>
+</div>
+</nav>
+<!-- end Tool Col2 -->
+<!-- start Tool Body -->
+<div class="Mrphs-toolBody Mrphs-toolBody--sakai-summary-calendar">
+<iframe allowfullscreen="allowfullscreen" class="portletMainIframe" frameborder="0" height="475" id="Main7c3bfaccxc1c3x4a93x8cdfxb73003561a53" marginheight="0" marginwidth="0" name="Main7c3bfaccxc1c3x4a93x8cdfxb73003561a53" scrolling="auto" src="http://course.ucas.ac.cn/portal/tool/7c3bfacc-c1c3-4a93-8cdf-b73003561a53?panel=Main" title="日程 " width="100%">
+</iframe>
+</div>
+<!-- end Tool Body -->
+<!-- end include tool -->
+</div>
+<!-- end Tool Container -->
+<!-- start Tool Container -->
+<div class="Mrphs-container Mrphs-sakai-synoptic-announcement">
+<!-- start include tool -->
+<!-- start Tool Col2 -->
+<!-- start Tool Header -->
+<nav class="Mrphs-toolTitleNav Mrphs-container Mrphs-container--toolTitleNav">
+<h2 class="Mrphs-toolTitleNav__title">最近通知</h2>
+<div class="Mrphs-toolTitleNav__button_container">
+<a class="Mrphs-toolTitleNav__link Mrphs-toolTitleNav__link--directurl" href="#Main703a2fddx9463x4328x9086x1872b410efee_directurl" rel="#Main703a2fddx9463x4328x9086x1872b410efee_directurl" title="工具链接">
+<span class="Mrphs-itemTitle">链接</span>
+</a>
+<div class="Mrphs-directUrl Mrphs-directUrl__dropDown" id="Main703a2fddx9463x4328x9086x1872b410efee_directurl">
+<i class="fa fa-times dropDown_close"></i>
+<input class="Mrphs-directUrl__checkbox" id="directToolUrl-4" onclick="toggleShortUrlOutput('http://course.ucas.ac.cn/portal/directtool/703a2fdd-9463-4328-9086-1872b410efee/', this, 'Main703a2fddx9463x4328x9086x1872b410efee_urlholder');" type="checkbox"/><label for="directToolUrl-4">短链接</label>
+<textarea class="Mrphs-directUrl__textarea Main703a2fddx9463x4328x9086x1872b410efee_urlholder">http://course.ucas.ac.cn/portal/directtool/703a2fdd-9463-4328-9086-1872b410efee/</textarea>
+</div>
+<a class="Mrphs-toolTitleNav__link Mrphs-toolTitleNav__link--help-popup" href="http://course.ucas.ac.cn/portal/help/main?help=sakai.synoptic.announcements" onclick="openWindow('http://course.ucas.ac.cn/portal/help/main?help=sakai.synoptic.announcements', 'Help',  'resizable=yes,toolbar=no,scrollbars=yes,menubar=yes,width=1024,height=768'); return false" target="_blank" title="最近通知的帮助">
+<span class="Mrphs-itemTitle">帮助</span>
+<span class="skip">在新窗口打开</span>
+</a>
+</div>
+</nav>
+<!-- end Tool Col2 -->
+<!-- start Tool Body -->
+<div class="Mrphs-toolBody Mrphs-toolBody--sakai-synoptic-announcement">
+<iframe allowfullscreen="allowfullscreen" class="portletMainIframe" frameborder="0" height="475" id="Main703a2fddx9463x4328x9086x1872b410efee" marginheight="0" marginwidth="0" name="Main703a2fddx9463x4328x9086x1872b410efee" scrolling="auto" src="http://course.ucas.ac.cn/portal/tool/703a2fdd-9463-4328-9086-1872b410efee?panel=Main" title="最近通知 " width="100%">
+</iframe>
+</div>
+<!-- end Tool Body -->
+<!-- end include tool -->
+</div>
+<!-- end Tool Container -->
+<!-- start Tool Container -->
+<div class="Mrphs-container Mrphs-sakai-synoptic-messagecenter">
+<!-- start include tool -->
+<!-- start Tool Col2 -->
+<!-- start Tool Header -->
+<nav class="Mrphs-toolTitleNav Mrphs-container Mrphs-container--toolTitleNav">
+<h2 class="Mrphs-toolTitleNav__title">消息中心通告</h2>
+<div class="Mrphs-toolTitleNav__button_container">
+<a class="Mrphs-toolTitleNav__link Mrphs-toolTitleNav__link--directurl" href="#Main73825c0fx4165x496bx9d89x159fd8fa97dc_directurl" rel="#Main73825c0fx4165x496bx9d89x159fd8fa97dc_directurl" title="工具链接">
+<span class="Mrphs-itemTitle">链接</span>
+</a>
+<div class="Mrphs-directUrl Mrphs-directUrl__dropDown" id="Main73825c0fx4165x496bx9d89x159fd8fa97dc_directurl">
+<i class="fa fa-times dropDown_close"></i>
+<input class="Mrphs-directUrl__checkbox" id="directToolUrl-5" onclick="toggleShortUrlOutput('http://course.ucas.ac.cn/portal/directtool/73825c0f-4165-496b-9d89-159fd8fa97dc/', this, 'Main73825c0fx4165x496bx9d89x159fd8fa97dc_urlholder');" type="checkbox"/><label for="directToolUrl-5">短链接</label>
+<textarea class="Mrphs-directUrl__textarea Main73825c0fx4165x496bx9d89x159fd8fa97dc_urlholder">http://course.ucas.ac.cn/portal/directtool/73825c0f-4165-496b-9d89-159fd8fa97dc/</textarea>
+</div>
+<a class="Mrphs-toolTitleNav__link Mrphs-toolTitleNav__link--help-popup" href="http://course.ucas.ac.cn/portal/help/main?help=sakai.synoptic.messagecenter" onclick="openWindow('http://course.ucas.ac.cn/portal/help/main?help=sakai.synoptic.messagecenter', 'Help',  'resizable=yes,toolbar=no,scrollbars=yes,menubar=yes,width=1024,height=768'); return false" target="_blank" title="消息中心通告的帮助">
+<span class="Mrphs-itemTitle">帮助</span>
+<span class="skip">在新窗口打开</span>
+</a>
+</div>
+</nav>
+<!-- end Tool Col2 -->
+<!-- start Tool Body -->
+<div class="Mrphs-toolBody Mrphs-toolBody--sakai-synoptic-messagecenter">
+<iframe allowfullscreen="allowfullscreen" class="portletMainIframe" frameborder="0" height="475" id="Main73825c0fx4165x496bx9d89x159fd8fa97dc" marginheight="0" marginwidth="0" name="Main73825c0fx4165x496bx9d89x159fd8fa97dc" scrolling="auto" src="http://course.ucas.ac.cn/portal/tool/73825c0f-4165-496b-9d89-159fd8fa97dc?panel=Main" title="消息中心通告 " width="100%">
+</iframe>
+</div>
+<!-- end Tool Body -->
+<!-- end include tool -->
+</div>
+<!-- end Tool Container -->
+</div> <!-- end of #col2of2 -->
+</main> <!-- END of main.Mrphs-mainContent -->
+<!-- END VM includePageBody.vm -->
+<div class="Mrphs-container Mrphs-container--footer">
+<div class="Mrphs-container Mrphs-container--extras">
+<div id="Mrphs-footerApp">
+<div class="Mrphs-footerApp__portalChat is-hidden" id="Mrphs-footerApp__chat">
+<a class="Mrphs-footerApp--toggle Mrphs-footerApp--toggle-chat" href="#" id="Mrphs-footerApp--toggle">
+<i class="Mrphs-footerApp--icon icon-sakai-chat"></i>
+                    聊天 
+                    <span class="Mrphs-footerApp--count Mrphs-footerApp--count-chat" id="Mrphs-footerApp--count"></span>
+</a>
+<!-- chat tray, will hold chat containers (as many as ongoing chats) -->
+</div>
+</div>
+<h1 class="skip">当前用户从此开始</h1>
+<span class="skip" id="Mrphs-portalChat__avatar--permitted"></span>
+<div class="Mrphs-portalChat" id="Mrphs-portalChat" tabindex="-1">
+<header class="Mrphs-portalChat__title" id="Mrphs-portalChat__title">聊天
+            <a class="Mrphs-closeButton Mrphs-portalChat__close" href="#" id="Mrphs-portalChat__close" title="关闭聊天">
+<i class="Mrphs-footerApp--icon icon-sakai-close"></i>
+<span class="skip">关闭聊天</span>
+</a>
+</header>
+<div class="Mrphs-portalChat__container Mrphs-portalChat__video--localcontent" data-video="0" id="Mrphs-portalChat__video--localcontent" style="display:none;">
+<video autoplay="" class="pc_chat_video_min Mrphs-portalChat__videochat--video" id="Mrphs-portalChat__video--localvideo" muted="true"></video>
+<nav id="Mrphs-portalChat__video--nav">
+<a class="Mrphs-portalChat__videochat--videobutton" href="javascript:;" id="disable_local_video" onclick="return portal.chat.video.disableVideo();" title="禁用您的视频">
+<i class="Mrphs-footerApp--icon icon-sakai-videocam"></i>
+<i class="Mrphs-footerApp--icon icon-sakai-toggle-on"></i>
+</a>
+<a class="Mrphs-portalChat__videochat--videobutton" href="javascript:;" id="enable_local_video" onclick="return portal.chat.video.enableVideo();" style="display:none" title="启用您的视频">
+<i class="Mrphs-footerApp--icon icon-sakai-videocam"></i>
+<i class="Mrphs-footerApp--icon icon-sakai-toggle-off"></i>
+</a>
+<a class="Mrphs-portalChat__videochat--videobutton " href="javascript:;" id="mute_local_audio" onclick="return portal.chat.video.mute();" title="静音">
+<i class="Mrphs-footerApp--icon icon-sakai-mic"></i>
+<i class="Mrphs-footerApp--icon icon-sakai-toggle-on"></i>
+</a>
+<a class="Mrphs-portalChat__videochat--videobutton" href="javascript:;" id="unmute_local_audio" onclick="return portal.chat.video.unmute();" style="display:none" title="取消静音">
+<i class="Mrphs-footerApp--icon icon-sakai-mic"></i>
+<i class="Mrphs-footerApp--icon icon-sakai-toggle-off"></i>
+</a>
+</nav>
+</div>
+<div class="Mrphs-portalChat__container Mrphs-portalChat__content" id="Mrphs-portalChat__content">
+<ul class="Mrphs-portalChat__list Mrphs-portalChat__options" id="pc_options">
+<li class="Mrphs-portalChat__options--list-item" id="pc_show_off_ctrl">
+<input class="Mrphs-portalChat__options--checkbox" id="Mrphs-portalChat__showoffline" type="checkbox"/>
+<label class="Mrphs-portalChat__options--label Mrphs-portalChat__options--showoffline" for="Mrphs-portalChat__showoffline">显示离线好友</label>
+</li>
+<li class="Mrphs-portalChat__options--list-item" id="pc_go_off_ctrl">
+<input class="Mrphs-portalChat__checkbox Mrphs-portalChat__checkbox--options" id="Mrphs-portalChat__gooffline--check" type="checkbox"/>
+<label class="Mrphs-portalChat__options--label Mrphs-portalChat__options--go-offline" for="Mrphs-portalChat__gooffline--check">显示为离线</label>
+</li>
+<li class="Mrphs-portalChat__options--list-item" id="Mrphs-portalChat__videooff--ctrl">
+<input class="Mrphs-portalChat__options--checkbox" id="Mrphs-portalChat__videooff--check" type="checkbox"/>
+<label class="Mrphs-portalChat__options--label Mrphs-portalChat__options--video-off" for="Mrphs-portalChat__videooff--check">禁用视频</label>
+</li>
+</ul>
+<div class="Mrphs-portalChat__container Mrphs-portalChat__users" id="Mrphs-portalChat__users">
+<div class="Mrphs-portalChat__connections--wrapper" id="Mrphs-portalChat__connections--wrapper">
+<h2 class="Mrphs-portalChat__title">我的好友</h2>
+<ul class="Mrphs-portalChat__list Mrphs-portalChat__connections" id="Mrphs-portalChat__connections"></ul>
+</div>
+<div class=".Mrphs-portalChat__user--wrapper">
+<h2 class="Mrphs-portalChat__title">在此站点</h2>
+<ul class="Mrphs-portalChat__list Mrphs-portalChat__siteusers" id="Mrphs-portalChat__siteusers"></ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Trimpath template for the profile connections list -->
+<div class="Mrphs-portalChat__template Mrphs-portalChat__template--connections is-hidden" id="pc_connections_template"><!--
+                {for connection in connections}
+                    <li class="Mrphs-portalChat_connection Mrphs-portalChat__list-item" >
+
+                        <a id="${connection.uuid}_link" class="Mrphs-portalChat__user--link" href="javascript:;" onclick="return portal.chat.setupChatWindow('${connection.uuid}');">
+										                            <img class="Mrphs-portalChat__image Mrphs-portalChat__user--image" src="/direct/profile/${connection.uuid}/image"/>
+			                            <span class="Mrphs-portalChat__user--name">${connection.displayName}</span>
+                            {if connection.online}
+         	                   {if connection.video == 'none' || !portal.chat.video || !portal.chat.video.webrtc.isVideoEnabled()}
+                           	       <i class="Mrphs-portalChat__connection--bullet Mrphs-footerApp--icon icon-sakai-online"></i>
+                               {/if}
+                            {else}
+                            	<i class="Mrphs-portalChat__connection--bullet Mrphs-footerApp--icon icon-sakai-offline"></i>
+                            {/if}
+                        </a>
+                        {if connection.online}
+     	                   {if connection.video != 'none' && portal.chat.video && portal.chat.video.webrtc.isVideoEnabled()}
+	                        <a id="${connection.uuid}_link" class="Mrphs-portalChat__connection--videolink" href="javascript:;" onclick="return portal.chat.video.directVideoCall('${connection.uuid}',false);">
+                        	   <i class="Mrphs-portalChat__connection--bullet Mrphs-footerApp--icon icon-sakai-videocam"></i>
+                        	</a>
+                           {/if}
+                        {/if}
+                        {if connection.online == false}
+                            <a href="javascript:;" onclick="portal.chat.pingConnection('${connection.uuid}');" title="Ping ${connection.displayName} 获取连接进行聊天">
+                           	   <i class=" Mrphs-footerApp--icon icon-sakai-bell"></i>
+                            </a>
+                       		<span id="Mrphs-portalChat__connection--ping_${connection.uuid}" class=" Mrphs-portalChat__connection--ping ">Ping成功！</span>
+                        {/if}
+                    </li>
+                {/for}
+            -->
+</div>
+<!-- Trimpath template for the present users list -->
+<div class="Mrphs-portalChat__template Mrphs-portalChat__template--users is-hidden" id="pc_site_users_template"><!--
+                {for user in siteUsers}
+                    <li class="Mrphs-portalChat__user Mrphs-portalChat__list-item">
+                        {if !user.offline}
+                        <a id="${user.id}_link" class="pc_user_link Mrphs-portalChat__user--link" href="javascript:;" onclick="return portal.chat.setupChatWindow('${user.id}');">
+                        {/if}
+										                            <img class="pc_user_image Mrphs-portalChat__image Mrphs-portalChat__user--image" src="/direct/profile/${user.id}/image" />
+			                            <span class="pc_site_display_name Mrphs-portalChat__name Mrphs-portalChat__user--name">${user.displayName}</span>
+                            {if user.offline == false}
+                              {if user.video == 'none' || !portal.chat.video || !portal.chat.video.webrtc.isVideoEnabled()}
+                           	       <i class="Mrphs-portalChat__connection--bullet Mrphs-footerApp--icon icon-sakai-online"></i>
+                              {/if}
+                            {else}
+                           	       <i class="Mrphs-portalChat__connection--bullet Mrphs-footerApp--icon icon-sakai-offline"></i>
+                            {/if}
+                        {if user.offline == false}
+                        </a>
+                        {/if}
+                        {if user.video != 'none' && portal.chat.video && portal.chat.video.webrtc.isVideoEnabled()}
+                         <a id="${user.id}_link" class="Mrphs-portalChat__connection--videolink" href="javascript:;" onclick="return portal.chat.video.directVideoCall('${user.id}',false);">
+                        	   <i class="Mrphs-portalChat__connection--bullet Mrphs-footerApp--icon icon-sakai-videocam"></i>
+                         </a>
+                        {/if}
+                    </li>
+                {/for}
+            -->
+</div>
+<!-- Trimpath template for the chat windows -->
+<div class="Mrphs-portalChat__template Mrphs-portalChat__template--chat is-hidden" id="pc_connection_chat_template" tabindex="-1"><!--
+               <div class="pc_connection_chat_title_avt pc_connection_chat_title Mrphs-portalChat__chat--title Mrphs-portalChat__chat--titleavt" onclick="portal.chat.toggleChatWindow('${uuid}');"><a href="#">
+                 <img src="/direct/profile/${uuid}/image" class="pc_connection_chat_title_avt Mrphs-portalChat__user--image"/><span class="Mrphs-portalChat__user--name">${displayName}</span></a>
+                    <a href="javascript:;" class="Mrphs-portalChat__close" onclick="return portal.chat.closeChatWindow('${uuid}');" title="关闭聊天">
+						<i class="Mrphs-footerApp--icon icon-sakai-close"></i>
+						<span class="skip">关闭聊天</span>
+					</a>
+                </div>
+                				<div id="Mrphs-portalChat__chat--videochatbar-${uuid}" class="pc_connection_videochat_bar Mrphs-portalChat__videochat--bar Mrphs-portalChat__videochat--ctrlbar">
+					<div class="Mrphs-portalChat__videochat--barelement Mrphs-portalChat__videochat--leftelement">
+						<a href="javascript:;" onclick="return portal.chat.video.openVideoCall('${uuid}',false);" class="video_off Mrphs-portalChat__videochat--videobutton " title="发起视频聊天" >
+							<i class="Mrphs-footerApp--icon icon-sakai-videocam"></i>
+						</a>
+						<a href="javascript:;" onclick="return portal.chat.video.closeVideoCall('${uuid}',true);" class="video_on Mrphs-portalChat__videochat--videobutton" title="结束视频聊天" >
+								<i class="Mrphs-footerApp--icon icon-sakai-stop"></i>
+						</a>
+						<a href="javascript:;" onclick="return portal.chat.video.maximizeVideoCall('${uuid}');" class="video_on Mrphs-portalChat__videochat--videobutton" title="最大化视频聊天" >
+							<i class="Mrphs-footerApp--icon icon-sakai-maximize"></i>
+						</a>
+					</div>
+					<div id="Mrphs-portalChat__chat--videoin-${uuid}" class="pc_connection_videochat_bar_answer Mrphs-portalChat__videochat--barelement Mrphs-portalChat__videochat--answerelement">
+						<a href="javascript:;" onclick="return portal.chat.video.acceptVideoCall('${uuid}');" class="Mrphs-portalChat__videochat--videobutton" title="接收视频聊天">
+							<i class="Mrphs-footerApp--icon icon-sakai-thumbup"></i>
+						</a>
+						<a href="javascript:;" onclick="return portal.chat.video.ignoreVideoCall('${uuid}');" class="Mrphs-portalChat__videochat--videobutton" title="忽略视频聊天">
+							<i class="Mrphs-footerApp--icon icon-sakai-thumbdown"></i>
+						</a>
+						<span>您想应答吗？</span>
+					</div>
+					<div id="Mrphs-portalChat__chat--videotime-${uuid}" class=" Mrphs-portalChat__videochat--barelement Mrphs-portalChat__videochat--rightelement">
+						<span id="Mrphs-portalChat__chat--time-${uuid}">00:00</span>
+					</div>
+                </div>
+				<div id="Mrphs-portalChat__chat--videocontent-${uuid}" class="Mrphs-portalChat__chat--videocontent">
+					<div style="display:none;" class="Mrphs-portalChat__videochat--statusbar "><span></span></div>
+					<div style="display:none;" class="Mrphs-portalChat__videochat--statuselement Mrphs-portalChat__videochat--statusfailed" ><i class="Mrphs-footerApp--icon icon-sakai-frown"></i></div>
+					<div style="display:none;" class="Mrphs-portalChat__videochat--statuselement Mrphs-portalChat__videochat--statusfinished" ><i class="Mrphs-footerApp--icon icon-sakai-flagcheckered"></i></div>
+					
+					<div style="display:none;" class="Mrphs-portalChat__videochat--statuselement Mrphs-portalChat__videochat--bubblingG">
+						<span class="Mrphs-portalChat__videochat--bubblingG_1">
+						</span>
+						<span class="Mrphs-portalChat__videochat--bubblingG_2">
+						</span>
+						<span class="Mrphs-portalChat__videochat--bubblingG_3">
+						</span>
+					</div>
+					
+					<div style="display:none;" class="Mrphs-portalChat__videochat--statuselement Mrphs-portalChat__videochat--remotevideo">
+						<video id="Mrphs-portalChat__videochat--remotevideo-${uuid}" class="Mrphs-portalChat__videochat--video " autoplay >
+						</video>
+					</div>
+
+				</div>
+				                <div id="Mrphs-portalChat__chat--content-${uuid}" class="pc_connection_chat_content Mrphs-portalChat__chat--content">
+                    <ul id="Mrphs-portalChat__chat--messages-${uuid}" class="Mrphs-portalChat__chat--messages"></ul>
+                    <div class="Mrphs-portalChat__chat--editorwrapper"><input type="text" id="Mrphs-portalChat__chat--editor-${uuid}" class="Mrphs-portalChat__chat--editor" alt="" title="输入聊天内容"/></div>
+                </div>
+            -->
+</div>
+<!-- Chat windows get prepended to this container -->
+<div class="Mrphs-portalChat__chat--container"><div class="Mrphs-portalChat__chat--windowscroller"></div></div>
+<!-- END FLOATING CHAT STUFF -->
+</div> <div class="Mrphs-tutorial Mrphs-modal" id="tutorial"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- END VM includePageWithNav.vm -->
+</body></html> <!-- end Mrphs-portalWrapper -->
+<!-- END VM site.vm -->
+<script>
+        var needJQuery = true;
+        var secondJQuery = false;
+        var notJQuery = false;
+        var dollarEmpty = false;
+        var dollarVersion = false;
+        if ( window.$ ) {
+              if ( window.$.fn && window.$.fn ) {
+                 dollarVersion = window.$.fn.jquery;
+              } else {
+                 dollarVersion = 'not jQuery';
+                 window.console && console.log('Dollar is defined but is not jQuery');
+                 window.console && console.log($);
+                 //Just have it reload this other $ afterward
+                 notJQuery = true;
+              }
+         } else {
+              dollarEmpty = true;
+              dollarVersion = 'not present';
+              if ( window.jQuery ) {
+                  window.console && console.log('tool called jQuery.noConflict()');
+              }
+        }
+        if ( window.jQuery ) {
+            tver = jQuery.fn.jquery;
+            if ( tver.indexOf('1.11.') == 0 ) {
+                window.console && console.log('Using tool jQuery '+tver);
+                needJQuery = false;
+            } else {
+                secondJQuery = true;
+            }
+        }
+        if ( needJQuery ) {
+            document.write('\x3Cscript src="/library/webjars/jquery/1.11.3/jquery.min.js?version=5c5a648">'+'\x3C/script>')
+            document.write('\x3Cscript src="/library/webjars/jquery-migrate/1.4.0/jquery-migrate.min.js?version=5c5a648">'+'\x3C/script>')
+            document.write('\x3Cscript src="/library/webjars/bootstrap/3.3.6/js/bootstrap.min.js?version=5c5a648">'+'\x3C/script>')
+            document.write('\x3Cscript src="/library/webjars/jquery-ui/1.11.3/jquery-ui.min.js?version=5c5a648">'+'\x3C/script>')
+            document.write('\x3Clink rel="stylesheet" href="/library/webjars/jquery-ui/1.11.3/jquery-ui.min.css?version=5c5a648"/>')
+            if (Modernizr.touch) {
+              document.write('\x3Cscript type="text/javascript" src="/library/webjars/jquery-ui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js?version=5c5a648">'+'\x3C/script>')
+            }
+            window.console && console.log('Portal scripts loaded JQ+MI+BS+UI');
+        } else {
+            if (typeof jQuery.migrateWarnings == 'undefined') {
+                document.write('\x3Cscript type="text/javascript" src="/library/webjars/jquery-migrate/1.4.0/jquery-migrate.min.js?version=5c5a648">'+'\x3C/script>')
+                window.console && console.log('Portal adding jQuery migrate');
+            }
+            if ( typeof jQuery.fn.popover == 'undefined') {
+                document.write('\x3Cscript type="text/javascript" src="/library/webjars/bootstrap/3.3.6/js/bootstrap.min.js?version=5c5a648">'+'\x3C/script>')
+                window.console && console.log('Portal adding Bootstrap');
+            }
+            if (typeof jQuery.ui == 'undefined') {
+                document.write('\x3Cscript type="text/javascript" src="/library/webjars/jquery-ui/1.11.3/jquery-ui.min.js?version=5c5a648">'+'\x3C/script>')
+		document.write('\x3Clink rel="stylesheet" href="/library/webjars/jquery-ui/1.11.3/jquery-ui.min.css?version=5c5a648"/>')
+                window.console && console.log('Portal adding jQuery UI');
+            }
+            if (typeof jQuery.ui == 'undefined' || (typeof jQuery.ui.mouse != 'undefined' && typeof jQuery.ui.mouse.prototype._touchStart == 'undefined')) {
+                document.write('\x3Cscript type="text/javascript" src="/library/webjars/jquery-ui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js?version=5c5a648">'+'\x3C/script>')
+                window.console && console.log('Portal adding jQuery UI Touch Punch for touch device support');
+            }
+        }
+    </script>
+<script>
+        $PBJQ = jQuery; // The Portal's jQuery (also in $ for now)
+    </script>
+<script src="/portal/scripts/sessionstoragemanager.js?version=5c5a648"></script>
+<!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<![endif]-->
+<script src="/library/js/trimpath-template-latest.js?version=5c5a648"></script>
+<script src="/library/js/jquery/bgiframe/jquery.bgiframe.min.js?version=5c5a648"></script>
+<script src="/library/js/jquery/cluetip/1.2.10/jquery.cluetip.min.js?version=5c5a648"></script>
+<script src="/library/skin/morpheus-default/js/morpheus.plugins.min.js?version=5c5a648"></script>
+<script src="/library/skin/morpheus-default/js/morpheus.scripts.min.js?version=5c5a648"></script>
+<script src="/library/webjars//pnotify/2.1.0/pnotify.core.min.js?version=5c5a648"></script>
+<script src="/library/js/jquery/qtip/jquery.qtip-latest.min.js?version=5c5a648"></script>
+<script src="/library/js/jquery/qtip/tutorial.js?version=5c5a648"></script>
+<script src="/portal/scripts/jquery.idle-timer.js?version=5c5a648"></script>
+<script>
+	var portalChatPollInterval = 5000;
+</script>
+<script type="text/javascript">
+    portal.chat.video.enabled = true;
+    portal.chat.video.timeout = 25;
+    portal.chat.video.messages = {
+        "pc_video_status_setup": "设置您的视频……",
+        "pc_video_status_user_hung": "用户以挂断",
+        "pc_video_status_hangup": "您已挂断！",
+        "pc_video_status_user_refused": "用户拒绝了您的请求",
+        "pc_video_status_incoming_call": "您有一个连接请求……",
+        "pc_video_status_call_timeout": "聊天发起超时！",
+        "pc_video_status_waiting_peer": "等待连接……",
+        "pc_video_status_call_accepted": "发起被接受，建立连接中……",
+        "pc_video_status_call_not_accepted": "视频聊天没有被接受或连接失败",
+        "pc_video_status_call_in_progress": "发起进行中……",
+        "pc_video_status_answer_timeout": "应答超时！",
+        "pc_video_status_connecting": "连接中……",
+        "pc_video_status_connection_established": "连接已建立",
+        "pc_video_status_call_failed": "发起失败",
+        "pc_video_status_you_ignored": "您忽略了那个请求",
+        "pc_video_status_connection_established": "连接已建立"
+    };
+</script>
+<script src="/portal/scripts/webrtc-adapter.js?version=5c5a648" type="text/javascript"></script>
+<script src="/portal/scripts/videocall.js?version=5c5a648" type="text/javascript"></script>
+<script src="/portal/scripts/jescape.js?version=5c5a648" type="text/javascript"></script>
+<script src="/portal/scripts/chat.js?version=5c5a648"></script>
+<script>
+                var sakaiPortalWindow = "";
+                $PBJQ(document).ready(function() {
+                    setupSkipNav();
+                });
+            </script>
+<script>
+            // If we loaded a second jQuery, revert $ and jQuery to the first jQuery
+            if ( secondJQuery ) {
+                $PBJQ = jQuery.noConflict(true); // Safely return $ to the tool jQuery
+                if ( ! dollarEmpty && !notJQuery ) jQuery = $;  // Return jQuery to point at the tool jQuery
+            }
+            if (notJQuery && !secondJQuery) {
+                $PBJQ = jQuery.noConflict(true); // Safely return $ to the tool jQuery
+                //Just set jQuery to be the same thing since it didn't exist before
+                jQuery = $PBJQ;
+
+            }
+            window.console && console.log('Portal script load complete PBJQ='+$PBJQ.fn.jquery+' jQuery='+jQuery.fn.jquery+' $='+dollarVersion);
+
+            $PBJQ(document).ready(function() {
+                setupSiteNav();
+                            });
+        </script>
+<script>
+        PNotify.prototype.options.styling = "jqueryui";
+        function portal_check_pnotify() {
+            $PBJQ.getJSON( "/direct/portal/notify.json", function( data ) {
+                for(i=0; i<data.error.length; i++ ) {
+                     $PBJQ(function(){
+                        new PNotify({
+                            title: '注意',
+                            text: data.error[i],
+                            type: 'notice'
+                        });
+                    });
+                }
+            });
+        }
+            </script>
+<!--[if lt IE 9]>
+        <script src="/library/skin/morpheus-default/js/ie/sakai.portal.ie.js?version=5c5a648"></script>
+<![endif]-->
+<link href="/pasystem-tool/stylesheets/pasystem.css?version=5c5a648" property="stylesheet" rel="stylesheet" type="text/css">
+<script>
+// Work around the fact that several pages pull in very old versions
+// of JQuery.
+function paSystemJQueryOK() {
+    if (!window.jQuery) {
+        /* no jQuery at all */
+        return false;
+    }
+
+    var version_numbers = jQuery.fn.jquery.split('.');
+
+    /* >= 1.9+ */
+    return (parseInt(version_numbers[0]) > 1) || (parseInt(version_numbers[0]) == 1 && parseInt(version_numbers[1]) >= 9);
+}
+
+if (paSystemJQueryOK()) {
+  document.write('\x3Cscript src="/pasystem-tool/scripts/pasystem.js?version=5c5a648">\x3C/script>');
+  document.write('\x3Cscript type="text/javascript" src="/pasystem-tool/scripts/featherlight.min.js?version=5c5a648">\x3C/script>');
+
+  var pasystem = pasystem || {'loaded': true};
+} else {
+  console.log("PASystem not loaded for this page because jQuery is missing or unsupported.");
+}
+</script>
+<script id="pasystemBannerAlertsTemplate" type="text/template">
+  <div class="pasystem-banner-alert pasystem-banner-${type}" id="${id}">
+    <span class="pasystem-banner-alert-message">${message}</span>
+    {if dismissible}<a class="pasystem-banner-alert-close" href="javascript:void(0)"></a>{/if}
+  </div>
+</script>
+<script id="pasystemBannerAlertsToggleTemplate" type="text/template">
+  <li class="pasystem-banner-alert-toggle-list-item">
+    <a href="javscript:void(0)" class="pasystem-banner-alert-toggle">
+      显示系统广播
+    </a>
+  </li>
+</script>
+<script>
+  if (pasystem) {
+    pasystem['banners'] = new PASystemBannerAlerts([], "d52fecd52066c054ac96ff355dcffc2d6d47daebae75feaf776b929dddec4f2f");
+  }
+</script>
+<script id="popup-container-content" type="text/template">
+</script>
+<script id="popup-container-footer" type="text/template">
+<div class="popup-container-footer">
+  <a href="javascript:void(0)" class="popup-dismiss-button permanent" id="popup-acknowledged-button">不再显示</a>
+  <a href="javascript:void(0)" class="popup-dismiss-button temporary" id="popup-later-button">稍后通知我</a>
+</div>
+</script>
+<script id="timezoneBannerTemplate" type="text/template">
+  <span>
+    您的计算机设置的时区<span class="computerTimezone">${reportedTimezone}</span>和您的账户时区<span class="prefsTimezone">${prefsTimezone}</span>不一致。 <span class="pasystem-tz-click-here"><a href="${setTimezoneUrl}" id="setTimezoneMsg">点击这里更新您的时区设置</a></span>。
+  </span>
+</script>
+<script>
+  if (pasystem) {
+    new PASystemTimezoneChecker().checkTimezone();
+  }
+</script>
+<!-- START VM includeCookieNotice.vm -->
+<!-- END VM includeCookieNotice.vm -->
+</link>
+

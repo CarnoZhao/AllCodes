@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Cache-Control" content="public">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="description" content="携程国际机票官网提供北京到纽约机票查询预订及北京到纽约特价机票查询,并提供北京到纽约机票价格查询和打折机票查询服务。携程同时动态提供北京到纽约时刻表，票价查询，是您网上订机票的首选。"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="北京到纽约机票，北京到纽约机票查询，北京到纽约机票预订，北京到纽约特价机票，北京到纽约打折机票"/>
+    <link rel="shortcut icon" href="//www.ctrip.com/favicon.ico" mce_href="//www.ctrip.com/favicon.ico" type="image/x-icon">
+    <title>北京到纽约机票查询预订, 北京到纽约特价往返机票【携程国际机票】</title>
+
+
+<script>
+	GlobalSwitches={"adjacentDateSwitch":false,"airportCityBusSwitch":true,"loginMaskV2Switch":false,"hideLowestPriceFlagOfNon9C":true,"unfoldPriceListSwitch":true,"visaLuggageSwitch":true,"planeAgeSwitch":false,"mileagePointSwitch":false,"openFlagShipStoreSwitch":false,"javaBookingSwitch":true}
+</script>
+<script>
+	GlobalConfigs={"javaBookingRequiredVersion":"F|H","listPriceMsgConfig":{"PRICE_TAG":{"CaSpecialDiscount":"下单再减&yen;[PRICE]","CaSpecialInvite":"国航特邀","MuSpecialInvite":"东航特邀","MuGvDiscount":"会员专享","FlashSaleDiscount":"闪购特惠","MemberOnlyDiscount":"青年专享","BusinessCarTicketGift":"赠商务车票","CarRentalDiscount":"租车惠","CarRentalReduce200RMB":"租车减200","CashBack":"返现&yen;[VALUE]","FreeBusBoatTicketToHK":"赠[GO_BACK_TYPE]通港[BUS_BOAT_TYPE]票","FreePickUp":"赠[CAR_TYPE][FLIGHT_WAY]机","FreeVipLounge":"赠[FLIGHT_WAY]贵宾休息室","GiftPack":"大礼包","GiftBox":"定制礼盒","SpeedIssueTicket":"极速出票","TodayFreeRefund":"甄选服务","PickUpCoupon":"赠接送机券","GeneralCoupon":"赠￥[PRICE][NAME]","FreeOnlineCheckIn":"送在线值机"},"PRICE_TAG_HOVER":{"CaSpecialDiscount":"预订此航空公司特惠产品，每位乘机人下单时可享受<dfn>¥</dfn>[PRICE]优惠。<br>如需退订，<dfn>¥</dfn>[PRICE]特惠活动差额不退；<br>如需改签，需补齐<dfn>¥</dfn>[PRICE]特惠活动差额，更改后航班不再享受此优惠。","CaSpecialInvite":"此价格限国航特邀用户购买,如乘机人非特邀用户请选择其他价格预定","MuSpecialInvite":"部分乘机人可享此特惠价，可在填写页确认乘机人是否可享此价，其余非特邀乘机人请选择其他价格预订。","MuGvDiscount":"【会员专享】乘机人至少包含一位中国大陆籍成人乘客，验证航司会员身份或直接注册为会员。","FlashSaleDiscount":"【818秒杀】此为东方航空限时特惠产品，乘机人至少包含一位中国大陆籍成人乘客。","MemberOnlyDiscount":"【青年专享】此为青年专享产品，仅限13-20周岁旅客购买，且乘机人需至少包含一位东航会员，请提供一位中国大陆籍成人乘客验证航司会员或直接注册为会员。","BusinessCarTicketGift":"赠商务车票hover","CarRentalDiscount":"租车惠hover","CarRentalReduce200RMB":"租车减200hover","CashBack_Way_One":"填写Email，乘机后10天内完成返现邮件确认，乘机后10天内将获得[VALUE]元返现至您的返现账户。","CashBack_Way_Two":"乘机前关注微信公众号“携程旅行网”，并绑定您的携程账号，乘机后7天内通过携程官方微信推送的返现信息，对航班进行评分，乘机后10天内将获得[VALUE]元返现至您的返现账户。","FreeBusBoatTicketToHK":"全程选择带有赠送通港车船票相关标签的航班，可获赠特定航程通港车票或通港船票一份，仅限在乘机人填写页勾选通港车票或通港船票时使用，每位客人仅限当次预订时使用一次。","FreePickUp":"订购此机票，额外享受免费国内[CAR_TYPE][FLIGHT_WAY]机服务，往返程中两程均展示此标签实现赠送，单程价值最高可达￥600","FreeVipLounge":"此贵宾专享产品除机票外，另可享[VALUE]贵宾休息室服务。休息室详情请点击“预定”按钮后，在预订页面查看。","GiftPack":"大礼包hover","GiftBox":"定制礼盒hover","SpeedIssueTicket":"<img class=\"ico-quick-ticket\" src=\"//pic.c-ctrip.com/fltcommon/search_result/ico-speed.png\">支付成功后，预计[VALUE]分钟内完成出票","TodayFreeRefund":"<div class=\"bs-title\">— 甄选服务 —</div><ul class=\"bs-cont\"><li><img class=\"bs-icon\" src=\"//pic.c-ctrip.com/fltcommon/search_result/ico-speed-gold.png\" />支付成功后，预计[ticketingTime]分钟内完成出票</li><li><img class=\"bs-icon\" src=\"//pic.c-ctrip.com/fltcommon/search_result/ico-ticket.png\" />提供”[invoice]”作为报销凭证</li><li><img class=\"bs-icon\" src=\"//pic.c-ctrip.com/fltcommon/search_result/ico-wallet.png\" />预订当天[refundDeadline]([timezone]时间)前可免费退票</li></ul>","TodayFreeRefundTakeOffToday":"<div class=\"bs-title\">— 甄选服务 —</div><ul class=\"bs-cont\"><li><img class=\"bs-icon\" src=\"//pic.c-ctrip.com/fltcommon/search_result/ico-speed-gold.png\" />支付成功后，预计[ticketingTime]分钟内完成出票</li><li> <img class=\"bs-icon\" src=\"//pic.c-ctrip.com/fltcommon/search_result/ico-ticket.png\" />提供”[invoice]”作为报销凭证</li><li><img class=\"bs-icon\" src=\"//pic.c-ctrip.com/fltcommon/search_result/ico-wallet.png\" />预订当天[refundDeadline]([timezone]时间)前可免费退票，航班起飞后，不可享受免费退</li></ul>","PickUpCoupon":"订购此机票，即享接送机券服务","GeneralCoupon":"订购此机票，赠￥[PRICE][NAME]服务","FreeOnlineCheckIn":"无需操作，提前占座，省去外语值机繁琐步骤。","SpecialRefund24Hours":"本行程享受24小时特惠退，支付完成24小时内退票，退票免费。具体退改签信息请点击“预订”按钮后，在下一页面查看","FreeAirportBus":"<strong>赠送[CITY_NAME]跨城机场巴士</strong><br><strong>服务说明：</strong><br>使用规则：<br>1、巴士车票仅限出行当日使用，不预留座位，先到先得，请提前30分钟到达车站。<br>2、旅客凭预订机票时的有效登机证件（限本人使用）到乘车地点进行身份验证，经巴士柜台工作人员验证后乘车。<br>补充说明：<br>1、若机票退票改期，则无法再使用此巴士服务。<br>2、由于旅客自身预留时间不足、巴士承运公司问题或其他不可抗力原因导致旅客不能正常乘坐后续的航班，属于携程免责范围。<br>3、适用于所有正常团、散客，不适用于婴儿、无成人陪伴儿童、孕产妇、伤病旅客、残疾人旅客等特殊旅客，请旅客自行参照巴士运营方的规则要求办理。<br><strong>退改说明：</strong><br>免费退订"},"GV_TAG_HOVER":{"Title":"本产品需同时满足以下条件才可预订","MultiPerson":"本产品限[VALUE](同行婴儿不计入人数限制范围)才可以预订","Age":"本产品限[VALUE]才可以预订","Nationality":"本产品限[VALUE]才可以预订","Eligibility":"本产品限[VALUE]才可以预订","Multi":"限[VALUE]预订"}},"listFlightTrainMsgConfig":{"ALERT_TITLE":"更多出行方案购买需知","ALERT_CONTENT":["因天气、航空公司、铁路部门及突发事件等原因，可能影响乘客登机或乘车。请确认换成距离和中转时间，以便确定合适的航班、车次","因航空公司、铁路方面原因或不可抗力原因，影响乘客行程所产生的损失，属于携程旅行网免责范畴之内。请及时关注天气及路况信息。","如遇机票/火车票因系统原因，导致出票失败，携程将会为您自动取消订单并全额退款。"],"TRAIN_TIP_TITLE":"火车登车手续办理提醒：","TRAIN_TIP_CONTENT":"出票后，请务必使用乘机人电子票号在火车段出发前72小时内访问www.accesrail.com/checkin办理登车手续，并打印行程信息，以供乘车使用。"},"listDemandFormMsgConfig":{"NAME":{"NOT_NULL":"请填写姓名"},"PHONE":{"NOT_NULL":"请填写手机号码","ILLEGAL":"请填写正确的手机号码，以便接收航班动态信息","CN_ILLEGAL":"请填写正确的手机号码，以便接收航班动态信息","FOREIGN_ILLEGAL":"请填写正确的手机号码，以便接收航班动态信息","NOT_CN_TIP":"您填写的号码非大陆11位手机号，可能影响您正常获取联系短信，如确认无误，可继续下单"},"EMAIL":{"OPTIONAL_ILLEGAL":"请填写正确的Email地址，格式：a@b.c","NOT_NULL":"请填写Email地址"}},"listConstConfig":{"FILTER":{"DEFAULT_DISPLAY_COUNT":4,"HIDDEN_GROUPS_IDS":["FILTER_GROUP_TRANS_CITY.COUNTRY"]},"SEARCH":{"FIRST_PULL_DELAY":2000,"LATER_PULL_DELAY":1000,"MAX_STAY_TIME_OUT_IN_MIN":15,"BOOK_TIME_OUT_IN_MS":1000},"RECOMMEND":{"MIDDLE_REC_INDEX":8,"MIDDLE_REC_INDEX_TWO":16,"MIDDLE_REC_INDEX_THREE":24,"CF_REC_YS_REC_FOLD_INDEX":4,"CF_REC_YS_REC_MIN_INDEX":12,"CF_REC_YS_REC_AFTER_INDEX":10,"OPEN_JAW_RECOMMEND_MISERYINDEX_WEIGHT":200,"CALENDAR_LP_SINGLE_DAYSLIMIT":365,"CALENDAR_LP_ROUNG_DAYSLIMIT":365,"HEAD_RECOMMEND_POSITION":4},"FLIGHTS":{"PAGE_SIZE":5},"BAGGAGE":{"DEFAULT_DETAIL_HOVER":"行李尺寸限制请咨询航司","DEFAULT_DETAIL_FOOTER_HOVER":"行李尺寸限制请咨询航司","DEFAULT_HAS_BAGGAGE_SERVICE_HOVER":"后续页面提供购买行李额服务","DEFAULT_NO_BAGGEAGE_HOVER":"行李额信息请在点击“预订”按钮后，在下一个页面查看"},"PRICE":{"FORCE_TOP_AirlineAuthorizedStore":["CX","HX","OZ","NX","DL","UA","KE","JL","AA","SU","EK","PR","AF","KL","LH","OS","LX","VN","QF","MH","QR","AY","BA","IB","EY","NZ","SK","UL","VS","PS","HO","LH","OS","LX","U6","LO","SK","AC","HA","GA"],"FORCE_TOP_FlagShipStore":["MU","CA","3U","ZH","CZ"]},"OTHERS":{"CTM_HASH":["ctm_ref=Iflt_hp_hot_fav_p"]}},"listProductMsgConfig":{"ITINERARY_TAG":{"NightFlight":"夜间航班","SuperFlyer":"超级飞人","SuperFlyerFullTag":"<span class=\"tag tag-warn\">超飞</span> 临近起飞","Flyer":"飞人","FlyerFullTag":"<span class=\"tag tag-warn\">飞人</span> 临近起飞","CheaperTimeSavingChoice":"精选·便宜省时","DirectCheapestChoice":"精选·直飞低价","CheapestChoice":"精选·当日低价","ShortestTimeChoice":"精选·耗时短","MacaoTransferVisaFreeChoice":"精选·中转免签玩澳门","HkTransferVisaFreeChoice":"精选·中转免签玩香港","FlightGift":"航班礼盒"},"ITINERARY_TAG_HOVER":{"NightFlight":"指深夜或凌晨起飞的航班","SuperFlyer":{"title":"超飞","hint":"携程为有紧急出行需求的用户推出的一项便捷服务","text":"1.该航班已临近起飞时间，请确保您能及时值机、登机，因误机产生的损失自行承担。<br/>2.该航班为特殊产品，支付成功5分钟内确认出票结果，若出票失败，订单自动取消并退款。"},"Flyer":{"title":"飞人","hint":"携程为有紧急出行需求的用户推出的一项便捷服务","text":"1.享受“飞人通道”服务只能使用国内信用卡来支付机票款和其他相关费用;<br/>2.电子机票行程单（报销凭证）将由我们邮寄到您指定的地址;<br/>3.如果您在机场办理登机手续时发生问题，请立刻电话联系我们，电话：400-830-6666"}},"PRODUCT_TAG":{"TransitPU":"多票组合","MultiPU":"组合特价","FlagShipStore":"航司旗舰店","AirlineAuthorizedStore":"航司官方授权店","LowestPrice":"航司直销","SpecialRefund24Hours":"24小时特惠退","Prioritizing":"商务优选","Exclusive":"","BaggagePackage":"","GuangfaExclusive":"","BusinessRecommend":"","SpecialRecommend":"","Cloud":""},"PRODUCT_TAG_HOVER":{"TransitPUHasRisk":"<h4>什么是多票组合？</h4>(1) 多票组合与航司联运中转航班不同，是多张机票自行拼接的行程，需在换乘地“TRANS_CITY_NAME”提取和托运行李，重新出入关，办理登机手续，行李额（重量/数量）可能有差异。<br />(2) 请注意查询中转地/目的地的签证政策，确保备齐所需签证后再预订。<br /><br /><h4>有哪些风险需要乘客注意？</h4>包括但不限于乘客证件不齐、乘客不合理安排换乘时间等原因导致无法搭乘任一航班，需乘客自行对每张票分开退票改期，损失将由乘机人自行承担。","TransitPUNoRisk":"<h4>什么是多票组合？</h4>多票组合与航司联运中转航班不同，是多张机票自行拼接的行程，需在换乘地“TRANS_CITY_NAME”提取和托运行李，行李额（重量/数量）可能有差异。<br /><br /><h4>有哪些风险需要乘客注意？</h4>包括但不限于乘客证件不齐、乘客不合理安排换乘时间等原因导致无法搭乘任一航班，需乘客自行对每张票分开退票改期，损失将由乘机人自行承担。","MultiPU":"此为组合特价产品，机票将分开出票。出票后，如遇航变及退改签等问题，需分开处理；若产生费用将分开收取。","SpecialRefund24Hours":"支付完成24小时内退票，退票免费。<br/>支付完成24小时后，以具体的退改规则为准。","Prioritizing":"商务优选机票服务有保障，我们提供：<br>1.快速出票；<br>2.提供行程单或者机票发票，报销无忧；<br>3.服务优先：尊享7×24小时的全天候服务。","PrioritizingExceptEInvoice":"商务优选机票服务有保障，我们提供：<br>1.快速出票；<br>2.服务优先：尊享7×24小时的全天候服务。","Exclusive":"<strong>旅行套餐包含：</strong><p style=\" line-height:1.8; padding-bottom:10px;\">价值<span class=\"f-orange\">200000</span>积分的旅游优惠券一张+机票一张。</p><strong>旅游优惠券使用说明：</strong><p style=\" line-height:1.8; padding-bottom:10px;\">购买旅游度假产品订单满<span class=\"price\"><dfn>¥</dfn>5000</span>减<span class=\"price\"><dfn>¥</dfn>100</span>、满<span class=\"price\"><dfn>¥</dfn>10000</span>减<span class=\"price\"><dfn>¥</dfn>200</span>、满<span class=\"price\"><dfn>¥</dfn>20000</span>减<span class=\"price\"><dfn>¥</dfn>400</span>、满<span class=\"price\"><dfn>¥</dfn>50000</span>减<span class=\"price\"><dfn>¥</dfn>1000</span>、满<span class=\"price\"><dfn>¥</dfn>100000</span>减<span class=\"price\"><dfn>¥</dfn>2000</span>，每订单每个优惠券限用一次。不适用于签证、欧铁、用车、顶级游、门票、景点+酒店套餐及不参与优惠券活动的特例产品。优惠券不可与其他优惠活动同时使用，请登陆后输入代码确认可否使用。（有效期至2018年02月28日）</p><p style=\" line-height:1.8;\">注：本产品特供网络及手机客户端用户专享。仅提供旅行套餐发票。</p>"},"BOOK_NOTICE":{"TransitPUPart1":"<h4>多票组合 出行保障</h4>携程保障服务保障您出行无忧。如因航空公司原因引起一程航班调整或取消，导致无法正常搭乘后续航班，携程将保障您到达目的地或对未使用机票全额退款。<a href='//pages.c-ctrip.com/flight/promise/web.html' target='_blank'>了解更多></a><br/>","TransitPUHasRiskPart2":"<h4>预订前请确认您已了解并同意以下信息：</h4>(1) 多票组合与航司联运中转航班不同，是多张机票自行拼接的行程，需在换乘地“TRANS_CITY_NAME”提取和托运行李，重新出入关，办理登机手续，行李额（重量/数量）可能有差异，请留出足够换乘时间。<br/>(2) 请注意查询中转地/目的地的签证政策，确保备齐所需签证后再预订。<br/>(3) 包括但不限于乘客证件不齐、乘客不合理安排换乘时间等原因导致无法搭乘任一航班，需乘客自行对每张票分开退票改期，损失将由乘机人自行承担。","TransitPUNoRiskPart2":"<h4>预订前请确认您已了解并同意以下信息：</h4>(1) 多票组合与航司联运中转航班不同，是多张机票自行拼接的行程，需在换乘地“TRANS_CITY_NAME”提取和托运行李，行李额（重量/数量）可能有差异，请留出足够换乘时间。<br />(2) 包括但不限于乘客证件不齐、乘客不合理安排换乘时间等原因导致无法搭乘任一航班，需乘客自行对每张票分开退票改期，损失将由乘机人自行承担。"}},"flightListVersion":"F"}
+</script>
+    <script>
+        GlobalSearchCriteria ={"adultCount":1,"childCount":0,"infantCount":0,"flightWay":"D","cabin":"Y_S","extensionAttributes":{"AggSearchABTest":"A"},"transactionID":"ja4b69f8d62894a879732625259509b84","flightSegments":[{"departureCityCode":"BJS","arrivalCityCode":"NYC","departureDate":"2019-01-19","departureCountryId":1,"departureCountryName":"中国","departureCityName":"北京","departureProvinceId":1,"departureCityId":1,"arrivalCountryId":66,"arrivalCountryName":"美国","arrivalCityName":"纽约","arrivalProvinceId":10204,"arrivalCityId":633,"departureCityTimeZone":480,"arrivalCityTimeZone":-300,"timeZone":480},{"departureCityCode":"NYC","arrivalCityCode":"BJS","departureDate":"2019-05-21","departureCountryId":66,"departureCountryName":"美国","departureCityName":"纽约","departureProvinceId":10204,"departureCityId":633,"arrivalCountryId":1,"arrivalCountryName":"中国","arrivalCityName":"北京","arrivalProvinceId":1,"arrivalCityId":1,"departureCityTimeZone":-300,"arrivalCityTimeZone":480,"timeZone":-300}],"directFlight":false};
+    </script>
+</head>
+
+<body class="gray_body version3">
+<input type="hidden" id="static.resource.url" value="//webresource.c-ctrip.com/ResFltIntlOnline/R22">
+<input type="hidden" id="static.resource.version" value="20181204">
+<link href="//webresource.c-ctrip.com/ResCRMOnline/R1/pageheader/css/PageHeader_v2.css?temp=-2,527,580,523,222,601,222" rel="stylesheet" /><div class="cui_hd_cont">
+<div id="cui_hd" class="cui_hd">
+<input type="hidden" id="_searchboxNo_" value="ws_www20140409"><input type="hidden" id="_newHeaderFlag_" value="true">
+<div class="ctriplogo">
+<a title="携程旅行网" href="http://www.ctrip.com">携程旅行网</a>
+</div>
+<div class="nav-bar">
+<ul class="language">
+<li>
+<a href="http://www.ctrip.com/" rel="nofollow" class="selected" id="cui_lang_cn" onmouseover="this.className= 'selected language_current';document.getElementById('cui_lang_list').parentNode.style.display='block';" onmouseout="this.className= 'selected';document.getElementById('cui_lang_list').parentNode.style.display='none';"><span><em class="ico-global"></em>Language<b class="arrow"></b></span></a>
+<div class="language_wrap drowndrop" style="display: none;" onmouseover="document.getElementById('cui_lang_cn').className= 'selected language_current';this.style.display='block';" onmouseout="document.getElementById('cui_lang_cn').className= 'selected';this.style.display='none';">
+<ul class="language_list" id="cui_lang_list">
+<li class="active">
+<a id="ctrip_cn" class="language_big5" href="//www.ctrip.com">简体中文</a>
+</li>
+<li>
+<a id="ctrip_eng" class="language_en" href="https://www.trip.com/?locale=en_US">English (United States)</a>
+</li>
+<li>
+<a id="ctrip_uk" class="language_gb" href="https://uk.trip.com/?locale=en_gb">English (United Kingdom)</a>
+</li>
+<li>
+<a id="ctrip_hk" class="language_hk" href="http://hk.trip.com/?locale=zh_hk">繁&#39636;中文 (香港)</a>
+</li>
+<li>
+<a id="ctrip_hk_en" class="language_hk" href="https://hk.trip.com/?locale=en_hk">English(Hong Kong)</a>
+</li>
+<li>
+<a id="ctrip_korea" class="language_korea" href="https://kr.trip.com/?locale=ko_KR">韩语版</a>
+</li>
+<li>
+<a id="ctrip_jap" class="language_jap" href="https://jp.trip.com/?locale=ja_JP">日语版</a>
+</li>
+<li>
+<a id="ctrip_sg" class="language_sg" href="https://sg.trip.com/?locale=en_SG">English (Singapore)</a>
+</li>
+<li>
+<a id="ctrip_au" class="language_au" href="https://au.trip.com/?locale=en_au">English (Australia)</a>
+</li>
+<li>
+<a id="ctrip_de" class="language_de" href="https://de.trip.com/?locale=de_DE">Deutsch</a>
+</li>
+<li>
+<a id="ctrip_fr" class="language_fr" href="https://fr.trip.com/?locale=fr_FR">Fran&ccedil;ais</a>
+</li>
+<li>
+<a id="ctrip_es" class="language_es" href="https://es.trip.com/?locale=es_ES">Espa&ntilde;ol</a>
+</li>
+<li>
+<a id="ctrip_it" class="language_it" href="https://it.trip.com/?locale=it_IT">Italiano</a>
+</li>
+<li class="last">
+<a id="ctrip_ru" class="language_ru" href="https://ru.trip.com/?locale=ru_RU">Русский</a>
+</li>
+<li>
+<a id="ctrip_th" class="language_th" href="https://th.trip.com/?locale=th_TH">泰国站</a>
+</li>
+<li>
+<a id="ctrip_id" class="language_id" href="https://id.trip.com/?locale=id_ID">Bahasa Indonesia</a>
+</li>
+<li>
+<a id="ctrip_my" class="language_my" href="https://my.trip.com/?locale=ms_MY">Bahasa Malaysia</a>
+</li>
+<li>
+<a id="ctrip_my_en" class="language_my" href="https://my.trip.com/?locale=en_my">English (Malaysia)</a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+<ul class="cui_service">
+<li>
+<a target="_blank" rel="nofollow" href="http://kefu.ctrip.com">客服中心</a>
+</li>
+</ul>
+<ul class="cui_service service_1180">
+<li id="cui_service_cn">
+<a href="#" class="service_tel" onmouseover="this.className= 'service_tel service_current';document.getElementById('cui_service_cn').children[1].style.display='block';" onmouseout="this.className= 'service_tel';document.getElementById('cui_service_cn').children[1].style.display='none';"><span title="免境内长话费">境内：<em class="service_telnum">400-830-6666</em><b class="arrow"></b></span></a>
+<div class="service_wrap drowndrop" onmouseover="document.getElementById('cui_service_cn').children[0].className= 'service_tel service_current';this.style.display='block';" onmouseout="document.getElementById('cui_service_cn').children[0].className= 'service_tel';this.style.display='none';">
+<ul class="service_list">
+<li>
+<dl>
+<dd>香港（中国）：<em>+852-3069-9966</em>
+</dd>
+<dd>境外：<em>+86-21-3406-4888</em>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+<ul class="cui_wireless" id="head_float_level">
+<li>
+<a href="http://app.ctrip.com" class="wireless wireless_link" target="_blank" rel="nofollow" id="linkid"><i class="cui_ico_app"></i></a>
+<div id="head_float_box_app" class="cui_wireless_box" style="display: none;">
+<i class="cui_ico_chatarrow" style="right:40px;"></i>
+<div class="cui_wireless_inbox">
+<dl class="cui_wireless_type">
+<dt>手机扫码快速下载</dt>
+<dd>
+<img src="//pic.c-ctrip.com/platform/online/home/er_ctrip_app.jpg" alt=""></dd>
+</dl>
+<a href="http://app.ctrip.com" class="cui_link_app">携程旅行手机版<i>&gt;</i></a>
+</div>
+</div>
+</li>
+<li>
+<a href="#" class="wireless wireless_nolink" id="nolinkid"><i class="cui_ico_wechat"></i></a>
+<div id="head_float_box_weixin" class="cui_wireless_box" style="display: none;">
+<i class="cui_ico_chatarrow"></i>
+<div class="cui_wireless_inbox">
+<dl class="cui_wireless_type">
+<dt>携程订阅号:helloctrip</dt>
+<dd>
+<img src="//pic.c-ctrip.com/platform/online/home/er_ctrip_wechat.jpg" alt=""></dd>
+</dl>扫一扫,领旅行福利</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div><div id="cui_nav">
+<div class="base_nav">
+<ul id="cui_nav_ul" class="cui_nav cui_content">
+<li id="cui_c_ph_hp">
+<a id="c_ph_hp" class="cui_nav_non" href="http://www.ctrip.com/">首页</a>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_hotel">
+<a id="nav_hotel" class="cui_nav_has" href="http://hotels.ctrip.com/">酒店<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_hotel" class="cui_sub_nav">
+<li id="ul_c_ph_hotel_h">
+<a id="c_ph_hotel_h" href="http://hotels.ctrip.com/">国内酒店</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hoteli_h">
+<a id="c_ph_hoteli_h" href="http://hotels.ctrip.com/international/">海外酒店</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_apartment_h">
+<a id="c_ph_apartment_h" href="http://hotels.ctrip.com/apartment">海外民宿+短租</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_tuan_h">
+<a id="c_ph_tuan_h" href="http://tuan.ctrip.com">团购</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hotsale_h">
+<a id="c_ph_hotsale_h" href="http://hotels.ctrip.com/hotsale">特价酒店</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_tujia_h">
+<a id="c_ph_tujia_h" rel="nofollow" href="http://hotels.ctrip.com/tujia/">途家公寓</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_taocanj_h">
+<a id="c_ph_taocanj_h" href="http://taocan.ctrip.com/sh/HotelDefault.aspx?fluxentrance=10405&amp;FromMenu=hotel">酒店+景点</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_inn_h">
+<a id="c_ph_inn_h" href="http://inn.ctrip.com">客栈民宿</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_meetingroom_h">
+<a id="c_ph_meetingroom_h" href="http://meeting.ctrip.com/?channel=0#ctm_ref=mtg_meetingroom_2dh">团队房&bull;长住房</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_meeting_h">
+<a id="c_ph_meeting_h" href="http://meeting.ctrip.com/?channel=1#ctm_ref=mtg_meeting_2dh">会议</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="http://my.ctrip.com/Home/Order/HotelOrderList.aspx"><i class="cui-icon-hotel"></i>酒店订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_vac">
+<a id="nav_vac" class="cui_nav_has" href="http://vacations.ctrip.com/">旅游<span class="label-cn" id="ACT_Label_4" style="display:none"><em>会员日</em><i class="triangle"></i></span><i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_vac" class="cui_sub_nav">
+<li id="ul_c_ph_vacations_v">
+<a id="c_ph_vacations_v" href="http://vacations.ctrip.com/">旅游首页<span class="label-cn" id="ACT_Label_5" style="display:none"><em>抢神券</em><i class="triangle"></i></span></a>
+</li>
+<li class="divider " style="display:none"></li>
+<li id="ul_c_ph_around_v">
+<a id="c_ph_around_v" href="http://weekend.ctrip.com/around/">周末游</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_vacationsd_v">
+<a id="c_ph_vacationsd_v" href="http://vacations.ctrip.com/grouptravel/">跟团游</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_taocan_v">
+<a id="c_ph_taocan_v" href="http://taocan.ctrip.com/">自由行</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_cruise_v">
+<a id="c_ph_cruise_v" href="http://cruise.ctrip.com/">邮轮</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_taocanj_v">
+<a id="c_ph_taocanj_v" href="http://taocan.ctrip.com/sh/">酒店+景点</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_huodong_v">
+<a id="c_ph_huodong_v" href="https://huodong.ctrip.com/">当地玩乐</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_zhutiyou_v">
+<a id="c_ph_zhutiyou_v" href="http://vacations.ctrip.com/themetravel/">主题游</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_baotuan_v">
+<a id="c_ph_baotuan_v" href="http://vacations.ctrip.com/dingzhi">定制旅行</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_youxue_v">
+<a id="c_ph_youxue_v" href="http://vacations.ctrip.com/youxue">游学</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_visa_v">
+<a id="c_ph_visa_v" href="http://vacations.ctrip.com/visa">签证</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_mice_v">
+<a id="c_ph_mice_v" href="http://mice.ctrip.com">企业会奖</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hh_v">
+<a id="c_ph_hh_v" target="_blank" rel="nofollow" href="http://www.hhtravel.com/#ctm_ref=hh_ct_thp_nav">高端游</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_golf_v">
+<a id="c_ph_golf_v" href="http://fun.iwanoutdoor.com/">爱玩户外</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_insurance_v">
+<a id="c_ph_insurance_v" href="http://vacations.ctrip.com/insurance">保险</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_deals_v">
+<a id="c_ph_deals_v" href="http://vacations.ctrip.com/deals">特卖汇</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="http://my.ctrip.com/Home/Order/PkgOrderList.aspx"><i class="cui-icon-vacations"></i>旅游订单 &gt;</a>
+</div>
+</li>
+<li class="divider divider_spec"></li>
+<li id="cui_nav_gentuan">
+<a id="nav_gentuan" class="cui_nav_non" DividerClass="divider_spec" href="http://vacations.ctrip.com/grouptravel">跟团游</a>
+</li>
+<li class="divider divider_spec"></li>
+<li id="cui_nav_ziyouxing">
+<a id="nav_ziyouxing" class="cui_nav_non" DividerClass="divider_spec" href="http://taocan.ctrip.com/">自由行</a>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_flight" class="cui_nav_current">
+<a id="nav_flight" class="cui_nav_has" href="https://flights.ctrip.com/">机票<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_flight" class="cui_sub_nav">
+<li id="ul_c_ph_flights_f">
+<a id="c_ph_flights_f" href="https://flights.ctrip.com">国内机票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_flightsi_f">
+<a id="c_ph_flightsi_f" class="cui_sub_current" href="https://flights.ctrip.com/international/">国际&bull;港澳台机票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_fuzzy_f">
+<a id="c_ph_fuzzy_f" href="https://flights.ctrip.com/fuzzy/#ctm_ref=ctr_nav_flt_fz_pgs">特价机票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_taocan_f">
+<a id="c_ph_taocan_f" href="http://taocan.ctrip.com">机+酒</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_flightstoolbox_f">
+<a id="c_ph_flightstoolbox_f" href="http://flights.ctrip.com/actualtime">航班动态</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_bookseat_f">
+<a id="c_ph_bookseat_f" rel="nofollow" href="https://flights.ctrip.com/domestic/checkinseat/index">值机选座</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_flightorderlist_f">
+<a id="c_ph_flightorderlist_f" rel="nofollow" href="https://my.ctrip.com/Home/Order/FlightOrderList.aspx">退票改签</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_airportguides_f">
+<a id="c_ph_airportguides_f" rel="nofollow" href="https://flights.ctrip.com/booking/airport-guides.html">机场攻略</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="http://my.ctrip.com/Home/Order/FlightOrderList.aspx"><i class="cui-icon-flight"></i>机票订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_trains">
+<a id="nav_trains" class="cui_nav_has" href="http://trains.ctrip.com">火车<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_trains" class="cui_sub_nav">
+<li id="ul_c_ph_train_t">
+<a id="c_ph_train_t" href="http://trains.ctrip.com">国内火车票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_traino_t">
+<a id="c_ph_traino_t" href="http://rails.ctrip.com">国际&bull;港台火车票</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="http://my.ctrip.com/Home/Order/RailwayOrderList.aspx"><i class="cui-icon-train"></i>火车票订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_destination">
+<a id="nav_destination" class="cui_nav_has" href="http://bus.ctrip.com/">汽车票<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_destination" class="cui_sub_nav">
+<li id="ul_c_ph_bus_t">
+<a id="c_ph_bus_t" href="http://bus.ctrip.com/">汽车票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_ship_t">
+<a id="c_ph_ship_t" href="http://bus.ctrip.com/ship/">船票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_yacht_t">
+<a id="c_ph_yacht_t" target="_blank" rel="nofollow" href="http://yacht.ctrip.com/">游艇帆船</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_daozy_t">
+<a id="c_ph_daozy_t" href="http://pages.c-ctrip.com/bus/xicui/201803/dzy/html/pc.html">到站游</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="http://my.ctrip.com/Home/Order/QicheOrderlist.aspx"><i class="cui-icon-bus"></i>汽车票订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_car">
+<a id="nav_car" class="cui_nav_has" href="http://car.ctrip.com/#ctm_ref=chp_var_txt">用车<span class="label-cn" id="ACT_Label_8" style="display:none"><em>年末盛惠</em><i class="triangle"></i></span><i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_car" class="cui_sub_nav">
+<li id="ul_c_ph_car_c">
+<a id="c_ph_car_c" href="http://car.ctrip.com/#ctm_ref=chp_var_txt">用车首页</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hwzj_c">
+<a id="c_ph_hwzj_c" href="http://car.ctrip.com/hwzijia#ctm_ref=chp_var_txt">境外租车</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hwdaijia_c">
+<a id="c_ph_hwdaijia_c" href="http://car.ctrip.com/hwdaijia#ctm_ref=chp_var_txt">境外接送机<span class="label-cn" id="ACT_Label_9" style="display:none"><em>热卖中</em><i class="triangle"></i></span></a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hwrizu_c">
+<a id="c_ph_hwrizu_c" href="http://car.ctrip.com/line/index">境外包车</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_zj_c">
+<a id="c_ph_zj_c" href="http://car.ctrip.com/zijia#ctm_ref=chp_var_txt">国内租车</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_daijia_c">
+<a id="c_ph_daijia_c" href="http://car.ctrip.com/daijia#ctm_ref=chp_var_txt">国内接送机/火车</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_rizu_c">
+<a id="c_ph_rizu_c" href="http://car.ctrip.com/idayweb">国内包车</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="http://my.ctrip.com/Home/Order/CarOrderList.aspx"><i class="cui-icon-car"></i>用车订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_ticket">
+<a id="nav_ticket" class="cui_nav_has" href="http://piao.ctrip.com/">门票<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_ticket" class="cui_sub_nav">
+<li id="ul_c_ph_piao_p">
+<a id="c_ph_piao_p" href="http://piao.ctrip.com/?clear=t#ctm_ref=tkt_home_tab_inland">境内门票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_piaooversea_p">
+<a id="c_ph_piaooversea_p" href="http://piao.ctrip.com/oversea#ctm_ref=tkt_home_tab_oversea">出境&bull;港澳台门票</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_huodong_p">
+<a id="c_ph_huodong_p" href="https://huodong.ctrip.com#ctm_ref=ctr_hp_ttd">当地玩乐</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_wifi_p">
+<a id="c_ph_wifi_p" href="https://huodong.ctrip.com/wifi#ctm_ref=ctr_hp_wifi">出境WiFi&bull;电话卡</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_around_p">
+<a id="c_ph_around_p" href="http://you.ctrip.com/around#ctm_ref=gs-990123-290801-0-02-M001|0|0">周末游</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_disney_p">
+<a id="c_ph_disney_p" href="http://pages.c-ctrip.com/ttd/manu/201712/changlong/online/index.html">长隆</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="http://my.ctrip.com/Home/Order/LocalUnionOrderList.aspx"><i class="cui-icon-ticket"></i>门票玩乐订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_c_ph_you">
+<a id="c_ph_you" class="cui_nav_non" href="http://you.ctrip.com/">攻略</a>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_g">
+<a id="nav_g" class="cui_nav_has" href="http://g.ctrip.com/">全球购<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_g" class="cui_sub_nav">
+<li id="ul_c_ph_mdg_g">
+<a id="c_ph_mdg_g" href="http://g.ctrip.com/">名店购</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_ts_g">
+<a id="c_ph_ts_g" href="http://tax.ctrip.com/?bid=2&amp;cid=1&amp;pid=1">退税</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_ylth_g">
+<a id="c_ph_ylth_g" href="http://g.ctrip.com/gsmarketingactive/unionpay?ctm_ref=M_gw_3home_paypal_cl">银联特惠</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_skjl_g">
+<a id="c_ph_skjl_g" href="http://card.ctrip.com/#ctm_ref=ctr_bid_0_cid_1_pid_1">万千赏</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_forex_g">
+<a id="c_ph_forex_g" href="http://forex.ctrip.com/?bid=62&amp;1=1">外币兑换</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="http://forex.ctrip.com/order/list/"><i class="cui-icon-foreign"></i>外币兑换订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_lpk">
+<a id="nav_lpk" class="cui_nav_has" href="http://lipin.ctrip.com">礼品卡<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_lpk" class="cui_sub_nav">
+<li id="ul_c_ph_lipin_l">
+<a id="c_ph_lipin_l" href="http://lipin.ctrip.com">礼品卡首页</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_xcb_l">
+<a id="c_ph_xcb_l" href="http://lipin.ctrip.com/xcb">礼品卡福袋</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_lipincorp_l">
+<a id="c_ph_lipincorp_l" href="http://jr.ctrip.com/cms/PC-1220">企业购卡</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_ckzm_l">
+<a id="c_ph_ckzm_l" href="http://jr.ctrip.com/deposit/deposit/index">存款证明</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_dhq_l">
+<a id="c_ph_dhq_l" href="http://lipin.ctrip.com/voucher">兑换券</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_forexlipin_l">
+<a id="c_ph_forexlipin_l" href="http://forex.ctrip.com/?bid=12&amp;1=1">外币兑换</a>
+</li>
+</ul>
+<a class="cui_ico_order" rel="nofollow" href="http://my.ctrip.com/Home/Order/TicketOrderList.aspx"><i class="cui-icon-card"></i>礼品卡订单 &gt;</a>
+</div>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_sl">
+<a id="nav_sl" class="cui_nav_has" href="http://ct.ctrip.com/#ctm_ref=xcct">商旅<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_sl" class="cui_sub_nav">
+<li id="ul_c_ph_slsy_s">
+<a id="c_ph_slsy_s" href="http://ct.ctrip.com/#ctm_ref=xcct">商旅首页</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_chl_s">
+<a id="c_ph_chl_s" href="http://ct.ctrip.com/crptravel/default/landing#ctm_ref=xcpt">企业差旅平台</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_hj_s">
+<a id="c_ph_hj_s" href="http://mice.ctrip.com">会议旅游</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="divider divider_spec"></li>
+<li id="cui_nav_cruise">
+<a id="nav_cruise" class="cui_nav_non" DividerClass="divider_spec" href="http://cruise.ctrip.com">邮轮</a>
+</li>
+<li class="divider divider_spec"></li>
+<li id="cui_nav_mudidi">
+<a id="nav_mudidi" class="cui_nav_non" DividerClass="divider_spec" href="http://dst.ctrip.com/">目的地</a>
+</li>
+<li class="divider "></li>
+<li id="cui_nav_more">
+<a id="nav_more" class="cui_nav_has" rel="nofollow" href="http://mall.ctrip.com">更多<i class="cui_ico_triangle"></i><span class="point"></span></a>
+<div class="cui_subnav_wrap">
+<ul id="ul_nav_more" class="cui_sub_nav">
+<li id="ul_c_ph_ypsc_m">
+<a id="c_ph_ypsc_m" href="http://mall.ctrip.com">优品商城</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_sjhy_m">
+<a id="c_ph_sjhy_m" href="http://pages.c-ctrip.com/commerce/promote/201709/other/cj/index2.html?pushcode=act_svip_pc34&amp;qrcode=act_svip_pc37">超级会员</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_tuangou_m">
+<a id="c_ph_tuangou_m" href="http://tuan.ctrip.com">团购</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_cards_m">
+<a id="c_ph_cards_m" rel="nofollow" href="http://cards.ctrip.com">合作卡</a>
+</li>
+<li class="divider "></li>
+<li id="ul_c_ph_xcyd_m">
+<a id="c_ph_xcyd_m" href="https://sport.ctrip.com/">携程运动</a>
+</li>
+</ul>
+</div>
+</li>
+<li id="loginDivLi" class="cui_nav_myctrip cui_content">
+<ul class="cui_myctrip_log" style="display:block;" id="ulCTFullMC">
+<li class="userLogin" id="div_User"></li>
+<li class="myctrip" style="margin-top:0;">
+<span id="div_MyCtrip"></span>
+<ul class="cui_account cui_account_login" id="loginDiv" style="display:none;">
+<li>
+<div id="div_Loginbtn"></div>
+</li>
+<li class="cui_account_info">
+<a rel="nofollow" href="http://my.ctrip.com/home/Order/AllOrder.aspx#ctm_ref=ssc_hp_myctrip_allorders_a">全部订单</a>
+</li>
+<li class="divider"></li>
+<li class="account_order">
+<ul>
+<li>
+<a rel="nofollow" href="http://my.ctrip.com/Home/Order/FlightOrderList.aspx#ctm_ref=ssc_hp_myctrip_flightorders_a">机票+相关订单</a>
+</li>
+<li>
+<a rel="nofollow" href="http://my.ctrip.com/Home/Order/HotelOrderList.aspx#ctm_ref=ssc_hp_myctrip_hotelorders_a">酒店订单</a>
+</li>
+<li>
+<a rel="nofollow" href="http://my.ctrip.com/Home/Order/PkgOrderList.aspx#ctm_ref=ssc_hp_myctrip_tourorders_a">旅游订单</a>
+</li>
+<li>
+<a rel="nofollow" href="http://my.ctrip.com/Home/Order/RailwayOrderList.aspx#ctm_ref=ssc_hp_myctrip_trainorders_a">火车票订单</a>
+</li>
+<li>
+<a rel="nofollow" class="gray" href="https://passport.ctrip.com/user/member/fastOrder#ctm_ref=ssc_hp_myctrip_phoneorders_a">手机号查订单</a>
+</li>
+</ul>
+</li>
+<li class="divider"></li>
+<li>
+<a rel="nofollow" href="https://secure.ctrip.com/webwallet/index#ctm_ref=ssc_hp_myctrip_wallet_a">携程钱包</a>
+</li>
+<li>
+<a rel="nofollow" href="http://my.ctrip.com/FavoriteOnline/hotel/hotellist.aspx#ctm_ref=ssc_hp_myctrip_collect_a">收藏</a>
+</li>
+<li>
+<a rel="nofollow" href="https://smarket.ctrip.com/Promocode/zh-cn/Promocode.aspx#ctm_ref=ssc_hp_myctrip_integral_a">票券与积分</a>
+</li>
+<li>
+<a rel="nofollow" href="http://my.ctrip.com/Home/Passenger/PassengerList.aspx#ctm_ref=ssc_hp_myctrip_info_a">常用信息</a>
+</li>
+</ul>
+</li>
+<li class="message" id="div_MyCTMessages"></li>
+</ul>
+<ul class="cui_myctrip_log" style="display:none;" id="ulCTMinMC">
+<li class="userLogin" id="div_User"></li>
+<li class="myctrip" style="margin-top:0;clear:left;">
+<span id="div_MyCtrip"></span>
+<ul class="cui_account cui_account_login" id="loginDiv" style="display:none;">
+<li>
+<div id="div_Loginbtn"></div>
+</li>
+<li class="cui_account_info">
+<a rel="nofollow" href="http://my.ctrip.com/home/Order/AllOrder.aspx#ctm_ref=ssc_hp_myctrip_allorders_a">全部订单</a>
+</li>
+<li>
+<a rel="nofollow" class="gray" href="https://passport.ctrip.com/user/member/fastOrder#ctm_ref=ssc_hp_myctrip_phoneorders_a">手机号查订单</a>
+</li>
+</ul>
+</li>
+<li class="message" id="div_MyCTMessages"></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="nav_bh" class="cui_nav_behind" style="display:none;height:0px;"></div>
+</div><div id="ActConfig_ID" style="display:none">[{"id":"4","onlinetime":"2018/12/01 00:00:11$2018/12/02 23:55:37"},{"id":"5","onlinetime":"2018/12/01 00:00:11$2018/12/05 23:55:58"},{"id":"9","onlinetime":"2018/12/01 00:00:11$2018/12/30 23:55:12"},{"id":"8","onlinetime":"2018/12/01 00:00:11$2018/12/10 23:55:29"},{"id":"10","onlinetime":"2018/12/11 00:00:23$2200/08/08 16:19:09"},{"id":"7","onlinetime":"2018/12/11 00:00:18$2018/12/11 23:55:16"},{"id":"6","onlinetime":"2018/12/06 00:00:20$2018/12/10 23:55:19"}]</div><input type="hidden" id="popfloating_isshow" value="0"><input type="hidden" id="siteDomainHeadFloat" value="ctrip"><input type="hidden" id="bsType" value="0"><input type="hidden" id="formatTel" value="[{'formatTelNum':'400-830-6666','prefix':'境内：','sortIndex':'1','standardTelNum':'4008306666','suffix':''},{'formatTelNum':'95010','prefix':'（或）','sortIndex':'2','standardTelNum':'SHMobile95010','suffix':''},{'formatTelNum':'+ 852-3069-9966','prefix':'香港（中国）：','sortIndex':'3','standardTelNum':'85230699966','suffix':''},{'formatTelNum':'+ 86-21-3406-4888','prefix':'境外：','sortIndex':'4','standardTelNum':'34064888','suffix':''}]">
+<script> ;window.replace=function(){return ''};window.replace=function(){return""}; !function(){window.replace=function(){return""};(function(){var h=document,c=function(a){return h.getElementById(a)},k=null,l=null,m=0,d=[c("cui_nav_hotel"),c("cui_nav_vac"),c("cui_nav_flight"),c("cui_nav_trains"),c("cui_nav_destination"),c("cui_nav_car"),c("cui_nav_ticket"),c("cui_nav_g"),c("cui_nav_lpk"),c("cui_nav_sl"),c("cui_nav_more")],g={onmouseenter:function(a,b){(h.all?a.onmouseenter=b:a.onmouseover=function(a){(null==a.relatedTarget?b():this!==a.relatedTarget&&20!=this.compareDocumentPosition(a.relatedTarget)&& b())})},onmouseout:function(a,b){(h.all?a.onmouseleave=b:a.onmouseout=function(a){(null==a.relatedTarget?b():this!==a.relatedTarget&&20!=this.compareDocumentPosition(a.relatedTarget)&&b())})},addEvent:function(a,b,f){(a.addEventListener?a.addEventListener(b,f,!1):(a.attachEvent?a.attachEvent("on"+b,f):a["on"+b]=f))}},e={setTime:function(){g.onmouseenter(c("cui_nav"),function(){setTimeout(function(){m=150},30)});g.onmouseout(c("cui_nav"),function(){m=0})},initEvent:function(){for(var a=0,b=d.length;b>a;a++)(function(){var b= a;g.onmouseenter(d[b],function(){e.interFn(d[b])});g.onmouseout(d[b],function(){e.outerFn(d[b])})})(a)},reset:function(){for(var a=0,b=d.length;b>a;a++)d[a].className=(-1<d[a].className.indexOf("cui_nav_current")?"cui_nav_current":"")},padReset:function(a){for(var b=0,f=d.length;f>b;b++)(-1<d[b].className.indexOf("cui_nav_current")?d[b].className="cui_nav_current":b!==a&&(d[b].className=""))},interFn:function(a){for(var b=document.getElementById("cui_nav").getElementsByTagName("li"),f="",d=0;d<b.length;d++)b[d].className.match((/cui_nav_current/))&& (f=b[d]);null!=l&&(clearTimeout(l),l=null);k=setTimeout(function(){e.reset();(-1<a.className.indexOf("cui_nav_current")?f.className="cui_nav_current":(a.className="cui_nav_o",f.className="cui_nav_current cui_nav_unhover"))},m)},outerFn:function(a){for(var b=document.getElementById("cui_nav").getElementsByTagName("li"),d="",c=0;c<b.length;c++)b[c].className.match((/cui_nav_current/))&&(d=b[c]);null!=k&&(clearTimeout(k),k=null);l=setTimeout(function(){e.reset();(-1<a.className.indexOf("cui_nav_current")? d.className="cui_nav_current":(a.className="",d.className="cui_nav_current"))},250)},initMobile:function(){for(var a=0,b=d.length;b>a;a++)(function(){var b=a,c=d[b].getElementsByTagName("A")[0];c.href="###";c.onmousedown=function(){e.padReset(b);-1===d[b].className.indexOf("cui_nav_current")&&((-1<d[b].className.indexOf("cui_nav_o")?(d[b].className="",document.getElementsByClassName("cui_nav_current")[0].className="cui_nav_current",c.style.visibility="hidden",setTimeout(function(){c.style.visibility= "visible"},10)):(d[b].className="cui_nav_o",document.getElementsByClassName("cui_nav_current")[0].className="cui_nav_current",document.getElementsByClassName("cui_nav_current")[0].className+=" cui_nav_unhover")))}})(a)},contains:function(a){for(var b=0,c=d.length;c>b;b++)if(0<d[b].compareDocumentPosition(a)-19)return!0;return!1}};c("headStyleId")&&c("headStyleId").parentNode.removeChild(c("headStyleId"));((/ip(hone|od)|ipad/i).test(navigator.userAgent)?(e.initMobile(),g.addEvent(h.body,"click",function(a){e.contains(a.target|| a.srcElement)||e.reset()})):(e.setTime(),e.initEvent()))})()}(); </script>
+  <input type="hidden" id="page_id" value="10320672928"/>
+
+
+<input type="hidden" id="ab_testing_tracker" value="M:24,180911_fli_txjgo:C;M:34,180124_fli_hslgt:A;M:11,180413_fli_cakb:B;M:97,171206_fli_lbygb:F;"/>
+
+<div id="app" class="container">
+
+    <div id="loading"
+         style="width: 100%; padding: 60px 0 100px;padding: 20px 0;text-align: center;color: #849bab;font-size: 12px;">
+        <img src="//pic.c-ctrip.com/flight/loading/yoyo_go.gif" style="width: 200px;border:0;margin:0 auto;" alt="">
+        <p style="margin:0; color:#216E98; font-size: 14px;text-align: center;display: block;-webkit-margin-before: 1em; -webkit-margin-after: 1em; -webkit-margin-start: 0px; -webkit-margin-end: 0px;"> 玩儿命加载中，请耐心等待......</p>
+    </div>
+
+</div>
+
+<input type="hidden" id="sso_loginprocxyPath" name="sso_loginprocxyPath" value="https://flights.ctrip.com/international/search/loginprocxy.html" />
+
+<script type="text/javascript">
+    ;(function(){if(!(window.$_bf&&window.$_bf.loaded||window.$LAB||window.CtripJsLoader)){var a=new Date,b=!1,c="?v="+a.getFullYear()+a.getMonth()+"_"+a.getDate(),a=document.createElement("script");a.type="text/javascript";a.charset="utf-8";a.async=!0;try{b="https:"==location.protocol}catch(d){}a.src=((b?"https:":"http:"))+"//webresource.c-ctrip.com/code/ubt/_bfa.min.js"+c;b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}})();
+</script>
+
+<script type="text/javascript">
+
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf("MSIE ") > 0;
+    var isValidBrowser = !msie;
+    var root = document.getElementById('static.resource.url').value;
+    var version = document.getElementById('static.resource.version').value;
+
+    var addScript = function(url){
+        var script = document.createElement("script");
+        script.src = root + "/" + url + "?v=" + version;
+        script.type = "text/javascript";
+
+        document.body.appendChild(script);
+    }
+
+    var addCss = function(url){
+        var link = document.createElement("link");
+        link.type = "text/css";
+        link.charset = "UTF-8";
+        link.rel = "stylesheet";
+        link.href = root + "/" + url + "?v=" + version;
+
+        document.body.appendChild(link);
+    }
+
+    if (msie){
+        addScript('assets/detect.js')
+        addCss('assets/detect.css')
+
+        isValidBrowser = !(document.all && !document.addEventListener)
+    }
+	
+    if(isValidBrowser || msie){
+	addScript('assets/shim.js')
+    }	
+
+    if(isValidBrowser){
+        addCss('assets/list.css')
+        addScript('assets/lib.js')
+        addScript('assets/list.js')
+    }
+
+
+</script>
+<div id="base_ft">
+<p>
+<a href="http://pages.ctrip.com/public/sitemap/sitemap.htm" target="_blank" title="网站导航">网站导航</a>&nbsp;|&nbsp;<a href="http://hotels.ctrip.com/jiudian/" target="_blank" title="宾馆索引">宾馆索引</a>&nbsp;|&nbsp;<a href="http://flights.ctrip.com/booking/hot-city-flights-sitemap.html " target="_blank" title="机票索引">机票索引</a>&nbsp;|&nbsp;<a href="http://pages.ctrip.com/public/sitemap/dj.html" title="旅游索引">旅游索引</a>&nbsp;|&nbsp;<a href="http://ct.ctrip.com/crptravel/sitemap.html" title="商旅索引">商旅索引</a>&nbsp;|&nbsp;<a title="攻略索引" href="http://you.ctrip.com/sitemap/">攻略索引</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/ctripab/abctrip.htm" target="_blank" title="关于携程">关于携程</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/commerce/promote/201201/other/qygm/index.html" title="企业公民">企业公民</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://job.ctrip.com/" title="诚聘英才">诚聘英才</a>&nbsp;|&nbsp;<a rel="nofollow" title="智慧旅游" href="http://you.ctrip.com/Intelligence.html">智慧旅游</a>&nbsp; |&nbsp;<a rel="nofollow" target="_blank" href="http://u.ctrip.com/" title="分销联盟">分销联盟</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/dlhz.htm" title="代理合作">代理合作</a>&nbsp;|&nbsp;<a target="_blank" href="http://ct.ctrip.com" title="企业商旅">企业商旅</a>&nbsp;|&nbsp;<a target="_blank" href="http://ct.ctrip.com/crptravel/default/landing" title="中小企业差旅">中小企业差旅</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/ctripad/adyw.htm" title="广告业务">广告业务</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/contact.htm" title="联系我们">联系我们</a>
+</p>
+<p>
+<a rel="nofollow" href="http://pages.c-ctrip.com/cooperation/web/cooperation.html#ctm_ref=ctr_hp_btm_coop" target="_blank">加盟合作</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://join.easytrip.com/jiameng/#ctm_ref=ctr_def_btm_hsu_n_1" target="_blank" title="酒店加盟">酒店加盟</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://dst.ctrip.com/">目的地及景区合作</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/serve%20guideline.htm" target="_blank" title="用户协议">用户协议</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/serve%20guideline.htm" target="_blank" title="隐私政策">隐私政策</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://pages.ctrip.com/public/diploma/company.htm">营业执照</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://m.ctrip.com/webapp/vacations/tour/supplier" title="旅游度假资质">旅游度假资质</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="https://insurance.ctrip.com/portal/index.aspx">保险代理</a>&nbsp;|&nbsp;<a target="_blank" href="http://pages.ctrip.com/public/link/ctrip_link.html">友情链接</a>&nbsp;|&nbsp;<a rel="nofollow" href="http://pages.ctrip.com/public/copyright.htm" id="copyright">Copyright&copy;</a>,&nbsp;<a href="http://www.ctrip.com/">ctrip.com</a>. All rights reserved.&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://www.miibeian.gov.cn/">ICP证：沪B2-20050130</a>
+</p>
+<p class="gns">
+<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010502002731"><i class="icon-gns"></i>沪公网备31010502002731号</a>
+</p>
+<div class="honour_wrap">
+<a href="http://www.ca-sme.com/index.credit?action=certDetail&amp;id=40288084605466f1016057ea4cb20021" class="honour1" target="_blank" rel="nofollow">信用评级</a><a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20110428175405415" title="工商亮照标识" class="honour2" target="_blank" rel="nofollow">上海工商</a><a href="http://credit.szfw.org/CX20111018000615000623.html" title="诚信认证示范企业" class="honour3" target="_blank" rel="nofollow">诚信网站</a><a href="http://www.zx110.org/" class="honour4" target="_blank" rel="nofollow" title="征信网">网络社会征信网</a><a href="http://www.shjbzx.cn/" class="honour5" target="_blank" rel="nofollow" title="上海市互联网违法与违规信息举报中心">信息举报中心</a><a href="https://ss.knet.cn/verifyseal.dll?sn=e12061531010025926306977" class="honour6" target="_blank" rel="nofollow" title="可信网站">可信网站</a><a href="http://www.12377.cn/" class="honour8" title="违法和不良信息举报中心" target="_blank" rel="nofollow">违法和不良信息举报中心</a>
+</div>
+</div><config id="timespan" value="20160329"></config><!--InstanceEnd name="position"-->
+<script type="text/javascript">var globalConfig={H1:'https',AjaxUrl:'accounts.ctrip.com',H3:'my.ctrip.com',PassportUrl:'passport.ctrip.com',Lang:'gb2312'};</script><script type="text/javascript" src="//webresource.c-ctrip.com/ResCRMOnline/R1/pageheader/js/ActivityController.js?temp=-2,075,978,537" charset="utf-8"></script>
+<script type="text/javascript" src="https://webresource.c-ctrip.com/ResCRMOnline/R6/member/common/js/mask_young.js?20171130"></script>
+
+</body>
+</html>
