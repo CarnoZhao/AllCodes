@@ -1,7 +1,11 @@
 travel <- function (r, zipcode) {
-	ad = lapply(strsplit(ad, ','), function(x){strsplit(x, split = ' ')})
-	zipcode = strsplit(zipcode, ' ')
-	ad = ad[which(zipcode[1] %in% ad && zipcode[2] %in% ad)]
+	r = gsub('\n', '', r)
+	r = lapply(strsplit(r, ',')[[1]], function(x){strsplit(x, split = ' ')[[1]]})
+	zipcode = strsplit(zipcode, ' ')[[1]]
+	fits = r[which(sapply(r, function(x){sum(zipcode %in% x) >= 2}))]
+	housenums = sapply(fits, function(x){x[1]})
+	places = lapply(fits, function(x){paste(x[2:(length(x) - 2)], collapse = ' ')})
+	return(paste(paste(zipcode, collapse = ' '), ':', paste(places, collapse = ','), '/', paste(housenums, collapse = ','), sep = ''))
 }
 
 ad <- "123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432,
