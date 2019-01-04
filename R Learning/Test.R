@@ -1,2 +1,1 @@
-string = 'What is this fucking thing'
-string = strsplit(string, ' ')
+FALSE < 0
