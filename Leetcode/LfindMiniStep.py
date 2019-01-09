@@ -12,12 +12,20 @@ def clean(board):
 		pre = i
 	return board
 
+def allclean(board):
+	nex = None
+	while nex != board:
+		nex = clean(board)
+	return nex
+
 class Solution:
 	def findMinStep(self, board, hand):
-		return 1
+		for ball in hand:
+			for i in range(len(board)):
+				newboard = board.insert(i, hand)
+				board
 
 board, hand = "RBYYBBRRB", "YRBGB" 
 s = Solution()
 result = s.findMinStep(board, hand)
 print(result)
-print(clean(clean('aabbbbasd')))

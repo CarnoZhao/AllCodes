@@ -2,6 +2,7 @@ from itertools import combinations
 from math import ceil
 from collections import defaultdict
 
+
 def multi2(N, m):
     N2 = N
     a = list(range(m, N + m))
