@@ -1,3 +1,2 @@
-tup = (1, 2)
-tup[1] = 2
-print(tup)
+ls = [-1, -2, -3]
+print(sorted(ls))
