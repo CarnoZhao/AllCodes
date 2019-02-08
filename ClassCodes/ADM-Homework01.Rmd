@@ -87,9 +87,9 @@ $$\vec{v}_{H,new} = \vec{v}_H + \alpha L(\hat{y}_i,y_i) \cdot \vec{x}_i$$
 
 Basically, it is because the data points are linearly non-separable. Under the condition that learning rate $\alpha$ is constant, the result is not convergent.
 
-The codes of perceptron algorithm with $\alpha = 1$ is as follow, and the boundary lines are shown as black lines after refreshing $\vec{v}_H$ for $100$ times,
+The result of perceptron algorithm with $\alpha = 1$ is as follow, and the boundary lines are shown as black lines after refreshing $\vec{v}_H$ for $100$ times,
 
-```{r, out.width = '20em', fig.align = 'center'}
+```{r, out.width = '20em', fig.align = 'center', echo = FALSE}
 library(MASS)
 library(ggplot2)
 data = mvrnorm(20, c(0, 0), matrix(c(2, 0, 0, 2), 2, 2))
@@ -124,7 +124,7 @@ plot(graph)
 ## 1.
 
 The $f(x)$ is plotted as follows,
-```{r}
+```{r, out.width = '30em', fig.align = 'center'}
 f = function(x){-dnorm(x, 0, 1) + 0.5 * dnorm(x, 1, 0.5) - 0.4 * dnorm(x, 2, 0.4)}
 x = seq(-2, 4, length.out = 500)
 graph = spline(x, f(x), n = 1000)
@@ -141,18 +141,70 @@ print(f.prime(-2))
 ## 3.
 
 ```{r}
-gred.des = function(x1, epsilon = 0.05){
+gred.des = function(x1, epsilon = 0.001, which.n = '1/sqrt(n)'){
 	n = 1
 	x.data = c(x1)
-	f.data = c(f(x1))
 	while(n == 1 || abs(x1 - pre) > epsilon){
 		pre = x1
-		x1 = x1 - f.prime(x1) / n
+		x1 = ifelse(which.n == '1/sqrt(n)', 
+			x1 - f.prime(x1) / sqrt(n), 
+			x1 - f.prime(x1) / n)
 		x.data = c(x.data, x1)
-		f.data = c(f.data, f(x1))
 		n = n + 1
 	}
-	return(list(n, x.data, x1, f(x1), f.data))
+	return(list(n, x.data, x1, f(x1)))
 }
-print(gred.des(-2))
+```
+
+After testing the function several times, I found that the parameters $\epsilon = 0.05$ and $\alpha_n = \frac{1}{n}$ are not proper to find the minimum of $f(x)$. First, the $\epsilon$ is too large both for $x$ value and $f(x)$ value based on their scales, which makes the function repeat less times, then stop at a wrong point. Second, the step size $\alpha_n$ decreases too fast, making $|x_{n + 1} - x_n|$ reach $\epsilon$ quickly.
+
+When setting $\epsilon = 0.001$ and $\alpha_n = \frac{1}{\sqrt{n}}$:
+```{r}
+result = gred.des(-2, epsilon = 0.001, which.n = '1/sqrt(n)')
+print(result[1][[1]]) # Iteration times
+print(result[2][[1]]) # All x_i
+print(result[3][[1]]) # Final x_n
+print(result[4][[1]]) # Minimum of f(x)
+```
+
+## 4.
+
+$x_1,\,...,x_{10}$ are plotted as follows,
+
+
+```{r, out.width = '30em', fig.align = 'center', echo = FALSE}
+x = seq(-2, 4, length.out = 500)
+graph = spline(x, f(x), n = 1000)
+plot(graph, type = 'l', xlab = 'x', ylab = 'f(x)')
+x.1_10 = result[2][[1]][1:10]
+points(x.1_10, f(x.1_10))
+```
+
+## 5.
+
+The hist graph is as follows,
+
+```{r, out.width = '30em', fig.align = 'center', echo = FALSE}
+xs = runif(100, -2, 4)
+gred.des2 = function(x1, epsilon = 0.001, which.n = '1/sqrt(n)'){
+	n = 1
+	x.data = c(x1)
+	while(n == 1 || abs(x1 - pre) > epsilon){
+		pre = x1
+		x1 = ifelse(which.n == '1/sqrt(n)', 
+			x1 - f.prime(x1) / sqrt(n), 
+			x1 - f.prime(x1) / n)
+		x.data = c(x.data, x1)
+		n = n + 1
+	}
+	return(f(x1))
+}
+minis = sapply(xs, gred.des2)
+hist(minis)
+```
+
+The minimum value of all 100 returns is as follows, which can be seen as the global minimum of $f(x)$.
+
+```{r, echo = FALSE}
+print(min(minis))
 ```

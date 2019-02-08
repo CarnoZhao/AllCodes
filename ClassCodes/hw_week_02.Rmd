@@ -1,6 +1,6 @@
 ---
 title: "| EEEB UN3005/GR5005\n| Homework - Week 02 - Due 12 Feb 2019"
-author: "USE YOUR NAME HERE"
+author: "Xun Zhao, xz2827"
 output: pdf_document
 fontsize: 12pt
 ---
@@ -21,8 +21,12 @@ library(dplyr)
 On the class CourseWorks and GitHub site you will find a dataset called `orangutans.csv`. This file contains hypothetical data on weight, sex, and observed tool use for orangutans from Sumatra and Borneo. Import this data into R, assigning the data to an object called `orangutans`. Use a summary function of your choice to get an idea of the data structure you're working with. Which variable(s) in the data represent numeric data?
 
 ```{r}
-
+orangutans = read.csv('orangutans.csv')
+summary(orangutans)
+structure(orangutans)
 ```
+
+**Answer:** Based on the summaries given above, we can know that the variable `weight_kg` is numeric.
 
 
 ## Problem 2 (2 points)
@@ -30,7 +34,8 @@ On the class CourseWorks and GitHub site you will find a dataset called `orangut
 Using `dplyr`, return the row of data for individual J. Perform the same operation using bracket subsetting (i.e., the base R solution).
 
 ```{r}
-
+filter(orangutans, individual == 'J') # 'dplyr' operation
+orangutans[orangutans$individual == 'J',] # base R operation
 ```
 
 
@@ -39,7 +44,7 @@ Using `dplyr`, return the row of data for individual J. Perform the same operati
 Using `dplyr`, return all rows of data that correspond to orangutans sampled from Sumatra that are greater than 40 kg in weight. 
 
 ```{r}
-
+filter(orangutans, location == 'Sumatra' & weight_kg > 40)
 ```
 
 
@@ -48,7 +53,7 @@ Using `dplyr`, return all rows of data that correspond to orangutans sampled fro
 Using `dplyr`, sort the `orangutans` data frame according to weight, from high to low, and return only the `individual` and `weight_kg` variables.
 
 ```{r}
-
+select(arrange(orangutans, desc(weight_kg)), individual, weight_kg)
 ```
 
 
@@ -57,5 +62,5 @@ Using `dplyr`, sort the `orangutans` data frame according to weight, from high t
 Using `dplyr`, calculate the mean weight for orangutans of each sex in each in location. In other words, you should be returning one mean weight value for each of the following groups: females from Borneo, females from Sumatra, males from Borneo, and males from Sumatra.
 
 ```{r}
-
+summarize(group_by(orangutans, sex, location), mean(weight_kg))
 ```

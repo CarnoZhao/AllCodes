@@ -1,1 +1,1 @@
-FALSE < 0
+print(a)
