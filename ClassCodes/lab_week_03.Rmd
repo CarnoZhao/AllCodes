@@ -1,6 +1,6 @@
 ---
 title: "| EEEB UN3005/GR5005\n| Lab - Week 03 - 11 and 13 February 2019"
-author: "USE YOUR NAME HERE"
+author: "Xun Zhao, xz2827"
 output: pdf_document
 fontsize: 12pt
 ---
@@ -22,7 +22,9 @@ library(ggplot2)
 In class you've already seen the `ebay_snake_captures` dataset which shows snake capture results for approximately a year of sampling at one wetland in South Carolina, [Ellenton Bay](http://archive-srel.uga.edu/set-asides/area1.html). You can find this data as a CSV file (`ebay_snake_captures.csv`) on both the class CourseWorks and GitHub site. Download this data, and import it into R, assigning it to an object called `e`. Rename the six columns of this data as follows: "date", "time", "trap_type", "species", "count", "comments". Use `head()` to confirm your change of column names.
 
 ```{r}
-
+e = read.csv('ebay_snake_captures.csv')
+colnames(e) = c('date', 'time', 'trap_type', 'species', 'count', 'comments')
+head(e)
 ```
 
 
@@ -33,32 +35,40 @@ Dates can be very tricky to work with in R. Think about the general issues we mi
 Use the function `str()` to examine the structure of the `date` column in the `e` data. How is R currently representing this data?
 
 ```{r}
-
+str(e$date)
 ```
+**Answer:** The R represents these dates as factors. And for every date, it represents a different class (or factor label).
 
 Create a modified date column in `e` called `date_mod` using the following code: `as.Date(as.character(e$date), format = "%d-%b-%y")`. Can you figure out what the `format` argument is doing here? What is the structure of the new `date_mod` column? 
 
 ```{r}
-
+e$date_mod = as.Date(as.character(e$date), format = "%Y-%m-%d")
+str(e$date_mod)
 ```
+**Answer:** The format is used to tell the function what the date strings looks like, namely, "Day" - "Three Letters Month" - "Two Digit Year".  
 
 
 ## Exercise 3: Creating Monthly Summary Capture Counts
 
 Given that the `e` data contains information on snake captures throughout the year, one might naturally be interested in how snake captures vary over time. One sensible way to do this would be to summarize how many of each snake species were captured in a given month. However, right now, our `date_mod` variable represents an even finer scale of date data (i.e., specific days rather than just months).
 
-To get data appropriate for downstream use, first, create a new variable in your `e` data frame called `month_of_capture` that indicates the month associated with a given `date_mod` value using the following code: `(format(e$date_mod, "%m"))`. Note, if you plan to work extensively with dates in R, the `lubridate` package has a number of convenient functions for this purpose. The `lubridate` function `month()` would allow us to do this same operation, for example.
+To get data appropriate for downstream use, first, create a new variable in your `e` data frame called `month_of_capture` that indicates the month associated with a given `date_mod` value using the following code: `as.numeric(format(e$date_mod, "%m"))`. Note, if you plan to work extensively with dates in R, the `lubridate` package has a number of convenient functions for this purpose. The `lubridate` function `month()` would allow us to do this same operation, for example.
 
 Next, create a data frame called `e2` that represents each unique month-snake species combination found within `e` and the associated total capture count (call this variable `monthly_capture_count`). 
 
 ```{r}
-
+e$month_of_capture = as.numeric(format(e$date_mod, '%m'))
+e2 = summarize(group_by(e, month_of_capture, species), monthly_capture_count = n())
+e2
 ```
 
 Should `e2` have more or fewer rows of data than `e`? Can you show this is the case? Use some summary functions to investigate `e2` and ensure you have the appropriate dataset for further analyses.
 
-```{r}
+**Answer:** e2 should have fewer rows. The result is shown below.
 
+```{r}
+print(ifelse(nrow(e2) > nrow(e), 'e2 has more rows than e', 'e2 has less rows than e'))
+str(e2)
 ```
 
 
@@ -67,17 +77,23 @@ Should `e2` have more or fewer rows of data than `e`? Can you show this is the c
 One way you might want to visualize snake captures over time in the `e2` data is with a bar chart. Generate a bar chart using `ggplot()`. The month of capture should appear on the x-axis and capture counts on the y-axis.
 
 ```{r}
-
+ggplot(e2, aes(x = month_of_capture, y = monthly_capture_count)) + geom_col()
 ```
 
 What is the maximum bar height you see displayed? How does this compare with the maximum value of `monthly_capture_count` in the `e2` data? Why?
+
+```{r}
+print(list('max of e2:', max(e2$monthly_capture_count)))
+```
+**Answer:** The maximum height is slightly larger than 125, where the max of e2 is 100. It is because the maximum of e2 is specified with month and species, while the every bar in the plot is the sum of all species in a month.
 
 Now, create a histogram of your `monthly_capture_count` variable using `ggplot()` and `geom_histogram()`. Note that `geom_histogram()` does not accept a y-axis variable. You only need to specify the x-axis variable. Within `geom_histogram()`, set the `breaks` argument equal to `seq(from = 0, to = 120, by = 5)` just to create a nicer looking plot. 
 
 What is this histogram showing you? What does the y-axis represent? Are there any noticeable outliers in the data?
 
 ```{r}
-
+ggplot(e2, aes(x = monthly_capture_count)) + 
+	geom_histogram(breaks = seq(from = 0, to = 120, by = 5))
 ```
 
 
@@ -86,31 +102,46 @@ What is this histogram showing you? What does the y-axis represent? Are there an
 Now let's examine the `e2` data with scatter plots. Using `ggplot()`, generate a scatter plot of `monthly_capture_count` against `month_of_capture`. Additionally, build the plot such that the color of the data points corresponds to `species`.
 
 ```{r}
-
+ggplot(e2, aes(x = month_of_capture, y = monthly_capture_count, 
+	color = species)) + 
+	geom_point()
 ```
 
 Notice how the x-axis is a little ugly? Let's work step-by-step to make this look better. First, generate a vector named `my.breaks` that contains the numbers 1, 4, 7, and 10. Next, examine the `month.abb` vector that is built into R. Can you generate a vector called `my.labels` that contains the first, fourth, seventh, and tenth elements of `month.abb`?
 
 ```{r}
-
+my.breaks = c(1, 4, 7, 10)
+my.labels = month.abb[my.breaks]
+print(data.frame(my.breaks, my.labels))
 ```
 
 Now that we have these vectors, let's use them to modify the look of our plot. We can specify where on our plot the x-axis labels should appear and what they should be labelled using the layer `scale_x_continuous()`. The relevant arguments are `breaks` (controlling where the x-axis labels land) and `labels` (controlling what the labels read). Regenerate your previous plot but with `scale_x_continuous()` added, with `breaks` equal to `my.breaks` and `labels` equal to `my.labels`.
 
 ```{r}
-
+ggplot(e2, aes(x = month_of_capture, y = monthly_capture_count, 
+	color = species)) + 
+	geom_point() + 
+	scale_x_continuous(breaks = my.breaks, labels = my.labels)
 ```
 
 Instead of distinguishing species based on color, create a facetted plot for each species in the dataset.
 
 ```{r}
-
+ggplot(e2, aes(x = month_of_capture, y = monthly_capture_count)) + 
+	geom_point() + 
+	scale_x_continuous(breaks = my.breaks, labels = my.labels) +
+	facet_wrap(~species)
 ```
 
 Look at the y-axes of the various plots you've produced. By default, `ggplot()` will show all facets with the same y-axis range. However, you can see that one species in the dataset, *Seminatrix pygaea* (check 'em out [here](https://srelherp.uga.edu/snakes/sempyg.htm)) has by far the highest monthly capture count, which means all other species' data is relatively difficult to inspect by comparison. Modify your previous plot to exclude *Seminatrix pygaea* so that any variation in other species' data will be more apparent.
 
 ```{r}
-
+e2 %>%
+filter(species != 'Seminatrix pygaea') %>%
+ggplot(aes(x = month_of_capture, y = monthly_capture_count)) + 
+	geom_point() + 
+	scale_x_continuous(breaks = my.breaks, labels = my.labels) +
+	facet_wrap(~species)
 ```
 
 

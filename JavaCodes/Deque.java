@@ -1,65 +1,84 @@
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class Deque<Item> implements Iterable<Item>{
-	public class Node{
+	private int size;
+	private Node first = new Node(null);
+	private Node last = new Node(null);
+	private class Node{
 		Item item;
-		Node prev;
 		Node next;
+		Node prev;
+		Node(Item val){
+			this.item = val;
+		}
 	}
-	private Node start;
-	private Node end;
-	private Node current = start;
-	private int lenth;
 	public Deque(){
-		Node start = new Node();
-		start.item = null;
-		Node end = start;
-		int lenth = 0;
-	}                           // construct an empty deque
+		first.prev = last;
+		last.next = first;
+		int size = 0;
+	}
 	public boolean isEmpty(){
-		return start.item == null && end.item == null;
-	}                 // is the deque empty?
+		return size == 0;
+	}
 	public int size(){
-		return lenth;
-	}                        // return the number of items on the deque
+		return size;
+	}
 	public void addFirst(Item item){
-		Node nex = new Node();
-		nex.item = item;
-		start.next = nex;
-		nex.prev = start;
-		start = nex;
-		lenth += 1;
-	}          // add the item to the front
+		if(item == null) throw new java.lang.IllegalArgumentException();
+		Node newNode = new Node(item);
+		Node oldfirst = first.prev;
+		newNode.prev = oldfirst;
+		oldfirst.next = newNode;
+		first.prev = newNode;
+		newNode.next = first;
+		size ++;
+	}
 	public void addLast(Item item){
-		Node nex = new Node();
-		nex.item = item;
-		nex.next = end;
-		end.prev = nex;
-		end = nex;
-		lenth += 1;
-	}           // add the item to the end
+		if(item == null) throw new java.lang.IllegalArgumentException();
+		Node newNode = new Node(item);
+		Node oldlast = last.next;
+		newNode.next = oldlast;
+		oldlast.prev = newNode;
+		last.next = newNode;
+		newNode.prev = last;
+		size ++;
+	}
 	public Item removeFirst(){
-		Item ret;
-		ret = start.item;
-		start.prev.next = null;
-		lenth -= 1;
+		if(size == 0) throw new java.util.NoSuchElementException();
+		Item ret = first.prev.item;
+		first.prev = first.prev.prev;
+		first.prev.next = first;
+		size --;
 		return ret;
-	}                // remove and return the item from the front
+	}
 	public Item removeLast(){
-		Item ret;
-		ret = end.item;
-		end.next.prev = null;
-		lenth -= 1;
+		if(size == 0) throw new java.util.NoSuchElementException();
+		Item ret = last.next.item;
+		last.next = last.next.next;
+		last.next.prev = last;
+		size --;
 		return ret;
-	}                 // remove and return the item from the end
+	}
 	public Iterator<Item> iterator(){
+		return new DequeIterator();
+	}
+	private class DequeIterator implements Iterator<Item>{
+		private Node current = first.prev;
+		public boolean hasNext(){
+			return current.item != null;
+		}
+		public void remove(){
+			throw new java.lang.UnsupportedOperationException();
+		}
 		public Item next(){
+			if(!hasNext()) throw new java.util.NoSuchElementException();
 			Item item = current.item;
 			current = current.prev;
 			return item;
 		}
-	}         // return an iterator over items in order from front to end
+	}
 	public static void main(String[] args){
 		;
-	}   // unit testing (optional)
+	}
 }
