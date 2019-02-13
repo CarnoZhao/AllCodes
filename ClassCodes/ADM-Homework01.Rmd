@@ -141,28 +141,23 @@ print(f.prime(-2))
 ## 3.
 
 ```{r}
-gred.des = function(x1, epsilon = 0.001, which.n = '1/sqrt(n)'){
+gred.des = function(x1, epsilon = 0.05){
 	n = 1
 	x.data = c(x1)
-	while(n == 1 || abs(x1 - pre) > epsilon){
+	while(n == 1 || abs(f.prime(x1)) > epsilon){
 		pre = x1
-		x1 = ifelse(which.n == '1/sqrt(n)', 
-			x1 - f.prime(x1) / sqrt(n), 
-			x1 - f.prime(x1) / n)
+		x1 = x1 - f.prime(x1) / n
 		x.data = c(x.data, x1)
 		n = n + 1
 	}
 	return(list(n, x.data, x1, f(x1)))
 }
 ```
-
-After testing the function several times, I found that the parameters $\epsilon = 0.05$ and $\alpha_n = \frac{1}{n}$ are not proper to find the minimum of $f(x)$. First, the $\epsilon$ is too large both for $x$ value and $f(x)$ value based on their scales, which makes the function repeat less times, then stop at a wrong point. Second, the step size $\alpha_n$ decreases too fast, making $|x_{n + 1} - x_n|$ reach $\epsilon$ quickly.
-
-When setting $\epsilon = 0.001$ and $\alpha_n = \frac{1}{\sqrt{n}}$:
+When setting $\epsilon = 0.05$ and $\alpha_n = \frac{1}{n}$:
 ```{r}
-result = gred.des(-2, epsilon = 0.001, which.n = '1/sqrt(n)')
+result = gred.des(-2, epsilon = 0.05)
 print(result[1][[1]]) # Iteration times
-print(result[2][[1]]) # All x_i
+print(summary(result[2][[1]])) # All x_i
 print(result[3][[1]]) # Final x_n
 print(result[4][[1]]) # Minimum of f(x)
 ```
@@ -186,14 +181,12 @@ The hist graph is as follows,
 
 ```{r, out.width = '30em', fig.align = 'center', echo = FALSE}
 xs = runif(100, -2, 4)
-gred.des2 = function(x1, epsilon = 0.001, which.n = '1/sqrt(n)'){
+gred.des2 = function(x1, epsilon = 0.05){
 	n = 1
 	x.data = c(x1)
-	while(n == 1 || abs(x1 - pre) > epsilon){
+	while(n == 1 || f.prime(x1) > epsilon){
 		pre = x1
-		x1 = ifelse(which.n == '1/sqrt(n)', 
-			x1 - f.prime(x1) / sqrt(n), 
-			x1 - f.prime(x1) / n)
+		x1 = x1 - f.prime(x1) / n
 		x.data = c(x.data, x1)
 		n = n + 1
 	}
