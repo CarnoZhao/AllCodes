@@ -8,6 +8,8 @@ public class PercolationStats {
 	private int times;
 	private int width;
 	private final double CONFIDENCE_95 = 1.96;
+	private double mu;
+	private double sd;
 
 	public PercolationStats(int n, int trials){
 		if (n <= 0 || trials <= 0) throw new java.lang.IllegalArgumentException();
@@ -23,12 +25,14 @@ public class PercolationStats {
 			}
 			nums[i] = (double)p.numberOfOpenSites() / (n * n);
 		}
+		mu = StdStats.mean(nums);
+		sd = StdStats.stddev(nums);
 	}
 	public double mean(){
-		return StdStats.mean(nums);
+		return mu;
 	}
 	public double stddev(){
-		return StdStats.stddev(nums);
+		return sd;
 	}
 	public double confidenceLo(){
 		return mean() - CONFIDENCE_95 * stddev() / Math.sqrt(times);
