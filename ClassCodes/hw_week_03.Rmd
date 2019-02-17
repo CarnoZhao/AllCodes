@@ -42,7 +42,9 @@ c) Now, create a plot analogous to Problem 1b but rather than plotting the raw b
 > Hint: There are multiple ways to approach this problem. You may want to create new variables in your `mammals` data frame that are log-transformed versions of the raw variables or you can insert the `log10()` function calls directly within your `plot()` call to do the transformation there. It's up to you!
 
 ```{r}
-plot(log10(mammals$body), log10(mammals$brain), xlab = 'Log10(Body Mass (kg))', ylab = 'Log10(Brain Mass (g))', main = 'Brain-Body Mass Relationship Across 62 Mammals')
+plot(log10(mammals$body), log10(mammals$brain), 
+	xlab = 'Log10(Body Mass (kg))', ylab = 'Log10(Brain Mass (g))', 
+	main = 'Brain-Body Mass Relationship Across 62 Mammals')
 ```
 
 d) Replicate the plot in Problem 1c as completely as possible using `ggplot()`. Include the log transformation of both the body and brain values. Modify the x-axis, y-axis, and main title labels as previously described.

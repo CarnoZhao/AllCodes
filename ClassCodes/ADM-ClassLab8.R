@@ -68,9 +68,40 @@ main2 = function(){
 		rgl.clear(type = c("shapes", "bboxdeco"))
 		rgl.viewpoint(theta = 15, phi = 20, zoom = 0.7)
 	}
+	theta = rnorm(4)
+	for (i in 1:100){
+		grad = g(theta, as.vector(df$y), as.matrix(df[,2:4]))
+		if(all(grad == 0)) break
+		theta = theta - grad
+	}
+	cat("converged after ", i, " iterations\n", sep = "")
+	v.h = theta[1:3]
+	c = theta[4]
+	v.h.norm = sqrt(sum(v.h ^ 2))
+	u.h = v.h / v.h.norm
+	c = c / v.h.norm
 	rgl_init()
 
 	with(df, plot3d(X1, X2, X3, type = "p", col = ifelse(y == 1, "red", "blue"), size = 5, box = FALSE, axes = TRUE))
+	planes3d(u.h[1], u.h[2], u.h[3], d = -c, color = 'gray')
+}
+
+f = function(theta, y, x){
+	v = theta[-length(theta)]
+	c = theta[length(theta)]
+	pred = as.vector(x %*% v - c)
+	sum((sign(pred) != y) * abs(pred))
+}
+
+g = function(theta, y, x){
+	v = theta[-length(theta)]
+	c = theta[length(theta)]
+	pred = as.vector(x %*% v - c)
+	misc = sign(pred) != y
+	if(sum(misc) == 0L){
+		return(rep_len(0, length(theta)))
+	}
+	colSums(-y[misc] * cbind(x[misc,], -1))
 }
 
 main2()
