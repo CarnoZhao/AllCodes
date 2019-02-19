@@ -1,0 +1,83 @@
+---
+title: "| EEEB UN3005/GR5005\n| Lab - Week 04 - 18 and 20 February 2019"
+author: "Xun Zhao, xz2827"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Bayesian Basics
+
+
+## Exercise 1: Applying Bayes' Theorem using Grid Approximation
+
+Imagine the series of observations in the globe tossing example from the *Statistical Rethinking* text and class were: W L W W, where "W" corresponds to water and "L" corresponds to land.
+
+With this set of observations, use grid approximation (with 11 grid points) to construct the posterior for *p* (the probability of water). Assume a flat prior.
+
+Plot the posterior distribution.
+
+```{r, out.width = '25em', fig.align = 'center'}
+grid.length = 11
+prob = seq(0, 1, length.out = grid.length)
+prior = rep(1, grid.length)
+likelihood = dbinom(3, size = 4, prob = prob)
+unstd.post = likelihood * prior
+std.post = unstd.post / sum(unstd.post)
+plot(prob, std.post, type  ='b', 
+	xlab = 'Probability of water', 
+	ylab = 'Posterior probability', 
+	main = paste(c(as.character(grid.length), '-grid'), collapse = ''))
+```
+
+
+## Exercise 2: Thinking Deeper with Bayes' Theorem
+
+Suppose in the globe tossing scenario there are two globes, one for Earth and one for Mars. The Earth globe is 70% covered in water. The Mars globe is 100% land. Further suppose that one of these globes-you don't know which-was tossed in the air and produced a land observation. Assume that each globe was equally likely to be tossed. Show that the posterior probability that the globe was the Earth, conditional on seeing land (Pr(Earth|land)), is 0.23.
+
+Note, this problem might seem like it has a lot of information to consider, but it is actually a direct application of Bayes' Theorem. If you're having problems getting started, write out Bayes' Theorem. Also, R is not strictly necessary for this problem. You could do the math by hand, so R is just a glorified calculator here.
+
+**Prove:**
+
+From the information given above, directly we can get:
+
+$$Pr(Land|Earth) = 0.3, \, Pr(Water|Earth) = 0.7$$
+$$Pr(Land|Mars) = 1, \, Pr(Water|Mars) = 0$$
+$$Pr(Mars) = Pr(Earth) = 0.5$$
+
+Accoding to the **Bayes' Theorem**,
+
+$$Pr(A|B) = \frac{Pr(B|A) \times Pr(A)}{Pr(B)}$$
+
+To calculate $Pr(Earth|Land)$, we assume that $A = Earth$, $B = Land$.
+
+Thus, the equation is,
+
+$$Pr(Earth|Land) = \frac{Pr(Land|Earth) \times Pr(Earth)}{Pr(Land)}$$
+
+For all the probabilities in this equation, the only one we do not know is $Pr(Land)$, but we can calculate as follows according to **Total Probability Theorem**,
+
+$$
+\begin{aligned}
+Pr(Land) &= Pr(Land|Mars) \times Pr(Mars) + Pr(Land|Earth) \times Pr(Earth)\\\
+&=1 \times 0.5 + 0.3 \times 0.5\\\
+&=0.65
+\end{aligned}
+$$
+
+Put all known values into the equation,
+
+$$
+\begin{aligned}
+Pr(Earth|Land) &= \frac{Pr(Land|Earth) \times Pr(Earth)}{Pr(Land)}\\\
+&=\frac{0.3 \times 0.5}{0.65}\\\
+&=0.23
+\end{aligned}
+$$
+
+q.e.d.
