@@ -21,7 +21,8 @@ $$
 \begin{aligned}
 \hat{y}_{new}&=f({\vec{x}}_{new})\\\
 &=\underset{c_k}{arg max}P(Y\in c_k)\cdot P(X = {\vec{x}}_{new}|Y\in c_k)\\\
-&=\underset{c_k}{arg max}\frac{N_{c_k}}{N_{c_1} + N_{c_2} + N_{c_3}}\cdot\frac{1}{\sqrt{(2\pi)^p\Pi_{i = 1}^{5}{\sigma}_i^2}}exp[-\frac{1}{2}\Sigma_{i = 1}^{5}\frac{({\vec{x}}_{new}^{(i)} - {\vec{\mu}}^{(i)})^2}{{\sigma}_i^2}]
+&=\underset{c_k}{arg max}P(Y \in c_k) \cdot \prod_{i = 1}^{5}P(X^{(i)} = {\vec{x}_{new}^{(i)}}|Y \in c_k)\\\
+&=\underset{c_k}{arg max}\frac{N_{c_k}}{N_{c_1} + N_{c_2} + N_{c_3}}\cdot\frac{1}{\sqrt{(2\pi)^5\prod_{i = 1}^{5}{\sigma}_i^2}}exp[-\frac{1}{2}\sum_{i = 1}^{5}\frac{({\vec{x}}_{new}^{(i)} - {\vec{\mu}}^{(i)})^2}{{\sigma}_i^2}]
 \end{aligned}
 $$
 
@@ -29,13 +30,13 @@ $$
 
 In the estimation function given above, ${\vec{\mu}}$ is the mean vector of all $\vec{x}$ that belong to different classes $c_k$,
 
-$${\vec{\mu}}_k = (\frac{\Sigma x_i^{(1)}}{N_{c_k}},  ..., \frac{\Sigma x_i^{(5)}}{N_{c_k}}), {\vec{x}}_i\in c_k$$
+$${\vec{\mu}}_k = (\frac{\Sigma \vec{x}^{(1)}}{N_{c_k}},  ..., \frac{\Sigma \vec{x}^{(5)}}{N_{c_k}}),\,{\vec{x}}\in c_k$$
 
-and $\sigma$ is the estimated variance of differnet classes and different features,
+and $\sigma$ is the estimated variance of different classes and different features,
 
-$$\sigma_k^{(i)} = \frac{1}{n}\Sigma(x_k^{(i)} - \mu_k^{(i)})^2$$
+$$\sigma_k^{(i)} = \frac{1}{N_{c_k}}\Sigma(\vec{x}^{(i)} - \vec{\mu_k}^{(i)})^2,\,{\vec{x}}\in c_k$$
 
-$x_k^{(i)}$ is the $i$-th feature of $\vec{x}$ that belongs to class $c_k$.
+where $\vec{x}^{(i)}$ is the $i$-th feature of $\vec{x}$ that belongs to class $c_k$.
 
 $P(Y \in c_k)$ is estimated as
 
