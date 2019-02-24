@@ -32,13 +32,13 @@ In the estimation function given above, ${\vec{\mu}}$ is the mean vector of all 
 
 $${\vec{\mu}}_k = (\frac{\Sigma \vec{x}^{(1)}}{N_{c_k}},  ..., \frac{\Sigma \vec{x}^{(5)}}{N_{c_k}}),\,{\vec{x}}\in c_k$$
 
-and $\sigma$ is the estimated variance of different classes and different features,
+and $\sigma^2$ is the estimated variance of different classes and different features,
 
-$$\sigma_k^{(i)} = \frac{1}{N_{c_k}}\Sigma(\vec{x}^{(i)} - \vec{\mu_k}^{(i)})^2,\,{\vec{x}}\in c_k$$
+$${\sigma^2}_k^{(i)} = \frac{1}{N_{c_k}}\sum(\vec{x}^{(i)} - \vec{\mu_k}^{(i)})^2,\,{\vec{x}}\in c_k$$
 
 where $\vec{x}^{(i)}$ is the $i$-th feature of $\vec{x}$ that belongs to class $c_k$.
 
-$P(Y \in c_k)$ is estimated as
+Prior $P(Y \in c_k)$ is estimated as
 
 $$P(Y \in c_k) = \frac{N_{c_k}}{N_{c_1} + N_{c_2} + N_{c_3}}$$
 
@@ -111,7 +111,7 @@ while(any(y.est != y.data)){
 	cnt = cnt + 1
 	if(cnt == 100){break}}
 graph = ggplot(data, mapping = aes(x = X1, y = X2, 
-	color = as.factor(data[,3]))) + geom_point()
+	shape = as.factor(data[,3]))) + geom_point()
 graph.points = graph
 for(i in 1:dim(v.data)[2]){
 	graph = graph + geom_abline(intercept = v.data[1, i], 
