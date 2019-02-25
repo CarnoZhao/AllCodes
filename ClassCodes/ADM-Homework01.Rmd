@@ -111,7 +111,7 @@ while(any(y.est != y.data)){
 	cnt = cnt + 1
 	if(cnt == 100){break}}
 graph = ggplot(data, mapping = aes(x = X1, y = X2, 
-	shape = as.factor(data[,3]))) + geom_point()
+	color = as.factor(data[,3]))) + geom_point()
 graph.points = graph
 for(i in 1:dim(v.data)[2]){
 	graph = graph + geom_abline(intercept = v.data[1, i], 

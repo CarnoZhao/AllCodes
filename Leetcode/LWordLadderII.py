@@ -1,27 +1,21 @@
 class Solution:
-    def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -> List[List[str]]:
+    def findLadders(self, beginWord: str, endWord: str, wordList):
         from collections import defaultdict
-        wordList = set(wordList)
-        if beginWord not in wordList:
-            wordList.add(beginWord)
-        iters = [[beginWord]]
-        ret = []
-        used = set()
+        wordList = set(wordList + [beginWord])
+        iters = {beginWord:[[beginWord]]}
         while iters:
-            temp = []
-            for path in iters:
-                for nex in self.diff(path[-1]) & wordList:
-                    if nex in path or nex in used:
-                        continue
-                    if nex == endWord:
-                        ret.append(path + [nex])
-                    else:
-                        temp.append(path + [nex])
-            if ret:
+            used = set()
+            temp = defaultdict(list)
+            for key in iters:
+                for nex in self.diff(key) & wordList:
+                    for path in iters[key]:
+                        temp[nex].append(path + [nex])
+                    used.add(nex)
+            if endWord in temp.keys():
                 break
-            used.update(path[-1] for path in temp)
+            wordList = wordList - used
             iters = temp
-        return ret
+        return temp[endWord]
     
     def diff(self, word):
         ret = set()
