@@ -88,7 +88,7 @@ $$\vec{v}_{H,new} = \vec{v}_H + \alpha L(\hat{y}_i,y_i) \cdot \vec{x}_i$$
 
 Basically, it is because the data points are linearly non-separable. Under the condition that learning rate $\alpha$ is constant, the result is not convergent.
 
-The result of perceptron algorithm with $\alpha = 1$ is as follow, and the boundary lines are shown as black lines after refreshing $\vec{v}_H$ for $100$ times,
+The result of perceptron algorithm with $\alpha = 1$ is as follow, and the boundary lines are shown as black lines after refreshing $\vec{v}_H$ for $10$ times,
 
 ```{r, out.width = '20em', fig.align = 'center', echo = FALSE}
 library(MASS)
@@ -109,13 +109,13 @@ while(any(y.est != y.data)){
 	y.est = ((x.data %*% v > 0) - 0.5) * 2
 	v.data = cbind(v.data, v)
 	cnt = cnt + 1
-	if(cnt == 100){break}}
+	if(cnt == 10){break}}
 graph = ggplot(data, mapping = aes(x = X1, y = X2, 
-	color = as.factor(data[,3]))) + geom_point()
+	shape = as.factor(data[,3]))) + geom_point()
 graph.points = graph
 for(i in 1:dim(v.data)[2]){
 	graph = graph + geom_abline(intercept = v.data[1, i], 
-		slope = -v.data[2, i] / v.data[3, i])}
+		slope = -v.data[2, i] / v.data[3, i], col = 'grey')}
 plot(graph.points)
 plot(graph)
 ```
