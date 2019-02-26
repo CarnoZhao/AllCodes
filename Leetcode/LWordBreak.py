@@ -8,7 +8,6 @@ class Solution:
                     continue
                 for dpj in dp[j]:
                     dp[i].append(dpj + [i])
-            print(len(dp[i]))
         ret = []
         for x in dp[-1]:
             string = ' '.join([s[x[i - 1]:x[i]] for i in range(1, len(x))])
