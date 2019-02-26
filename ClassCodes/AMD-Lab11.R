@@ -21,8 +21,8 @@ f = function(par, y, x){
 	return(ret)
 }
 
-par = runif(d, -1, 1)
-optimFit = optim(par, f, y = y, x = x)
+par.random = runif(d, -1, 1)
+optimFit = optim(par.random, f, y = y, x = x)
 par = optimFit$par
 graph = graph + geom_abline(intercept = par[3] / par[2], 
 			slope = -par[1] / par[2], color = 'red')
@@ -31,4 +31,14 @@ graph = graph + geom_abline(intercept = c / v[2],
 plot(graph)
 
 glmFit = glm(y ~ X1 + X2, d, family = binomial)
-summary(optimFit)
+
+g = function(par, y, x){
+	v = par[-length(par)]
+	c = par[length(par)]
+	return(t(cbind(x, -1)) %*% (plogis(x %*% v - c) - y))
+}
+
+optimFit.g = optim(par.random, f, gr = g, y = y, x = x, method = "BFGS")
+print(optimFit.g)
+print(optimFit)
+summary(glmFit)
