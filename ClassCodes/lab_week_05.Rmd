@@ -1,0 +1,90 @@
+---
+title: "| EEEB UN3005/GR5005\n| Lab - Week 05 - 25 and 27 February 2019"
+author: "Xun Zhao, xz2827"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(rethinking)
+```
+
+
+# Statistical Distributions and Summary Statistics
+
+
+## Exercise 1: Grid Approximation, Our Old Friend
+
+Imagine the globe tossing example from the *Statistical Rethinking* text and class resulted in 8 water observations out of 15 globe tosses.
+
+With this set of observations, use grid approximation (with 101 grid points) to construct the posterior for *p* (the probability of water). Assume a flat prior.
+
+Plot the posterior distribution.
+
+```{r, out.width = '25em', fig.align = 'center'}
+grid = seq(0, 1, length.out = 101)
+prior = rep(1, 101)
+likelihood = dbinom(8, 15, prob = grid)
+unstd.post = likelihood * prior
+post = unstd.post / sum(unstd.post)
+plot(post)
+```
+
+
+## Exercise 2: Sampling From a Grid-Approximate Posterior
+
+Draw 10,000 samples from the posterior distribution of *p*. Call these samples `post.samples`. Visualize `post.samples` using the `dens()` function. Re-run your sampling and plotting code multiple times to observe the effects of sampling variation.
+
+```{r, out.width = '25em', fig.align = 'center'}
+post.samples = sample(grid, siz = 10000, replace = TRUE, prob = post)
+dens(post.samples)
+```
+
+
+## Exercise 3: Summarizing Samples
+
+Return the mean, median, and mode (using `chainmode()`) of `post.samples`. Then calculate the 80%, 90%, and 99% highest posterior density intervals.
+
+```{r, out.width = '25em', fig.align = 'center'}
+print(mean(post.samples))
+print(median(post.samples))
+print(chainmode(post.samples))
+print(HPDI(post.samples, 0.8))
+print(HPDI(post.samples, 0.9))
+print(HPDI(post.samples, 0.99))
+```
+
+
+## Exercise 4: Implied Model Predictions
+
+Using `post.samples`, generate 10,000 simulated model predictions for a binomial trial of size 15 (you can call these `preds`). Visualize the model predictions using the `simplehist()` function. 
+
+Based on these posterior predictions, what is the probability of observing 8 waters in 15 globe tosses?
+
+```{r, out.width = '25em', fig.align = 'center'}
+preds = rbinom(10000, size = 15, prob = post.samples)
+simplehist(preds)
+```
+**Answer:**
+
+Based on the graph, the maximum is at 8 out of 15 with frequency 1500. So the probability will be
+
+$$Pr(8w) = \frac{N_8}{N_{total}} = \frac{1500}{10000} = 0.15 $$
+
+## Exercise 5: More Implied Model Predictions
+
+Using the *same* posterior samples (i.e., `post.samples`), calculate the posterior probability of observing 8 waters in 9 tosses.
+
+```{r, out.width = '25em', fig.align = 'center'}
+preds2 = rbinom(10000, size = 9, prob = post.samples)
+simplehist(preds2)
+```
+
+**Answer:**
+
+There are about 500 times that the result is 8 out of 9. So the probability is
+
+$$P(8w) = \frac{N_8}{N_{total}} = \frac{500}{10000} = 0.05$$
