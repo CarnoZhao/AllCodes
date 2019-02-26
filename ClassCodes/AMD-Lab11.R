@@ -24,11 +24,6 @@ f = function(par, y, x){
 par.random = runif(d, -1, 1)
 optimFit = optim(par.random, f, y = y, x = x)
 par = optimFit$par
-graph = graph + geom_abline(intercept = par[3] / par[2], 
-			slope = -par[1] / par[2], color = 'red')
-graph = graph + geom_abline(intercept = c / v[2], 
-			slope = -v[1] / v[2], color = 'green')
-plot(graph)
 
 glmFit = glm(y ~ X1 + X2, d, family = binomial)
 
@@ -39,6 +34,24 @@ g = function(par, y, x){
 }
 
 optimFit.g = optim(par.random, f, gr = g, y = y, x = x, method = "BFGS")
-print(optimFit.g)
-print(optimFit)
-summary(glmFit)
+
+f.svm = function(par, y, x, t) {
+	v = par[-length(par)]
+	c = par[length(par)]
+
+	lin.pred = x %*% v - c
+	y = 2 * (y - 1)
+
+	return(mean(pmax(0, 1 - y * lin.pred)) + t * sum(v ^ 2))
+}
+
+optimFit.svm  = optim(par.random, f.svm, y = y, x = x, t = 1)
+par.svm = optimFit.svm$par * 100
+print(par.svm)
+#graph = graph + geom_abline(intercept = par[3] / par[2], 
+#			slope = -par[1] / par[2], color = 'red')
+#graph = graph + geom_abline(intercept = c / v[2], 
+#			slope = -v[1] / v[2], color = 'green')
+graph = graph + geom_abline(intercept = par.svm[3] / par.svm[2], 
+			slope = -par.svm[1] / par.svm[2], color = 'red')
+plot(graph)
