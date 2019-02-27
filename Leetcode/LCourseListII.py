@@ -14,14 +14,14 @@ class Solution:
                     change = True
                     ret.append(key)
                     dicpre.pop(key)
-                for postkey in dicpost[key]:
-                    dicpre[postkey].remove(key)
-        return ret
+                    for postkey in dicpost[key]:
+                        dicpre[postkey].remove(key)
+        return ret if not dicpre else []
 
             
 
 sol = Solution()
 ns = 3
-ps = [[0,1],[0,2],[1,2]]
+ps = [[1,0],[1,2],[0,1]]
 ans = sol.findOrder(ns, ps)
 print(ans)
