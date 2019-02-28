@@ -7,10 +7,10 @@ class Solution:
                 if abs(w - nums[j]) <= t:
                     return True
             window.add(nums[j])
-            j += 1
             if j >= k:
                 window.remove(nums[i])
                 i += 1
+            j += 1
         return False
 
 sol = Solution()
