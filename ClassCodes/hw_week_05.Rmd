@@ -62,6 +62,19 @@ dens(samples1, col = 'red')
 dens(samples2, add = TRUE, col = 'green')
 ```
 
+------------
+
+**Answer:**
+
+The most obvious difference is that `samples2` drops from its maximum to zero at `grid = 0.5`. However, `samples1` shows the symmetrical 
+shape like a Gaussian distribution. At the interval $[0,\,0.5]$, `samples2` is larger than `samples1`, but shows the same increasing trend. 
+
+The prior makes these differences, because in `likelihood * prior`, new `prior2` makes the second half of the vector all zero, but remains the first half unchanged. That is why `samples2` stops at `0.5`. 
+
+Moreover, when standardizing, `sum(unstd.post)` is smaller in `samples2` than `samples1`, which makes `samples2`'s density curve higher than `samples1`'s.
+
+
+--------------
 
 ## Problem 4 (2 points)
 
@@ -72,8 +85,28 @@ What is the mean value of `samples3`? What is the 90% HPDI of `samples3`?
 Does `samples3` differ strongly from `samples2`? Why or why not? As in the previous problem, visual comparison of the posterior distributions may help significantly in answering these questions.
 
 ```{r}
-
+prior3 = ifelse(grid < 0.5 & grid > 0.2, 1, 0)
+likelihood3 = dbinom(9, 20, prob = grid)
+unstd.post3 = likelihood3 * prior3
+post3 = unstd.post3 / sum(unstd.post3)
+samples3 = sample(grid, 10000, replace = TRUE, prob = post3)
+print(mean(samples3))
+print(HPDI(samples3, prob = 0.9))
+dens(samples2, col = 'green')
+dens(samples3, add = TRUE, col = 'blue')
 ```
+
+-----------
+
+**Answer:**
+
+The difference is not significant.
+
+It is because `samples2` originally has low probability to choose from $[0, 0.2]$, as its curve (density) is low when `grid < 0.2`.
+
+Thus, cutting this part from data set makes little impact to the density. 
+
+---------
 
 
 ## Problem 5 (1 points)
@@ -81,5 +114,6 @@ Does `samples3` differ strongly from `samples2`? Why or why not? As in the previ
 Assume that through further study you establish that the true probability of infection within the population is 0.3. Given this was the true probability of infection value, what was the probability of you initially observing 9 infected individuals out of 20 in your pilot study?
 
 ```{r}
-
+probability = dbinom(9, 20, prob = 0.3)
+print(probability)
 ```
