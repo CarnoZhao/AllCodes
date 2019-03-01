@@ -21,4 +21,4 @@ y = outer(x1, x2, f)
 contour(x1, x2, y, xlab = expression(x[1]), ylab = expression(x[2]), 
 	main = expression(f(x[1], x[2])), drawlabels = FALSE, nlevels = 10)
 abline(a = b, b = k)
-curve(f_res, -3, 3)
+curve(f_res, -3, 3, main = 'Horizontal Slice')

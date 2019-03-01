@@ -39,7 +39,7 @@ c = 0
 v.h.norm = sqrt(sum(v.h ^ 2))
 u.h = v.h / v.h.norm
 c = c / v.h.norm
-planes3d(u.h[1], u.h[2], u.h[3], d = -c, color = 'gray')
+planes3d(u.h[1], u.h[2], u.h[3], -c, color = 'gray')
 
 for(i in 1:n.pos){ # pick a point arbitrarily
 x.i = as.numeric(df[i,c("X1", "X2", "X3")])
@@ -48,3 +48,4 @@ x.plane = x.i - alpha * u.h
 spheres3d(x.i[1], x.i[2], x.i[3], radius = .05)# adds an orb to highlight the point
 lines3d(c(x.i[1], x.plane[1]), c(x.i[2], x.plane[2]), c(x.i[3], x.plane[3]), lwd = 1, col = "gray")
 }
+while(TRUE){}
