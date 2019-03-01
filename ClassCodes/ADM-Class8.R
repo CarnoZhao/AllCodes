@@ -105,3 +105,4 @@ g = function(theta, y, x){
 }
 
 main2()
+while(TRUE){}
