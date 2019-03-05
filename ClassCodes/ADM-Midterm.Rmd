@@ -1,0 +1,17 @@
+---
+title: "Applied Data Mining Midterm Practice"
+author: "Xun Zhao, xz2827"
+output: pdf_document
+fontsize: 12pt
+---
+
+# Problem 1
+
+## 1.
+
+No, the Bayes-optimal classifier is trying to minimize the risk $R(f)$, whose value depends on the loss function.
+
+## 2.
+
+## 3.
+The data points have labels, such as discrete $y$s (classification) or continuous $y$s (regression).
