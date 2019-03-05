@@ -1,6 +1,6 @@
 ---
 title: "| EEEB UN3005/GR5005\n| Lab - Week 06 - 04 and 06 March 2019"
-author: "USE YOUR NAME HERE"
+author: "Xun Zhao, xz2827"
 output: pdf_document
 fontsize: 12pt
 ---
@@ -28,9 +28,29 @@ Now, construct a model of tree age using a Gaussian distribution, and use `map()
 
 After fitting the model, use `precis()` to display the 99% PIs for all model parameters. How do you interpret the fit model parameters?
 
-```{r}
-
+```{r, out.width = '25em', fig.align = 'center'}
+d = read.csv('simulated_trees.csv')
+ggplot(d, aes(x = height, y = age)) +
+	geom_point() + 
+	geom_smooth() + 
+	xlab('Height') + 
+	ylab('Age') + 
+	ggtitle('Age - Height')
+curve(dnorm(x, 0, 50), from = -170, to = 170)
+curve(dcauchy(x, 0, 5), from = 0, to = 20)
+model = map(
+	alist(
+		age ~ dnorm(mu, sigma),
+		mu ~ dnorm(0, 50),
+		sigma ~ dcauchy(0, 5)),
+	start = list(mu = 0, sigma = 50),
+	data = d)
+precis(model, prob = 0.99)
 ```
+
+**[Answer]**
+
+Given a tree, its age is very likely to be between about 135 and 160. And the mean age of all trees is 147, with standard deviation about 5.
 
 
 ## Exercise 2: Fitting a Linear Regression of Tree Age
@@ -39,17 +59,30 @@ Now, use tree `height` as a predictor of tree `age` in a linear regression model
 
 After fitting the model, use `precis()` to summarize the 99% PIs for all model parameters. What does the estimated value of the slope parameter suggest about the relationship between tree height and tree age? What does the intercept parameter correspond to in this model?
 
-```{r}
-
+```{r, out.width = '25em', fig.align = 'center'}
+model2 = map(
+	alist(
+		age ~ dnorm(mu, sigma),
+		mu <- a + b * height,
+		a ~ dnorm(0, 50),
+		b ~ dnorm(0, 50),
+		sigma ~ dnorm(0, 5)),
+	start = list(a = 0, b = 0, sigma = 50),
+	data = d)
+precis(model2, prob = 0.99)
 ```
+**[Answer]**
 
+The estimated intercept is `a` in the table above, and estimated slope is `b` above. Both of them is distributed as Gaussian distribution, so we can think their `Mean` value is the final estimated value.
 
 ## Exercise 3: Plotting Raw Data and the *Maximum a Posterior* Trend Line
 
 Using either base R or `ggplot()`, plot tree age versus tree height, and add the *maximum a posterior* line for the estimated mean age at each tree height value. In other words, this line is the relationship between tree height and mean age implied by the *maximum a posterior* intercept and slope estimates from your fit model.
 
-```{r}
-
+```{r, out.width = '25em', fig.align = 'center'}
+graph = ggplot(d, aes(x = height, y = age)) + geom_point()
+graph = graph + geom_abline(intercept = coef(model2)["a"], slope = coef(model2)["b"], col = 'red')
+plot(graph)
 ```
 
 
@@ -57,8 +90,12 @@ Using either base R or `ggplot()`, plot tree age versus tree height, and add the
 
 Generate 10,000 posterior samples from your fit model with `extract.samples()`. Using these samples, make 10,000 age predictions for a tree with a height of 1,200 centimeters. What is the mean value of these age predictions? What is the 50% HPDI of these age predictions? Plot the density of these age predictions.
 
-```{r}
-
+```{r, out.width = '25em', fig.align = 'center'}
+samples = extract.samples(model2, 10000)
+preds = rnorm(10000, mean = samples$a + samples$b * 1200, sd = samples$sigma)
+print(mean(preds))
+HPDI(preds, 0.5)
+dens(preds)
 ```
 
 
@@ -66,6 +103,15 @@ Generate 10,000 posterior samples from your fit model with `extract.samples()`. 
 
 Recreate the plot from Exercise 3, but instead of overlaying the *maximum a posterior* trend line, overlay the trend lines implied by the first 100 posterior samples.
 
-```{r}
-
+```{r, out.width = '25em', fig.align = 'center'}
+graph = ggplot(d, aes(x = height, y = age)) + geom_point()
+for (i in 1:100){
+	graph = graph + 
+		geom_abline(
+			intercept = samples$a[i], 
+			slope = samples$b[i], 
+			col = "yellow"
+		)
+}
+plot(graph)
 ```
