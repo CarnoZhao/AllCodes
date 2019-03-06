@@ -1,0 +1,42 @@
+---
+title: "Applied Data Mining Homework 2"
+author: "Xun Zhao, xz2827"
+output: pdf_document
+fontsize: 12pt
+---
+
+# Problem 1: Trees
+
+## 1.
+
+Yes. But it needs the tree to be very high than some simple tree classifiers.
+
+As the tree classifier boundary is made of some line segments that are parallel with x-axis or y-axis, we can draw a zigzag curve along the linear boundary. Thus, the sloping linear boundary becomes many segments, and every segment is a dicision in tree classifier.
+
+```{r, echo = FALSE, out.width = "20em", fig.align = "center"}
+x1 = rnorm(100, 0, 1)
+x2 = rnorm(100, 0, 1)
+y = ifelse(x1 + x2 > 0, 1, 0)
+d = data.frame(cbind(x1, x2, y)[which(x1 + x2 > 1 | x1 + x2 < -1),])
+library(ggplot2)
+ggplot(d, aes(x = x1, y = x2, color = as.factor(y))) + 
+	geom_point() + 
+	geom_segment(x = -2, y = 2, xend = -1, yend = 2) +
+	geom_segment(x = -1, y = 2, xend = -1, yend = 1) +
+	geom_segment(x = -1, y = 1, xend = 0, yend = 1) +
+	geom_segment(x = 0, y = 1, xend = 0, yend = 0) +
+	geom_segment(x = 0, y = 0, xend = 1, yend = 0) +
+	geom_segment(x = 1, y = 0, xend = 1, yend = -1) +
+	geom_segment(x = 1, y = -1, xend = 2, yend = -1) +
+	geom_segment(x = 2, y = -1, xend = 2, yend = -2)
+```
+
+## 2.
+
+No, the Bayes-Optimal is defined as:
+
+$$f(\vec{x}) = \underset{y}{arg\,max}P({\bf{Y}} = y | {\bf{X}} = \vec{x})$$
+
+And the risk is defined as:
+
+$$R(f) = \underset{+1,\,-1}{\sum}\int L(y,\,f(\vec{x}))P(\vec{x},\,y)d\vec{x}$$
