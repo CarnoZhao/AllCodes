@@ -21,7 +21,7 @@ class Node:
                 else:
                     temp.extend((None, None))
             ls = temp
-        return '\n'.join(str(x) for x in string)
+        return '\n'.join(str(x) for x in string) + '\n'
 
 class NumArray:
 
@@ -30,20 +30,20 @@ class NumArray:
         self.lenth = len(nums)
 
     def update(self, i: int, val: int) -> None:
-        l, r = 0, self.lenth
+        l, r = 0, self.lenth - 1
         node = self.Tree
         plus = []
-        while l < r:
+        while node:
             plus.append(node)
-            mid = (l + r) // 2
+            diff = val - node.val
+            mid = (l + r + 1) // 2
             if i <= mid:
                 r = mid
                 node = node.left
             else:
                 l = mid
                 node = node.right
-        diff = val - node.val
-        for n in plus + [node]:
+        for n in plus:
             n.val += diff
 
     def sumRange(self, i: int, j: int) -> int:
@@ -54,7 +54,9 @@ class NumArray:
 
 
 import random
-na = NumArray([random.randint(0, 10) for x in range(10)])
+p = 10
+na = NumArray([x for x in range(p)])
 print(na, '\n')
-na.update(0, 2)
+for i in range(p):
+    na.update(i, 2)
 print(na)
