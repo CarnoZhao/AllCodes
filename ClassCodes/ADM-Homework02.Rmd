@@ -57,3 +57,42 @@ $$g(\vec{x}) = \begin{cases}
 		f_3(\vec{x}) < 0 & class\,C
 	\end{cases}
 \end{cases}$$
+
+# Problem 2: 10-fold Cross Validation
+
+## 1.
+
+10 folds means that we devide the data set $\chi$ in to 10 parts with the same size $\frac{||\chi||}{10}$.
+$$\chi = \bigcup^{10}_{i = 1}\chi_i$$
+$$\text{if }i\neq j,\,\chi_i\cap\chi_j = \varnothing$$
+$$||\chi_i|| = \frac{||\chi||}{10}$$
+
+## 2.
+
+Because k-NN algorithm actually is not a learning algorithm with model parameter, the training data can be used only for classification. Thus, we do not have to choose the best model from a set.
+
+Every time we use a new fold, namely, different cross validation set $\chi_{cv}$, we apply the classification function $f$ on $\chi_{cv}$ based on training set $\chi_{tr} = \chi-\chi_{cv}$ and culculated the error.
+
+The training set is used as model (or classification function).
+
+$$\hat{y} = f(\vec{x};\,k,\,\chi_{training}),\ \ \ k,\,\chi_{training}\text{ are fixed}$$
+
+The cross validation set is used as a criterion to quantify how well the model can generalize.
+
+$$Risk = \sum_{\vec{x}\text{ in }\chi_{cv}}l[y,\,f(\vec{x};\,k,\,\chi_{training})]$$
+
+## 3.
+
+As the risk function $R(k)$ given below, we compare the risk (for all folds and for all cross validation data points).
+
+$$R(k) = \frac{1}{10}\sum^{10}_{i = 1}\frac{1}{||\chi_i||}\sum^{||\chi_i||}_{j = 1}l[y_{ij},\,f(\vec{x}_{ij};\,k,\,\chi - \chi_i)]$$
+
+## 4.
+
+We can simply choose $k$ that minimize the risk $R(k)$.
+
+$$k = \underset{k\in \lbrace 1, 3, 5, 7, 9\rbrace}{arg\,min}R(k)$$
+
+## 5.
+
+The most obvious disadvantage of k-NN algorithm is that it has to store all the training data, and iterate all the training data when classifying a new data point. Thus, it is time-consuming and occupy a lot of storage.
