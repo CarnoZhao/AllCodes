@@ -6,17 +6,125 @@ fontsize: 12pt
 ---
 
 # Problem 1
-
-## 1. 
-No, the Bayes-optimal classifier is trying to minimize the risk $R(f)$, whose value depends on the loss function.
-
-## 2. 
-No, it is likely to overfitting for small $k$ value. For example, assuming $k = 1$, the decision boundary can be highly non-linear.
-
-## 3. 
-The data points have labels, such as discrete $y$s (classification) or continuous $y$s (regression).
+ 
+- No, the Bayes-optimal classifier is $f(\vec{x}) = \underset{y\in Y}{arg\,max}P(Y = y|X = \vec{x})$, which does not depends on loss function.
+ 
+- No, it is likely to overfitting for small $k$ value. For example, assuming $k = 1$, the decision boundary can be highly non-linear.
+ 
+- The data points have labels, such as discrete $y$ (classification) or continuous $y$ (regression).
 
 # Problem 2
+
+## Problem 2.1: Naive Bayes
+
+### 1.
+
+The naive Bayes classifier is based on an assumption that all the features are independent from each other. Meanwhile, in the case of this problem, it is mentioned that the input variables ${\vec{x}}_i, i = 1, 2, ..., N$, which contains 5 features $(x_i^{(1)}, x_i^{(2)}, ..., x_i^{(5)})$, has a spherical Guassian distribution. According to the defination of spherical Guassian, for all observation ${\vec{x}}_i$, $(x_i^{(1)}, x_i^{(2)}, ..., x_i^{(5)})$should be independent from each other. Thus, the training data set fits the requirement of naive Bayes classifier.
+
+Estimation formula is as follows,
+
+$$
+\begin{aligned}
+\hat{y}_{new}&=f({\vec{x}}_{new})\\\
+&=\underset{c_k}{arg max}P(Y\in c_k)\cdot P(X = {\vec{x}}_{new}|Y\in c_k)\\\
+&=\underset{c_k}{arg max}P(Y \in c_k) \cdot \prod_{i = 1}^{5}P(X^{(i)} = {\vec{x}_{new}^{(i)}}|Y \in c_k)\\\
+&=\underset{c_k}{arg max}\frac{N_{c_k}}{N_{c_1} + N_{c_2} + N_{c_3}}\cdot\frac{1}{\sqrt{(2\pi)^5\prod_{i = 1}^{5}{\sigma}_i^2}}exp[-\frac{1}{2}\sum_{i = 1}^{5}\frac{({\vec{x}}_{new}^{(i)} - {\vec{\mu}}^{(i)})^2}{{\sigma}_i^2}]
+\end{aligned}
+$$
+
+### 2.
+
+In the estimation function given above, ${\vec{\mu}}$ is the mean vector of all $\vec{x}$ that belong to different classes $c_k$,
+
+$${\vec{\mu}}_k = (\frac{\Sigma \vec{x}^{(1)}}{N_{c_k}},  ..., \frac{\Sigma \vec{x}^{(5)}}{N_{c_k}}),\,{\vec{x}}\in c_k$$
+
+and $\sigma^2$ is the estimated variance of different classes and different features,
+
+$${\sigma^2}_k^{(i)} = \frac{1}{N_{c_k}}\sum(\vec{x}^{(i)} - \vec{\mu_k}^{(i)})^2,\,{\vec{x}}\in c_k$$
+
+where $\vec{x}^{(i)}$ is the $i$-th feature of $\vec{x}$ that belongs to class $c_k$.
+
+Prior $P(Y \in c_k)$ is estimated as
+
+$$P(Y \in c_k) = \frac{N_{c_k}}{N_{c_1} + N_{c_2} + N_{c_3}}$$
+
+### 3. 
+
+I think the classifier works well under the independence assumption, because the distribution model is well defined and parameters can be estimated easily.
+
+However in some ways, the behavior depends on how the data set is distributed and how the new data is given.
+
+For example, if three classes are highly overlapped, the estimation function can get three high probabilities in all classes, and choose the largest one. In this case, it is more likely to draw a wrong conclusion because the difference among three probabilities is small and misleading.
+
+For another example, even three classes are well divided, if the new data is far away from most training data points, it can also generate three low but similar probabilities that gives little information.
+
+## Problem 2.2: Perceptron
+
+### 1.
+
+The minimum empirical risk is $\frac{1}{22}$, for the boundary can classify all the solid circles to one class excpet one open circle ($\tilde{x}_2$), and other open circles into another class. Then there is only one misclassification, namely:
+
+$$R = \frac{1}{n}\Sigma_{i = 1}^nL(f(x_i), y_i) = \frac{1}{22}$$
+
+### 2.
+
+To classify, we need to compute the value of ${\vec{v}}_H\cdot\vec{x} + c$.
+
+$$\begin{aligned}
+{\vec{v}}_H\cdot{\vec{x}}_1 + c &= 
+\begin{pmatrix}\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}\end{pmatrix}\cdot
+\begin{pmatrix}-3\\0\end{pmatrix} + \frac{1}{2\sqrt{2}}\\
+&=-\frac{5}{4}\sqrt{2}<0
+\end{aligned}$$
+
+$$\begin{aligned}
+{\vec{v}}_H\cdot{\vec{x}}_2 + c &= 
+\begin{pmatrix}\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}\end{pmatrix}\cdot
+\begin{pmatrix}\frac{1}{2}\\\frac{1}{2}\end{pmatrix} + \frac{1}{2\sqrt{2}}\\
+&=\frac{\sqrt{2}}{4}>0
+\end{aligned}$$
+
+Thus, ${\vec{x}}_1$ is classifed to the class that is below the boundary (class $-1$), and ${\vec{x}}_2$ is classifed to the class above the boundary (class $+1$).
+
+### 3.
+
+The algorithm will not have a solution, the value of ${\vec{v}}_H$ will fluctuate in a small range. It is because every time it iterate through all the points, there will always be some point(s) that is misclassified, and the $\vec{v}_H$ changes every time.
+
+$$\vec{v}_{H,new} = \vec{v}_H + \alpha L(\hat{y}_i,y_i) \cdot \vec{x}_i$$
+
+Basically, it is because the data points are linearly non-separable. Under the condition that learning rate $\alpha$ is constant, the result is not convergent.
+
+The result of perceptron algorithm with $\alpha = 1$ is as follow, and the boundary lines are shown as black lines after refreshing $\vec{v}_H$ for $10$ times,
+
+```{r, out.width = '20em', fig.align = 'center', echo = FALSE}
+library(MASS)
+library(ggplot2)
+data = mvrnorm(20, c(0, 0), matrix(c(2, 0, 0, 2), 2, 2))
+minpos = min(data[,1][which(data[,1] > 0)])
+maxneg = max(data[,1][which(data[,1] < 0)])
+data = rbind(data.frame(data, data[,1] > 0), c(rep(runif(1, 0, minpos), 2), FALSE),
+    c(rep(runif(1, maxneg, 0), 2), TRUE))
+v = as.matrix(runif(3, 0, 1))
+x.data = cbind(rep(1, dim(data)[1]), as.matrix(data[,1:2]))
+y.data = as.matrix((data[,3] - 0.5) * 2)    
+y.est = ((x.data %*% v > 0) - 0.5) * 2
+v.data = as.matrix(v)
+cnt = 1
+while(any(y.est != y.data)){
+    v = v + t(x.data) %*% (y.data - y.est)
+    y.est = ((x.data %*% v > 0) - 0.5) * 2
+    v.data = cbind(v.data, v)
+    cnt = cnt + 1
+    if(cnt == 10){break}}
+graph = ggplot(data, mapping = aes(x = X1, y = X2, 
+    shape = as.factor(data[,3]))) + geom_point()
+graph.points = graph
+for(i in 1:dim(v.data)[2]){
+    graph = graph + geom_abline(intercept = v.data[1, i], 
+        slope = -v.data[2, i] / v.data[3, i], col = 'grey')}
+plot(graph.points)
+plot(graph)
+```
 
 # Problem 3
 
