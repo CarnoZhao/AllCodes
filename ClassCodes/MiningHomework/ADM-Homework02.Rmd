@@ -79,7 +79,7 @@ $$\hat{y} = f(\vec{x};\,k,\,\chi_{training}),\ \ \ k,\,\chi_{training}\text{ are
 
 The cross validation set is used as a criterion to quantify how well the model can generalize.
 
-$$Risk = \sum_{\vec{x}\text{ in }\chi_{cv}}l[y,\,f(\vec{x};\,k,\,\chi_{training})]$$
+$$R(f) = \sum_{\vec{x}\text{ in }\chi_{cv}}l[y,\,f(\vec{x};\,k,\,\chi_{training})]$$
 
 ## 3.
 
