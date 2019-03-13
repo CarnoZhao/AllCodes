@@ -24,7 +24,7 @@ RandomExample = function(){
 	print(par.svm)
 	#graph = graph + geom_abline(intercept = par[3] / par[2], 
 	#			slope = -par[1] / par[2], color = 'red')
-	#graph = graph + geom_abline(intercept = c / v[2], 
+	#graph = graph + geom_abline(intercept = c / v[2])
 	#			slope = -v[1] / v[2], color = 'green')
 	graph = graph + geom_abline(intercept = par.svm[3] / par.svm[2], 
 				slope = -par.svm[1] / par.svm[2], color = 'red')
