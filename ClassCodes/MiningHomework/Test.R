@@ -12,3 +12,4 @@ print(class(d[,ncol(d)]))
 for(i in 1:4){
 	image.print(as.matrix(pixels[i,]))
 }
+print('发顺丰')
