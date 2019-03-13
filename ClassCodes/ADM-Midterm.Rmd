@@ -7,7 +7,7 @@ fontsize: 12pt
 
 # Problem 1
  
-- No, the Bayes-optimal classifier is $f(\vec{x}) = \underset{y\in Y}{arg\,max}P(Y = y|X = \vec{x})$, which does not depends on loss function.
+- Yes, the Bayes-optimal classifier is to minimize $R(f) = E_{\vec{x}, y}l(y,\,f(\vec{x}))$, which depends on loss function.
  
 - No, it is likely to overfitting for small $k$ value. For example, assuming $k = 1$, the decision boundary can be highly non-linear.
  
