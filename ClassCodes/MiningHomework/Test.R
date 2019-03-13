@@ -1,20 +1,14 @@
-library(rethinking)
-d = read.csv('simulated_trees.csv')
-centered.height = d$height - mean(d$height)
-centered.d = data.frame(centered.height, d$age)
-colnames(centered.d) = c('centered.height', 'age')
-ggplot(centered.d, aes(x = centered.height, y = d$age)) + 
-	geom_point() + 
-	xlab('Centered Height') + 
-	ylab('Age') + 
-	ggtitle('Age ~ Centered Height')
-model = map(
-	alist(
-		age ~ dnorm(mu, sigma), 
-		mu <- a + b * height,
-		a ~ dnorm(0, 50),
-		b ~ dnorm(0, 50),
-		sigma ~ dcauchy(0, 5)),
-	start = list(a = 50, b = 0, sigma = 50),
-	data = d)
-precis(model, prob = 0.99)
+image.print <- function(x)
+{
+x.matrix <- matrix(x, 16, 16, byrow = FALSE)
+x.matrix.rotated <- t(apply(x.matrix, 1, rev))
+image(x.matrix.rotated, axes = FALSE, col = grey(seq(0, 1, length.out = 256)))
+}
+
+pixels = read.table('../data/uspsdata.txt')
+labels = as.factor(read.table('../data/uspscl.txt'))
+d = data.frame(pixels, labels)
+print(class(d[,ncol(d)]))
+for(i in 1:4){
+	image.print(as.matrix(pixels[i,]))
+}
