@@ -47,7 +47,8 @@ class NumArray:
             n.val += diff
 
     def sumRange(self, i: int, j: int) -> int:
-        
+        sumvalue = self.Tree.val
+        if 
 
     def __str__(self):
         return self.Tree.__str__()
