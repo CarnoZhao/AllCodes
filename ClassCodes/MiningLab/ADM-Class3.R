@@ -35,7 +35,7 @@ x2.min = min(d$X2)
 x2.max = max(d$X2)
 
 points = sapply(
-	seq(x1.min, x1.max, length.out = 50), 
+	seq(x1.min, x1.max, length.out = 500), 
 	function(x1){
 		x_1 = x1
 		fn = function(x_2){
