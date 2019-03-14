@@ -7,14 +7,14 @@ class Solution:
         for edge in edges:
             nodes[edge[0]].add(edge[1])
             nodes[edge[1]].add(edge[0])
-        for key in nodes:
-            if len(nodes[key]) != 1:
-                continue
+        for key in [_ for _ in nodes if len(nodes[_]) == 1]:
             paths = [[key]]
             while paths:
                 temp = []
                 for path in paths:
-                    for newnode in nodes[path[-1]] - set(path):
+                    for newnode in nodes[path[-1]]:
+                        if newnode in path:
+                            continue
                         temp.append(path + [newnode])
                 if temp:
                     paths = temp
