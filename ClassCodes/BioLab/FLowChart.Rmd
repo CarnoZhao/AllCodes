@@ -1,0 +1,95 @@
+---
+title: "DNA Ristriction Enzyme Mapping Flow Chart"
+author: "Xun Zhao, xz2827"
+output: pdf_document
+fontsize: 12pt
+---
+
+# Step 1: Setting up the Restriction Digests
+
+|What|How|Why|
+|:-------------|:---------------------------------:|--------------:|
+|Label EP tubes|E, H, P, EH, EP, HP, EHP, L, pBR322|Specify enzymes|
+||||
+|$3\mu l$ pBR322|to all tubes except L|Plasmid to cut|
+||||
+|$6\mu l\,\lambda$ DNA|to tube L|For ladder|
+||||
+|Water|to total volume $10 \mu l$|Same reaction volume|
+||||
+|$1\mu l\,10\times$ buffer|to all tubes|Reaction buffer|
+||||
+|Enzymes|each $1\mu l$ as labels|Restriction enzymes|
+||||
+|Place in floater|Incubate, $37^{\circ}\text{C}$, $60$ min|Reaction starts|
+
+# Step 2: Casting a 1.0% Agarose Gel
+
+|What|How|Why|
+|:-----------|:--------:|--------------:|
+|Pour agarose|into flask with stir bar|To make the gel|
+||||
+|Add buffer|into flask|DNA negative in solution|
+||||
+|Heat|until agarose fully dissolve|Mix agarose and buffer|
+||||
+|Cool|until cool enough to touch||
+||||
+|Add EtBr|$4 \mu l$, use gloves|Make DNA visible under UV|
+||||
+|Pour into gel mold|after gently swirling, set $20 \text{min}$|Make gel solid|
+||||
+|Take out comb|||
+||||
+|Lift, turn $90^{\circ}$, reinsert||Gel open to buffer chamber|
+||||
+|Pour running buffer|to each end of gel box|Connect anode and cathode|
+||||
+
+# Step 3: Load Gel and Electrophorese
+
+|What|How|Why|
+|:-------------|:---------------------------:|--------------:|
+|Remove tubes from $37^{\circ}\text{C}$||Stop reaction|
+||||
+|Add Loading dye|$2 \mu l$ each tube|let digests sink, tell the location|
+||||
+|Close tops, vortex, microfuge||Mix the dye and digests|
+||||
+|Load|$12 \mu l$ per well, new tip||
+||||
+|Connect, turn on the power|137V, to positive red|Let DNA run|
+||||
+|Wait|until leading pigment run to #4|Let digests fully separate|
+||||
+|Turn off current|||
+
+# Step 4: View and Photograph
+
+|What|How|Why|
+|:-------------|:-----------------------:|--------------:|
+|Write name on weigh boat|with gloves||
+||||
+|Take out gel mold|slide gel into weigh boat, then transilluminator||
+||||
+|Turn on UV|with safty cover down|Show the DNA digests|
+||||
+|Take photo|||
+
+# Step 5: Cleanup
+
+- Put used tips and tubes into red Sharps container
+
+- Put used glassware on the tray, with stir bar, after rinsing
+
+- Empty ice buckets, put container on the chart
+
+- Put unused tips and tubes on the front bench
+
+- Rinse off casting tray, with comb, leave them on paper towel
+
+- Pour used buffer, leave it on paper towel upside down
+
+- Discard gloves
+
+- Make everything in order, wash hand
