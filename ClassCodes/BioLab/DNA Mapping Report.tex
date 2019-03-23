@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage{geometry, graphicx, float, subfigure, amsmath, bm}
+\usepackage{geometry, graphicx, float, subfigure, amsmath, bm, threeparttable}
 \usepackage[marginal]{footmisc}
 \geometry{a4paper,scale=0.8}
 
@@ -38,7 +38,8 @@
 
             \begin{table}[H]
                 \caption{$\lambda\ $DNA Data}
-                \begin{center}\begin{tabular}{|l|c|c|r|}
+                \centering
+                \begin{tabular}{|l|c|c|r|}
                     \hline
                     &base pairs&log(bps)&distance (pixels)\\
                     \hline
@@ -50,7 +51,7 @@
                     6&      2027&3.306853749&502\\
                     7&      564&2.751279104&870\\
                     \hline
-                \end{tabular}\end{center}
+                \end{tabular}
                 \label{l.data}
             \end{table}
 
@@ -84,7 +85,8 @@
             The distance of every well is shown below, using pixel unit.
             \begin{table}[H]
                 \caption{Distance}
-                \begin{center}\begin{tabular}{|l|c|c|c|c|c|c|c|}
+                \centering
+                \begin{tabular}{|l|c|c|c|c|c|c|c|}
                     \hline
                     tube&E&H&P&EH&EP&HP&EHP\\
                     \hline
@@ -93,37 +95,39 @@
                     &&&&830.039&&668.012&830.002\\
                     &&&&924.078&&&928.002\\
                     \hline
-                \end{tabular}\end{center}
+                \end{tabular}
                 \label{data.table}
             \end{table}
-            So using the equation derived above, we can get the estimated sequence length,
+            So using the equation derived above, we can get the estimated sequence length (rounded to integer),
             \begin{table}[H]
                 \caption{Length}
-                \begin{center}\begin{tabular}{|l|c|c|c|c|c|c|c|}
+                \centering
+                \begin{tabular}{|l|c|c|c|c|c|c|c|}
                     \hline
                     tube&E&H&P&EH&EP&HP&EHP\\
                     \hline
-                    length&3801.894&3326.596&4149.54&3184.198&2238.721&1570.363&1458.814\\
-                    (bps)&&475.335&&497.737&2018.366&897.429&859.014\\
-                    &&&&159.956&&527.23&159.956\\
-                    &&&&79.983&&&77.625\\
+                    length&3342&3112&3499&3041&2523&2089&2009\\
+                    (bps)&&1107&&1135&2388&1552&1517\\
+                    &&&&621&&1169&621\\
+                    &&&&430&&&423\\
                     \hline
-                \end{tabular}\end{center}
+                \end{tabular}
                 \label{data.len.table}
             \end{table}
             and also the logarithm of length,
             \begin{table}[H]
-                \caption{Logarithm of length}
-                \begin{center}\begin{tabular}{|l|c|c|c|c|c|c|c|}
+                \caption{Logarithm of Length}
+                \centering
+                \begin{tabular}{|l|c|c|c|c|c|c|c|}
                     \hline
                     tube&E&H&P&EH&EP&HP&EHP\\
                     \hline
-                    log(length)&3.58&3.522&3.618&3.503&3.35&3.196&3.164\\
-                    &&2.677&&2.697&3.305&2.953&2.934\\
-                    &&&&2.204&&2.722&2.204\\
-                    &&&&1.903&&&1.89\\
+                    log(length)&3.524&3.493&3.544&3.483&3.402&3.32&3.303\\
+                    &&3.044&&3.055&3.378&3.191&3.181\\
+                    &&&&2.793&&3.068&2.793\\
+                    &&&&2.633&&&2.626\\
                     \hline
-                \end{tabular}\end{center}
+                \end{tabular}
                 \label{data.log.table}
             \end{table}
         \subsection{pBR322 Mapping}
@@ -181,4 +185,81 @@
                 \caption{Labeled Bands}
                 \label{label.bands}
             \end{figure}
+            \subsubsection{Single Enzyme Digestion}
+                For tube \textbf{E, H, P}, we can see that \textbf{E, P} have two similar single bands, but \textbf{H} has two bands, which indicates that enzyme EcoR1 and PvuII cut the plasmid at one site, while HincII cuts at two sites. The picture below demonstrates this more clearly.
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width = 0.9\linewidth]{../Data/Plasmid/single.png}
+                    \caption{Number of Cutting Sites}
+                    \label{single.cut}
+                \end{figure}
+                Here, I choose different lengths for H.1 and H.2, because their bands' distances are different, causing H.1 to be longer with small distance, and H.2 to be shorter.
+
+            \subsubsection{Two Enzymes Digestion}
+                After we get the number of cutting sites of three enzymes, we can analysis their combination digestion.
+
+                \paragraph{\textbf{EH} tube} There are 4 different bands, and two of them (EH.1, EH.2) are almost the same as bands of \textbf{H}'s (H.1, H.2). However, as it is digested by EcoR1 and HincII, who have 1 and 2 cutting sites. So there should be 3 sites, and 3 bands. That is, HincII cuts the plasmid into two part, and EcoR1 cuts one of these two in to another two parts. Considering two same bands as \textbf{H}'s, the reaction of EcoR1's cutting is not complete, remaining small amount of HincII's product. In addition, as the signal of EH.1 is stronger than EH.2's, it is very likely that EH.2 (also H.2) should be cut into EH.3 and EH.4 but reaction is not complete, which means EcoR1's site might be located on EH.2 (also H.2), namely, shorter part between two HincII sites.
+
+                \paragraph{\textbf{EP} tube} The phenomenon is similar to \textbf{H}'s. Simply put, EcoR1's and PvuII's cutting sites lead to two fragments with different but similar lengths, since their distances are similar. So, EcoR1's cutting site should be about the opposite of PvuII's site.
+
+                \paragraph{\textbf{HP} tube} This can be analyzed as \textbf{EH} tube, but with better and clearer result. The digestion process can be explained as follows\footnote{There is no order of two enzyme reactions, but explaining them in order can make reaction process clear.}. HincII cuts plasmid into H.1 and H.2. Then, PvuII cuts H.1 into HP.1 and HP.2, leaving H.2 as HP.3, for their lengths are similar. So, PvuII's cutting site is located in H.1, namely, the longer part between two hincII sites.
+
+                \paragraph{Two Enzymes Conclusion} We have got three conclusions:
+                    \begin{enumerate}
+                        \item EcoR1 is on shorter part between HincII. (Assumption with high likelihood)
+                        \item EcoR1 is about the opposite of PvuII.
+                        \item PvuII is on longer part between HincII.
+                    \end{enumerate}
+                In addition, it is mentioned above that EH.3/EH.4 are products of H.1 or H.2. And HP.1/HP.2 are products of H.1. However, both EH.3 and EH.4 is shorter than HP.1 and HP.2, for their smaller distances, which indicates that if we connect EH.3 with EH.4, the summation of length is less than HP.1 plus HP.2. That is, EH.3/EH.4 and HP.1/HP.2 come from two different reagents, EH.3/EH.4 from shorter one (H.2), and HP.1/HP.2 from longer one (H.1). So, here is the map.
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[width = 0.4\linewidth]{../Data/Plasmid/III.png}
+                    \caption{Possible Map}
+                    \label{possible.map}
+                \end{figure}
+
+            \subsubsection{Three Enzyme Digestion}
+                For \textbf{EHP} tube, EHP.1 and EHP.2 are similar with HP.1 and HP.2. Meanwhile, EHP.3 and EHP.4 are similar with EH.3 and EH.4.
+
+                The bands correspond with the mapping result\footnote{No fixed order in real reaction.}:
+                $$\begin{aligned}
+                \text{pBR322}&\underset{\text{HincII}}{\rightarrow}&\text{H.1} &+ \text{H.2}\\
+                \text{H.1}&\underset{\text{PvuII}}{\rightarrow}&\text{EHP.1} &+ \text{EHP.2}\\
+                \text{H.2}&\underset{\text{EcoR1}}{\rightarrow}&\text{EHP.3} &+ \text{EHP.4}\\
+                \end{aligned}$$
+
+        \subsection{Length Analysis}
+            Before we start to calculate the length, we have to clean the raw length data (Table \ref{data.len.table} and Table \ref{data.log.table}). As we have known that some bands have equal length, some are the summation of other bands, and some bands equal to the whole plasmid.
+
+            First, the total length sould be standardized, using the average of 7 wells' results.
+            \begin{table}[H]
+                \centering
+                \caption{Total Length of Each Well}
+                \begin{threeparttable}
+                    \begin{tabular}{|l|c|c|c|c|c|c|c|}
+                        \hline
+                        tube&E&H&P&EH&EP&HP&EHP\\
+                        \hline
+                        length&3342&3112&3499&3041&2523&2089&2009\\
+                        (bps)&&1107&&(1135)&2388&1552&1517\\
+                        &&&&621&&1169&621\\
+                        &&&&430&&&423\\
+                        \hline
+                        total&3342&4219&3499&4092\tnote{*}&4911&4810&4570\\
+                        \hline
+                        average&\multicolumn{7}{|c|}{4206}\\
+                        \hline
+                    \end{tabular}
+                    \begin{tablenotes}
+                        \footnotesize
+                        \item[*] EH.2 (length = 1135) is remaining of incomplete reaction, not included.
+                    \end{tablenotes}
+                \end{threeparttable}
+                \label{data.len.table.total}
+            \end{table}
+
+            Then, using the average length as the total plasmid length, we can standardize the raw data.
+            \begin{table}[H]
+            \end{table}
+
 \end{document}
