@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2019.3.22)  23 MAR 2019 19:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2019.3.22)  23 MAR 2019 21:53
 entering extended mode
 **"./DNA Mapping Report.tex"
 ("DNA Mapping Report.tex"
@@ -311,102 +311,113 @@ File: ../Data/raw_point.png Graphic file (type png)
 
 <use ../Data/raw_point.png>
 Package pdftex.def Info: ../Data/raw_point.png used on input line 67.
-(pdftex.def)             Requested size: 239.00406pt x 239.0034pt.
+(pdftex.def)             Requested size: 191.20032pt x 191.19809pt.
 
 <../Data/raw_points_line.png, id=22, 505.6491pt x 505.6491pt>
 File: ../Data/raw_points_line.png Graphic file (type png)
 
 <use ../Data/raw_points_line.png>
 Package pdftex.def Info: ../Data/raw_points_line.png used on input line 79.
-(pdftex.def)             Requested size: 239.00406pt x 239.00533pt.
+(pdftex.def)             Requested size: 191.20032pt x 191.19963pt.
  [2 <../Data/raw_point.png>]
-<../Data/discard_1.png, id=29, 505.6491pt x 505.6491pt>
+<../Data/Plasmid/final.png, id=29, 1258.7025pt x 1258.7025pt>
+File: ../Data/Plasmid/final.png Graphic file (type png)
+
+<use ../Data/Plasmid/final.png>
+Package pdftex.def Info: ../Data/Plasmid/final.png used on input line 136.
+(pdftex.def)             Requested size: 191.20032pt x 191.198pt.
+ [3 <../Data/raw_points_line.png>]
+<../Data/discard_1.png, id=35, 505.6491pt x 505.6491pt>
 File: ../Data/discard_1.png Graphic file (type png)
 
 <use ../Data/discard_1.png>
-Package pdftex.def Info: ../Data/discard_1.png used on input line 142.
+Package pdftex.def Info: ../Data/discard_1.png used on input line 147.
 (pdftex.def)             Requested size: 191.20396pt x 191.19963pt.
 
-<../Data/discard_2.png, id=30, 505.6491pt x 505.6491pt>
+<../Data/discard_2.png, id=36, 505.6491pt x 505.6491pt>
 File: ../Data/discard_2.png Graphic file (type png)
 
 <use ../Data/discard_2.png>
-Package pdftex.def Info: ../Data/discard_2.png used on input line 148.
+Package pdftex.def Info: ../Data/discard_2.png used on input line 153.
 (pdftex.def)             Requested size: 191.20396pt x 191.19963pt.
 
-<../Data/discard_3.png, id=31, 505.6491pt x 505.6491pt>
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 145--157
+[][] [] 
+ []
+
+<../Data/discard_3.png, id=37, 505.6491pt x 505.6491pt>
 File: ../Data/discard_3.png Graphic file (type png)
 
 <use ../Data/discard_3.png>
-Package pdftex.def Info: ../Data/discard_3.png used on input line 154.
+Package pdftex.def Info: ../Data/discard_3.png used on input line 161.
 (pdftex.def)             Requested size: 191.20396pt x 191.19963pt.
 
-<../Data/discard_4.png, id=32, 505.6491pt x 505.6491pt>
+<../Data/discard_4.png, id=38, 505.6491pt x 505.6491pt>
 File: ../Data/discard_4.png Graphic file (type png)
 
 <use ../Data/discard_4.png>
-Package pdftex.def Info: ../Data/discard_4.png used on input line 160.
+Package pdftex.def Info: ../Data/discard_4.png used on input line 167.
 (pdftex.def)             Requested size: 191.20396pt x 191.19963pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 140--164
-[][] []
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 159--171
+[][] [] 
  []
 
-
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 140--164
-[] [] 
- []
-
-[3 <../Data/raw_points_line.png>]
-<../Data/xun_and_sam_label.png, id=37, 508.14844pt x 607.14328pt>
+[4 <../Data/Plasmid/final.png> <../Data/discard_1.png> <../Data/discard_2.png>]
+<../Data/xun_and_sam_label.png, id=45, 508.14844pt x 607.14328pt>
 File: ../Data/xun_and_sam_label.png Graphic file (type png)
 
 <use ../Data/xun_and_sam_label.png>
-Package pdftex.def Info: ../Data/xun_and_sam_label.png used on input line 184.
-(pdftex.def)             Requested size: 239.00406pt x 285.56119pt.
- [4 <../Data/discard_1.png> <../Data/discard_2.png> <../Data/discard_3.png> <..
-/Data/discard_4.png>]
-<../Data/Plasmid/single.png, id=45, 3496.06125pt x 1165.35374pt>
+Package pdftex.def Info: ../Data/xun_and_sam_label.png used on input line 191.
+(pdftex.def)             Requested size: 191.20032pt x 228.4471pt.
+
+<../Data/Plasmid/single.png, id=46, 3496.06125pt x 1165.35374pt>
 File: ../Data/Plasmid/single.png Graphic file (type png)
 
 <use ../Data/Plasmid/single.png>
-Package pdftex.def Info: ../Data/Plasmid/single.png used on input line 192.
+Package pdftex.def Info: ../Data/Plasmid/single.png used on input line 199.
 (pdftex.def)             Requested size: 430.20438pt x 143.39278pt.
- [5 <../Data/xun_and_sam_label.png (PNG copy)> <../Data/Plasmid/single.png>]
-<../Data/Plasmid/III.png, id=51, 1258.7025pt x 1258.7025pt>
+ [5 <../Data/discard_3.png> <../Data/discard_4.png> <../Data/xun_and_sam_label.
+png (PNG copy)>]
+<../Data/Plasmid/III.png, id=52, 1258.7025pt x 1258.7025pt>
 File: ../Data/Plasmid/III.png Graphic file (type png)
 
 <use ../Data/Plasmid/III.png>
-Package pdftex.def Info: ../Data/Plasmid/III.png used on input line 216.
+Package pdftex.def Info: ../Data/Plasmid/III.png used on input line 223.
 (pdftex.def)             Requested size: 191.20032pt x 191.198pt.
- [6 <../Data/Plasmid/III.png>] [7] [8]
+ [6 <../Data/Plasmid/single.png>] [7 <../Data/Plasmid/III.png>] [8]
+File: ../Data/Plasmid/final.png Graphic file (type png)
+ <use ../Data/Plasmid/final.png>
+Package pdftex.def Info: ../Data/Plasmid/final.png used on input line 387.
+(pdftex.def)             Requested size: 239.00406pt x 239.0023pt.
+ [9] [10]
 ("DNA Mapping Report.aux") ) 
 Here is how much of TeX's memory you used:
- 3133 strings out of 493323
- 43457 string characters out of 3138230
- 122463 words of memory out of 3000000
- 6601 multiletter control sequences out of 15000+200000
- 15200 words of font info for 53 fonts, out of 3000000 for 9000
+ 3145 strings out of 493323
+ 43667 string characters out of 3138230
+ 126505 words of memory out of 3000000
+ 6611 multiletter control sequences out of 15000+200000
+ 15546 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,15n,27p,838b,312s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,15n,27p,838b,310s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/InactiveApplication/LaTeX2/fonts/type1/public/a
 msfonts/cm/cmbx10.pfb><D:/InactiveApplication/LaTeX2/fonts/type1/public/amsfont
 s/cm/cmbx12.pfb><D:/InactiveApplication/LaTeX2/fonts/type1/public/amsfonts/cm/c
-mbx9.pfb><D:/InactiveApplication/LaTeX2/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb><D:/InactiveApplication/LaTeX2/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/
-InactiveApplication/LaTeX2/fonts/type1/public/amsfonts/cm/cmmib10.pfb><D:/Inact
-iveApplication/LaTeX2/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/InactiveAppl
-ication/LaTeX2/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/InactiveApplication
-/LaTeX2/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/InactiveApplication/LaTeX2/
-fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/InactiveApplication/LaTeX2/fonts/ty
-pe1/public/amsfonts/cm/cmr8.pfb><D:/InactiveApplication/LaTeX2/fonts/type1/publ
-ic/amsfonts/cm/cmr9.pfb><D:/InactiveApplication/LaTeX2/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb><D:/InactiveApplication/LaTeX2/fonts/type1/public/amsfonts/cm
-/cmsy7.pfb><D:/InactiveApplication/LaTeX2/fonts/type1/public/amsfonts/cm/cmti8.
-pfb>
-Output written on "DNA Mapping Report.pdf" (9 pages, 3249953 bytes).
+mbx9.pfb><D:/InactiveApplication/LaTeX2/fonts/type1/public/amsfonts/cm/cmex10.p
+fb><D:/InactiveApplication/LaTeX2/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:
+/InactiveApplication/LaTeX2/fonts/type1/public/amsfonts/cm/cmmib10.pfb><D:/Inac
+tiveApplication/LaTeX2/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/InactiveApp
+lication/LaTeX2/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/InactiveApplicatio
+n/LaTeX2/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/InactiveApplication/LaTeX2
+/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/InactiveApplication/LaTeX2/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb><D:/InactiveApplication/LaTeX2/fonts/type1/pub
+lic/amsfonts/cm/cmr9.pfb><D:/InactiveApplication/LaTeX2/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb><D:/InactiveApplication/LaTeX2/fonts/type1/public/amsfonts/c
+m/cmsy7.pfb><D:/InactiveApplication/LaTeX2/fonts/type1/public/amsfonts/cm/cmti1
+0.pfb><D:/InactiveApplication/LaTeX2/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on "DNA Mapping Report.pdf" (11 pages, 3329402 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
+ 123 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

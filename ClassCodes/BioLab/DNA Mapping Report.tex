@@ -64,7 +64,7 @@
             The raw curve is plotted as follows,
             \begin{figure}[H]
                 \centering
-                \includegraphics[width = 0.5\textwidth]{../Data/raw_point.png}
+                \includegraphics[width = 0.4\textwidth]{../Data/raw_point.png}
                 \caption{The realtionship between distance and logarithm of number of base pairs}
                 \label{raw.curve}
             \end{figure}
@@ -76,7 +76,7 @@
             The combination of this line and data points is as follows,
             \begin{figure}[H]
                 \centering
-                \includegraphics[width = 0.5\textwidth]{../Data/raw_points_line.png}
+                \includegraphics[width = 0.4\textwidth]{../Data/raw_points_line.png}
                 \caption{Standard Curve with Fitting Line}
                 \label{raw.curve.line}
             \end{figure}
@@ -131,7 +131,12 @@
                 \label{data.log.table}
             \end{table}
         \subsection{pBR322 Mapping}
-
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width = 0.4\linewidth]{../Data/Plasmid/final.png}
+                \caption{Mapping Result}
+                \label{final.map}
+            \end{figure}
     
     \section{Discussion}
         \subsection{Standard Curve}
@@ -149,6 +154,8 @@
                     \caption{Discarding Point 1}
                     \label{dis.1}
                 \end{minipage}
+            \end{figure}
+            \begin{figure}[H]
                 \begin{minipage}[t]{0.5\textwidth}
                     \centering
                     \includegraphics[width = 0.8\linewidth]{../Data/discard_3.png}
@@ -181,7 +188,7 @@
             For convenience, I label bands from tube \textbf{E, H, P, EH, EP, HP, EHP}.
             \begin{figure}[H]
                 \centering
-                \includegraphics[width = 0.5\linewidth]{../Data/xun_and_sam_label.png}
+                \includegraphics[width = 0.4\linewidth]{../Data/xun_and_sam_label.png}
                 \caption{Labeled Bands}
                 \label{label.bands}
             \end{figure}
@@ -228,7 +235,7 @@
                 \text{H.2}&\underset{\text{EcoR1}}{\rightarrow}&\text{EHP.3} &+ \text{EHP.4}\\
                 \end{aligned}$$
 
-        \subsection{Data Cleaning}
+        \subsection{Data Analysis}
             Before we start to calculate the length, we have to clean the raw length data (Table \ref{data.len.table} and Table \ref{data.log.table}). As we have known that some bands have equal length, some are the summation of other bands, and some bands equal to the whole plasmid.
 
             First, we will estimate the total length of plasmid by calculating the average of 7 summations.
@@ -258,60 +265,134 @@
                 \label{data.len.table.total}
             \end{table}
 
-            So, the estimated total length is 4206bp.
+            So, the estimated total length is 4206bp. Assuming the total length is true, we can standardize all the lengths to their ratio to total length.
 
-            Then, since there are some bands that look the same in the photo but have different length, because of the random error in electrophoresis and measuring, we have to make these lengths equal.
+            $$\text{Ratio} = \frac{\text{Length}}{\text{Total Length}} \in [0, 1]$$
 
-            We start with the indivisible fragments, EHP.1, EHP.2, EHP.3 and EHP.4.
-            $$\begin{aligned}
-            \text{EHP.1} &= \text{HP.1}\\
-            \text{EHP.2} &= \text{HP.2}\\
-            \text{EHP.3} &= \text{EH.3}\\
-            \text{EHP.4} &= \text{EH.4}\\
-            \end{aligned}$$
-
-            We convert values in raw data Table \ref{data.len.table.total} to the mean values of original lengths.
+            Then the data will become:
             \begin{table}[H]
+                \caption{Ratio of All Fragments}
                 \centering
-                \caption{Convert 1}
+                \begin{tabular}{|l|c|c|c|c|c|c|c|}
+                    \hline
+                    tube&E&H&P&EH&EP&HP&EHP\\
+                    \hline
+                    Ratio&1&0.738&1&0.743&0.514&0.434&0.44\\
+                    &&0.262&&(0.27)&0.486&0.323&0.332\\
+                    &&&&0.152&&0.243&0.136\\
+                    &&&&0.105&&&0.092\\
+                    \hline
+                \end{tabular}
+                \label{data.ratio}
+            \end{table}
+
+            Then we will use a mathematical method solving equations to get the most probable result.
+
+            Since EHP.1/EHP.2/EHP.3/EHP.4 are 4 indivisible fragments and others are made from them, we assume their true ratio are $x_1, x_2, x_3, x_4$, where $x_1 + x_2 + x_3 + x_4 = 1$.
+
+            Thus, the assumption is,
+            \begin{table}[H]
+                \caption{Ratio of All Fragments}
+                \centering
                 \begin{threeparttable}
                     \begin{tabular}{|l|c|c|c|c|c|c|c|}
                         \hline
                         tube&E&H&P&EH&EP&HP&EHP\\
                         \hline
-                        length&3342&3112&3499&3041&2523&$2049^{*}$&$2049^*$\\
-                        (bps)&&1107&&(1135)&2388&$1534.5^{**}$&$1534.5^{**}$\\
-                        &&&&$621^{***}$&&1169&$621^{***}$\\
-                        &&&&$426.5^{****}$&&&$426.5^{****}$\\
+                        Ratio&1&$x_1 + x_2$&1&$x_1 + x_2$&$\text{ - }^*$&$x_1$&$x_1$\\
+                        &&$x_3 + x_4$&&$(x_3 + x_4)$&$\text{ - }^*$&$x_2$&$x_2$\\
+                        &&&&$x_3$&&$x_3 + x_4$&$x_3$\\
+                        &&&&$x_4$&&&$x_4$\\
                         \hline
                     \end{tabular}
                     \begin{tablenotes}
-                        \footnotesize
-                        \item[*] $2049 = (2089 + 2009)/2$
-                        \item[**] $1534.5 = (1552 + 1517)/2$
-                        \item[***] $621 = (621 + 621)/2$
-                        \item[****] $426.5 = (430 + 423)/2$
-                    \end{tablenotes}
+                            \footnotesize
+                            \item[*] EP.1/EP.2's composition is unknown.
+                        \end{tablenotes}
                 \end{threeparttable}
-                \label{data.len.table.convert1}
+                \label{data.ratio.x}
             \end{table}
 
-            Then, we have known that some bands are the summations of other smaller bands.
-            $$\text{HP.1} + \text{HP.2} = \text{H.1} = \text{EH.1}$$
-            $$\text{EH.3} + \text{EH.4} = \text{H.2} = \text{EH.2} = \text{HP.3}$$
-            For the first equation,
+            So, for all fragments, there are assumption ratio and experimental ratio. We can calculate the error by squared error:
+            $$\text{Error} = (\text{Ratio} - \text{Ratio}_{\text{Experi}})^2$$
+
+            Then, we can choose $x_1, x_2, x_3, x_4$ to minimize the error. The total error is calculated as:
             $$\begin{aligned}
-            \text{HP.1} + \text{HP.2} &= 3583.5\\
-            \text{H.1} &= 3112\\
-            \text{EH.1} &= 3041\\
-            \text{Average} &= \frac{3583.5 + 3112 + 3041}{3} = 3245.5\\
-            \end{aligned}$$
-            For the second equation,
-            $$\begin{aligned}
-            \text{EH.3} + \text{EH.4} &= 1047.5\\
-            \text{H.2} &= 1107\\
-            \text{EH.2} &= 1135\\
-            \text{Average} &= \frac{1047.5 + 1107 + 1135}{3} = 1096.5\\
+            \text{Error} = &(x_1 + x_2 - 0.738) ^ 2 + (x_1 + x_2 - 0.743) ^ 2 + (x_3 + x_4 - 0.262) ^ 2\\
+            &+(x_3 + x_4 - 0.27) ^ 2 + (x_3 + x_4 - 0.243) ^ 2 + (x_1 - 0.434)^2 + (x_1 - 0.44)^2\\
+            &+(x_2 - 0.323)^2 + (x_2 - 0.332)^2 + (x_3 - 0.152)^2 + (x_3 - 0.136)^2\\
+            &+(x_4 - 0.105)^2 + (x_4 - 0.092)^2\\
             \end{aligned}$$
 
+            There are many optimization methods to deal with this problem. I used the \textit{optim()} function in \textbf{R} programming language to calculate the minimum error, which returned the result that:
+            $$\left\{\begin{aligned}
+            x_1 = 0.428\\
+            x_2 = 0.319\\
+            x_3 = 0.149\\
+            x_4 = 0.104\\
+            \end{aligned}\right.$$
+
+            Now, we can know which fragments EP.1/EP.2 consist of.
+            $$\text{Ratio}_{\text{EP.1}} = 0.514 \approx x_1 + x_4 = 0.532$$
+            $$\text{Ratio}_{\text{EP.2}} = 0.486 \approx x_2 + x_3 = 0.468$$
+
+            That is, the assumption ratio of EP.1 and EP.2 should be $x_1 + x_4 \text{ and } x_2 + x_3$.
+
+            After knowing that, we can do the optimization again, including the new ratio of EP.1 and EP.2.
+            The result is:
+            $$\left\{\begin{aligned}
+            x_1 = 0.424\\
+            x_2 = 0.323\\
+            x_3 = 0.154\\
+            x_4 = 0.099\\
+            \end{aligned}\right.$$
+
+            Then, using the optimized ratio, we can get the length by multiplying the Total length:
+            \begin{table}[H]
+                \caption{Ratio of All Fragments}
+                \centering
+                \begin{tabular}{|l|c|c|c|c|c|c|c|}
+                    \hline
+                    tube&E&H&P&EH&EP&HP&EHP\\
+                    \hline
+                    Ratio&1&0.747&1&0.747&0.523&0.424&0.424\\
+                    &&0.253&&(0.253)&0.477&0.323&0.323\\
+                    &&&&0.154&&0.253&0.154\\
+                    &&&&0.099&&&0.099\\
+                    \hline
+                \end{tabular}
+                \label{data.ratio.final}
+            \end{table}
+            \begin{table}[H]
+                \caption{Length of All Fragments}
+                \centering
+                \begin{tabular}{|l|c|c|c|c|c|c|c|}
+                    \hline
+                    tube&E&H&P&EH&EP&HP&EHP\\
+                    \hline
+                    Length&4206&3142&4206&3142&2200&1783&1783\\
+                    (bps)&&1064&&(1064)&2006&1359&1359\\
+                    &&&&648&&1064&648\\
+                    &&&&416&&&416\\
+                    \hline
+                \end{tabular}
+                \label{data.length.final}
+            \end{table}
+
+            Finally, we can get the mapping result Figure \ref{final.map}easily. Two HincII divide the plasmid into two parts, with length 3142 and 1064. EcoR1 is at the shorter part, dividing this short part into 648 and 416. PvuII is at the longer part, dividing this long part into 1783 and 1359. In addition, the 1783 and 416 is adjacent summing to 2200, and 1359 is adjacent summing to 2006. So the order is:
+            $$416\rightarrow1783\rightarrow1359\rightarrow648\rightarrow...$$
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width = 0.5\linewidth]{../Data/Plasmid/final.png}
+                \caption{Mapping Result}
+                \label{final.map2}
+            \end{figure}
+        \subsection{Undigested DNA}
+            There are two bands in \textbf{pBR322} tube, and the one with larger travel distance has stronger signal, the one with smaller travel distance has weaker signal. 
+
+            The stronger signal one is the normal circular DNA, with supercoiled conformation, namely, more denser conformation. So it travels fast, regardless of its large number of base pairs. However, the weaker signal one is untwisted, less denser than supercoiled, causing it travel slower.
+
+        \subsection{Conclusion}
+            \paragraph{Common Error} 
 \end{document}
