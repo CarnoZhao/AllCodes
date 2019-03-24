@@ -88,9 +88,9 @@
                 \centering
                 \begin{tabular}{|l|c|c|c|c|c|c|c|}
                     \hline
-                    tube&E&H&P&EH&EP&HP&EHP\\
+                    Tube&E&H&P&EH&EP&HP&EHP\\
                     \hline
-                    distance&400.125&418.12&388.082&424.118&472.004&520.004&530.015\\
+                    Distance&400.125&418.12&388.082&424.118&472.004&520.004&530.015\\
                     (pixels)&&682.237&&676.027&486.037&596.03&602.003\\
                     &&&&830.039&&668.012&830.002\\
                     &&&&924.078&&&928.002\\
@@ -104,9 +104,9 @@
                 \centering
                 \begin{tabular}{|l|c|c|c|c|c|c|c|}
                     \hline
-                    tube&E&H&P&EH&EP&HP&EHP\\
+                    Tube&E&H&P&EH&EP&HP&EHP\\
                     \hline
-                    length&3342&3112&3499&3041&2523&2089&2009\\
+                    Length&3342&3112&3499&3041&2523&2089&2009\\
                     (bps)&&1107&&1135&2388&1552&1517\\
                     &&&&621&&1169&621\\
                     &&&&430&&&423\\
@@ -120,9 +120,9 @@
                 \centering
                 \begin{tabular}{|l|c|c|c|c|c|c|c|}
                     \hline
-                    tube&E&H&P&EH&EP&HP&EHP\\
+                    Tube&E&H&P&EH&EP&HP&EHP\\
                     \hline
-                    log(length)&3.524&3.493&3.544&3.483&3.402&3.32&3.303\\
+                    log(Length)&3.524&3.493&3.544&3.483&3.402&3.32&3.303\\
                     &&3.044&&3.055&3.378&3.191&3.181\\
                     &&&&2.793&&3.068&2.793\\
                     &&&&2.633&&&2.626\\
@@ -245,9 +245,9 @@
                 \begin{threeparttable}
                     \begin{tabular}{|l|c|c|c|c|c|c|c|}
                         \hline
-                        tube&E&H&P&EH&EP&HP&EHP\\
+                        Tube&E&H&P&EH&EP&HP&EHP\\
                         \hline
-                        length&3342&3112&3499&3041&2523&2089&2009\\
+                        Length&3342&3112&3499&3041&2523&2089&2009\\
                         (bps)&&1107&&(1135)&2388&1552&1517\\
                         &&&&621&&1169&621\\
                         &&&&430&&&423\\
@@ -275,7 +275,7 @@
                 \centering
                 \begin{tabular}{|l|c|c|c|c|c|c|c|}
                     \hline
-                    tube&E&H&P&EH&EP&HP&EHP\\
+                    Tube&E&H&P&EH&EP&HP&EHP\\
                     \hline
                     Ratio&1&0.738&1&0.743&0.514&0.434&0.44\\
                     &&0.262&&(0.27)&0.486&0.323&0.332\\
@@ -297,7 +297,7 @@
                 \begin{threeparttable}
                     \begin{tabular}{|l|c|c|c|c|c|c|c|}
                         \hline
-                        tube&E&H&P&EH&EP&HP&EHP\\
+                        Tube&E&H&P&EH&EP&HP&EHP\\
                         \hline
                         Ratio&1&$x_1 + x_2$&1&$x_1 + x_2$&$\text{ - }^*$&$x_1$&$x_1$\\
                         &&$x_3 + x_4$&&$(x_3 + x_4)$&$\text{ - }^*$&$x_2$&$x_2$\\
@@ -353,7 +353,7 @@
                 \centering
                 \begin{tabular}{|l|c|c|c|c|c|c|c|}
                     \hline
-                    tube&E&H&P&EH&EP&HP&EHP\\
+                    Tube&E&H&P&EH&EP&HP&EHP\\
                     \hline
                     Ratio&1&0.747&1&0.747&0.523&0.424&0.424\\
                     &&0.253&&(0.253)&0.477&0.323&0.323\\
@@ -368,7 +368,7 @@
                 \centering
                 \begin{tabular}{|l|c|c|c|c|c|c|c|}
                     \hline
-                    tube&E&H&P&EH&EP&HP&EHP\\
+                    Tube&E&H&P&EH&EP&HP&EHP\\
                     \hline
                     Length&4206&3142&4206&3142&2200&1783&1783\\
                     (bps)&&1064&&(1064)&2006&1359&1359\\
@@ -394,5 +394,16 @@
             The stronger signal one is the normal circular DNA, with supercoiled conformation, namely, more denser conformation. So it travels fast, regardless of its large number of base pairs. However, the weaker signal one is untwisted, less denser than supercoiled, causing it travel slower.
 
         \subsection{Conclusion}
-            \paragraph{Common Error} 
+            \subsubsection{Common Error}
+                \paragraph{Experimental Error} As the electrophoresis does not exactly fit the equation $d \propto \frac{1}{log(n)}$, the distance itself consists of random error, which is inevitable in experiment. If we use wrong amount of reagents, or let reaction running for wrong time, or make mistakes when loading, the experimental error will increase.
+
+                \paragraph{Measurement Error} There is no standard scale in the photo. I measure the distance using software to count the pixels, which will generate random measurement error. However, after measuring for enough times, calculating the average distance can eliminate the random measurement error.
+
+                \paragraph{Linear Fitting Error} The standard curve is a curve, instead of a line. No matter how it looks like a straight line, the true value comes from a curve function. So if we use a linear function to estimate base pairs, there will always be error. Plus, the base pairs are in logarithm scale, which will magnify the small error into large length difference.
+
+            \subsubsection{Further Application}
+                At the end of the experiment, we get the locations of 4 restriction sites of 3 enzymes in a plasmid, and also, these fragments with known cohesive ends. We can bind these fragments into other known plasmids to determine what genes are in the fragments. Then, we will get the gene map of the unknown plasmid. This is useful to study a new plasmid or test a newly built plasmid. 
+
+                In genetic engineering, plasmid is an essential tool. If we know more details about the tool, we can do a better job. The mapping, including restriction mapping is the basic process to explore the detail of a plasmid.
+
 \end{document}
