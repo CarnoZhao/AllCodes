@@ -228,10 +228,10 @@
                 \text{H.2}&\underset{\text{EcoR1}}{\rightarrow}&\text{EHP.3} &+ \text{EHP.4}\\
                 \end{aligned}$$
 
-        \subsection{Length Analysis}
+        \subsection{Data Cleaning}
             Before we start to calculate the length, we have to clean the raw length data (Table \ref{data.len.table} and Table \ref{data.log.table}). As we have known that some bands have equal length, some are the summation of other bands, and some bands equal to the whole plasmid.
 
-            First, the total length sould be standardized, using the average of 7 wells' results.
+            First, we will estimate the total length of plasmid by calculating the average of 7 summations.
             \begin{table}[H]
                 \centering
                 \caption{Total Length of Each Well}
@@ -258,8 +258,60 @@
                 \label{data.len.table.total}
             \end{table}
 
-            Then, using the average length as the total plasmid length, we can standardize the raw data.
+            So, the estimated total length is 4206bp.
+
+            Then, since there are some bands that look the same in the photo but have different length, because of the random error in electrophoresis and measuring, we have to make these lengths equal.
+
+            We start with the indivisible fragments, EHP.1, EHP.2, EHP.3 and EHP.4.
+            $$\begin{aligned}
+            \text{EHP.1} &= \text{HP.1}\\
+            \text{EHP.2} &= \text{HP.2}\\
+            \text{EHP.3} &= \text{EH.3}\\
+            \text{EHP.4} &= \text{EH.4}\\
+            \end{aligned}$$
+
+            We convert values in raw data Table \ref{data.len.table.total} to the mean values of original lengths.
             \begin{table}[H]
+                \centering
+                \caption{Convert 1}
+                \begin{threeparttable}
+                    \begin{tabular}{|l|c|c|c|c|c|c|c|}
+                        \hline
+                        tube&E&H&P&EH&EP&HP&EHP\\
+                        \hline
+                        length&3342&3112&3499&3041&2523&$2049^{*}$&$2049^*$\\
+                        (bps)&&1107&&(1135)&2388&$1534.5^{**}$&$1534.5^{**}$\\
+                        &&&&$621^{***}$&&1169&$621^{***}$\\
+                        &&&&$426.5^{****}$&&&$426.5^{****}$\\
+                        \hline
+                    \end{tabular}
+                    \begin{tablenotes}
+                        \footnotesize
+                        \item[*] $2049 = (2089 + 2009)/2$
+                        \item[**] $1534.5 = (1552 + 1517)/2$
+                        \item[***] $621 = (621 + 621)/2$
+                        \item[****] $426.5 = (430 + 423)/2$
+                    \end{tablenotes}
+                \end{threeparttable}
+                \label{data.len.table.convert1}
             \end{table}
+
+            Then, we have known that some bands are the summations of other smaller bands.
+            $$\text{HP.1} + \text{HP.2} = \text{H.1} = \text{EH.1}$$
+            $$\text{EH.3} + \text{EH.4} = \text{H.2} = \text{EH.2} = \text{HP.3}$$
+            For the first equation,
+            $$\begin{aligned}
+            \text{HP.1} + \text{HP.2} &= 3583.5\\
+            \text{H.1} &= 3112\\
+            \text{EH.1} &= 3041\\
+            \text{Average} &= \frac{3583.5 + 3112 + 3041}{3} = 3245.5\\
+            \end{aligned}$$
+            For the second equation,
+            $$\begin{aligned}
+            \text{EH.3} + \text{EH.4} &= 1047.5\\
+            \text{H.2} &= 1107\\
+            \text{EH.2} &= 1135\\
+            \text{Average} &= \frac{1047.5 + 1107 + 1135}{3} = 1096.5\\
+            \end{aligned}$$
 
 \end{document}
