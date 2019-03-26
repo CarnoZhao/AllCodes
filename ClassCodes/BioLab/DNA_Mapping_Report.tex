@@ -2,6 +2,7 @@
 \usepackage{geometry, graphicx, float, subfigure, amsmath, bm, threeparttable}
 \usepackage[marginal]{footmisc}
 \geometry{a4paper,scale=0.8}
+\setlength{\parindent}{2em}
 
 \title{\bf{pBR322 Mapping by Restriction Digestion with EcoR1/HincII/PvuII and Electrophoresis}}
 \author{Xun Zhao (Partner: Samantha)}
@@ -139,6 +140,15 @@
             \end{figure}
     
     \section{Discussion}
+        \subsection{Overview of Discussion}
+            First, we will fit the standard curve.
+
+            Next, as the random error is inevitable in experiment, there are hardly two bands in photo that have the same distance in pixels. We have to assume that some of them indeed traveled the same distance.
+
+            Then, we will analyze the relative position without exact length information. Instead, the analysis will be based on the assumption that some bands seem to be same.
+
+            Finally, we will using statistical method to estimate the exact length, using the original data to minimize the estimation error.
+
         \subsection{Standard Curve}
             First, I tried to discard the points with larger length, which is out of the gel's resolving ability. The lines are derived from linear regression, namely, least squared method (calculation not shown).
             \begin{figure}[H]
@@ -329,7 +339,7 @@
             &+(x_4 - 0.105)^2 + (x_4 - 0.092)^2\\
             \end{aligned}$$
 
-            There are many optimization methods to deal with this problem. I used the \textit{optim()} function in \textbf{R} programming language to calculate the minimum error, which returned the result that:
+            There are many methods to find the minimum of a function. I used the \textit{optim()} function in \textbf{R} programming language to calculate the minimum error, which returned the result that:
             $$\left\{\begin{aligned}
             x_1 = 0.428\\
             x_2 = 0.319\\
@@ -407,8 +417,10 @@
                 \paragraph{Linear Fitting Error} The standard curve is a curve, instead of a line. No matter how it looks like a straight line, the true value comes from a curve function. So if we use a linear function to estimate base pairs, there will always be error. Plus, the base pairs are in logarithm scale, which will magnify the small error into large length difference.
 
             \subsubsection{Further Application}
-                At the end of the experiment, we get the locations of 4 restriction sites of 3 enzymes in a plasmid, and also, these fragments with known cohesive ends. We can bind these fragments into other known plasmids to determine what genes are in the fragments. Then, we will get the gene map of the unknown plasmid. This is useful to study a new plasmid or test a newly built plasmid. 
+                At the end of the experiment, we get the locations of 4 restriction sites of 3 enzymes in a plasmid, and also, these fragments with known restriction ends. We can bind these fragments into other known plasmids to determine what genes are in the fragments. Then, we will get the gene map of the unknown plasmid. This is useful to study a new plasmid or test a newly built plasmid. In genetic engineering, we can use these plasmids with known genetic structure to do recombination with bacteria chromosomes and build new genotypes. This is the basic of transgenosis.
 
-                In genetic engineering, plasmid is an essential tool. If we know more details about the tool, we can do a better job. The mapping, including restriction mapping is the basic process to explore the detail of a plasmid.
+                % In genetic engineering, plasmid is an essential tool. If we know more details about the tool, we can do a better job. The mapping, including restriction mapping is the basic process to explore the detail of a plasmid.
+
+                However, we have to admit that, compared with new generation of seqeuncing technology, the information we get from a traditional genetics experiment is not enough. 
 
 \end{document}
