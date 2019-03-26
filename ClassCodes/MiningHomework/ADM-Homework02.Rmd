@@ -9,9 +9,9 @@ fontsize: 12pt
 
 ## 1.
 
-Yes. But it needs the tree to be very high than some simple tree classifiers.
+Yes. But it needs the tree to be more complex.
 
-As the tree classifier boundary is made of some line segments that are parallel with x-axis or y-axis, we can draw a zigzag curve along the linear boundary. Thus, the sloping linear boundary becomes many segments, and every segment is a dicision in tree classifier.
+As the tree classifier boundary is made of some line segments that are parallel with x-axis or y-axis, we can draw a zigzag curve along the linear boundary. Thus, the sloping linear boundary becomes many segments, and every segment is a dicision in the tree classifier.
 
 ```{r, echo = FALSE, fig.width = 5, fig.height = 5, out.width = "20em", fig.align = "center"}
 x1 = rnorm(100, 0, 1)
@@ -19,8 +19,9 @@ x2 = rnorm(100, 0, 1)
 y = ifelse(x1 + x2 > 0, 1, 0)
 d = data.frame(cbind(x1, x2, y)[which(x1 + x2 > 1 | x1 + x2 < -1),])
 library(ggplot2)
-ggplot(d, aes(x = x1, y = x2, color = as.factor(y))) + 
+ggplot(d, aes(x = x1, y = x2, shape = as.factor(y))) + 
 	geom_point() + 
+	scale_shape_manual(values = c(2,16)) + 
 	geom_segment(x = -2, y = 2, xend = -1, yend = 2) +
 	geom_segment(x = -1, y = 2, xend = -1, yend = 1) +
 	geom_segment(x = -1, y = 1, xend = 0, yend = 1) +
@@ -43,20 +44,20 @@ And the risk is defined as:
 
 $$R(f) = \underset{+1,\,-1}{\sum}\int L(y,\,f(\vec{x}))P(\vec{x},\,y)d\vec{x}$$
 
-Thus, the risk $R(f)$ depends on the possible data distribution instead of only existing data points. Moreover, the Bayes-optimal classifier is defined by the possible distribution, so it can always minimize the risk under certain data model. However, the tree classifier cannot fit the linear boundary, which causes the misclassification compared with Bayes-optimal. As the Bayes-optimal has the lowest risk, the risk of tree classifier will always differ from Bayes-optimal, unless the Bayes-optimal's boundary is axis-parallel.
+Thus, the risk $R(f)$ depends on the possible data distribution instead of only existing data points. Moreover, the Bayes-optimal classifier is defined by the possible distribution, so it can always minimize the risk under certain data model. However, the tree classifier cannot fit the linear boundary, which causes the misclassification compared with Bayes-optimal. As the Bayes-optimal has the lowest risk, the risk of tree classifier will always differ from Bayes-optimal, unless the Bayes-optimal's boundary is parallel to x or y-axis.
 
 ## 3. 
 
 $$g(\vec{x}) = \begin{cases}
 	f_1(\vec{x}) > 0 &
 	\begin{cases}
-		f_2(\vec{x}) > 0 & class\,A\\\
-		f_2(\vec{x}) < 0 & class\,B
-	\end{cases}\\\
+		f_2(\vec{x}) > 0\rightarrow class\,A\\
+		f_2(\vec{x}) < 0\rightarrow class\,B
+	\end{cases}\\
 	f_1(\vec{x}) < 0 &
 	\begin{cases}
-		f_3(\vec{x}) > 0 & class\,B\\\
-		f_3(\vec{x}) < 0 & class\,C
+		f_3(\vec{x}) > 0\rightarrow class\,B\\
+		f_3(\vec{x}) < 0\rightarrow class\,C
 	\end{cases}
 \end{cases}$$
 
@@ -70,18 +71,21 @@ $$\text{if }i\neq j,\,\chi_i\cap\chi_j = \varnothing$$
 $$||\chi_i|| = \frac{||\chi||}{10}$$
 
 ## 2.
-
+<!-- 
 Because k-NN algorithm actually is not a learning algorithm with model parameter, the training data can be used only for classification. Thus, we do not have to choose the best model from a set.
+ -->
+For each new $i \in \{1, 2, ..., 10\}$, namely, different cross validation set $\chi_{cv} = \chi_{i}$, we learn the model from training set 
+$$\chi_{\text{training}} = \chi - \chi_i = \bigcup_{j \neq i}\chi_j$$
 
-Every time we use a new fold, namely, different cross validation set $\chi_{cv}$, we apply the classification function $f$ on $\chi_{cv}$ based on training set $\chi_{tr} = \chi-\chi_{cv}$ and culculated the err.
-
-The training set is used as model (or classification function).
+Next, we apply the classification model $f$ on $\chi_{cv} = \chi_{i}$ to calculate the error on cross validation set. Then, repeat this process for each $i$.<!-- Then, the final error is the average of these errors for each $i$. Finally, we choose the hyperparameter that has the least cross validation error.
+ -->
+<!-- The training set is used as model (or classification function).
 
 $$\hat{y} = f(\vec{x};\,k,\,\chi_{training}),\ \ \ k,\,\chi_{training}\text{ are fixed}$$
 
 The cross validation set is used as a criterion to quantify how well the model can generalize.
 
-$$R(f) = \sum_{\vec{x}\text{ in }\chi_{cv}}l[y,\,f(\vec{x};\,k,\,\chi_{training})]$$
+$$R(f) = \sum_{\vec{x}\text{ in }\chi_{cv}}l[y,\,f(\vec{x};\,k,\,\chi_{training})]$$ -->
 
 ## 3.
 
@@ -104,19 +108,18 @@ The most obvious disadvantage of k-NN algorithm is that it has to store all the 
 ## 1. Read data from files
 
 ```{r}
-pixels = as.matrix(read.table('../data/uspsdata.txt'))
-labels = as.matrix(read.table('../data/uspscl.txt'))
+pixels = as.matrix(read.table('../Data/uspsdata.txt'))
+labels = as.matrix(read.table('../Data/uspscl.txt'))
 nums = nrow(pixels)
 ```
 
 ## 2. Plot first 4 digits
 
 ```{r, fig.width = 20, fig.height = 20, out.width = '5em', out.height = '5em', fig.align = 'center'}
-image.print <- function(x)
-{
-x.matrix <- matrix(x, 16, 16, byrow = FALSE)
-x.matrix.rotated <- t(apply(x.matrix, 1, rev))
-image(x.matrix.rotated, axes = FALSE, col = grey(seq(0, 1, length.out = 256)))
+image.print <- function(x){
+	x.matrix <- matrix(x, 16, 16, byrow = FALSE)
+	x.matrix.rotated <- t(apply(x.matrix, 1, rev))
+	image(x.matrix.rotated, axes = FALSE, col = grey(seq(0, 1, length.out = 256)))
 }
 for(i in 1:4){
 	image.print(pixels[i,])
