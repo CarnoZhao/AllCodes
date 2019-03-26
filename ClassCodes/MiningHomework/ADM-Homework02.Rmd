@@ -119,7 +119,10 @@ nums = nrow(pixels)
 image.print <- function(x){
 	x.matrix <- matrix(x, 16, 16, byrow = FALSE)
 	x.matrix.rotated <- t(apply(x.matrix, 1, rev))
-	image(x.matrix.rotated, axes = FALSE, col = grey(seq(0, 1, length.out = 256)))
+	image(x.matrix.rotated, 
+		axes = FALSE, 
+		col = grey(seq(0, 1, length.out = 256))
+		)
 }
 for(i in 1:4){
 	image.print(pixels[i,])
@@ -129,6 +132,7 @@ for(i in 1:4){
 ## 3. Devide data into 3 parts
 
 ```{r}
+# Data set is random already. So split without shuffling 
 p.tr = pixels[1:round(nums * 0.6),]
 l.tr = labels[1:round(nums * 0.6),]
 p.cv = pixels[(round(nums * 0.6) + 1):round(nums * 0.8),]
@@ -157,7 +161,7 @@ for (row in rows){
 }
 ```
 
-## 5. Optimaize $k$
+## 5. Optimize $k$
 
 ```{r}
 k.seq = seq(1, 13, 2)
@@ -170,10 +174,10 @@ err.rates = sapply(
 print(rbind(k.seq, err.rates))
 ```
 
-The best $k$, with least error rate on test set is:
+To choose the best hyperparameter $k$, we need to choose the $k$ with least cross validation error:
 ```{r, echo = FALSE}
 k.optim = k.seq[which(err.rates == min(err.rates))]
-paste(c('k.optim = ', k.optim), collapse = '')
+paste(c('k.optim = ', k.optim, ', min(err.rates) = ', min(err.rates)), collapse = '')
 ```
 
 ```{r}
