@@ -5,16 +5,16 @@ output: pdf_document
 fontsize: 12pt
 ---
 
-# Step 1: Conjugation
+# Part I: Conjugation
 
 
 | What | Why |
 |:-----------------------------------------------------------|------------------------------:|
-| Resuspend doner cells by vortexing | mix with nutrient broth |
+| Resuspend donor cells by vortexing | mix with nutrient broth |
 | | |
 | Vortex recipient briefly | |
 | | |
-| Put 500$\mu L$ doner and $500\mu L$ recipient in mating tube and vortexing briefly | mate two strains |
+| Put 500$\mu L$ donor and $500\mu L$ recipient in mating tube and vortexing briefly | mate two strains |
 | | |
 | Incubate in $37^{\circ}\text{C}$ for 60 min (with balance) | start mating |
 | | |
@@ -26,6 +26,41 @@ fontsize: 12pt
 | | |
 | Repeat until $10 ^ {-7}$ | |
 | | |
-| Put $100\mu L$ last three tube onto nutrient agar plates and spread in circular fasion | control recipient group (without mating) |
+| Put $100\mu L$ last three tube onto nutrient agar plates and spread in circular fasion | count number of recipient |
 | | |
-| Put $100\mu L 10 ^0$ | |
+| Put $100\mu L\,10^0$ donor onto a Nal plate | verify all donor is sensitive to Nal |
+| | |
+| Put $100\mu L\,10^0$ recipient onto a Cm plate | verify all recipient is sensitive to Cm |
+| | |
+| Vortex mating tube for 60s | break pilus between donor and recipient | 
+| | |
+| Dilute to $10 ^ {-3}$ | |
+| | |
+| Plate $10^0\sim 10^{-3}$ to 4 Cm + Nal plates | count number of mated recipient |
+| | |
+| Divide 9 plates to 4/5 two stack. Incubate in $37^{\circ}\text{C}$ incubator | let colony grow |
+| | | 
+
+# Part II: Transposition Mutagenesis
+
+| What | Why |
+|:-----------------------------------------------------------|------------------------------:|
+| add $1\mu L$ IPTG, $1\mu L$ chloramphenicol to $998\mu L$ nutrient broth | make inducing broth |
+| | |
+| Inoculate with small loopful colonies from $10 ^ 0$ Cm+Nal plate | |
+| | |
+| Vortex briefly | | 
+| | |
+| Incubate suspension in $37^{\circ}\text{C}$ for 60 min | induce transposition |
+| | |
+| Label plates with information, make 7 dilution tube with $900\mu L$ saline | |
+| | |
+| Stop incubation and vortex briefly | |
+| | |
+| Dilute unitl $10 ^ {-7}$| | 
+| | |
+| Spread $10 ^ 0\sim 10 ^ {-3}$ onto 4 X-gal + kan plates| count number of transposition |
+| | |
+| Spread $10 ^ {-4} \sim 10 ^ {-7}$ onto 4 nutrient agar plates| count $cm^R,\,nal^R$ cells|
+| | |
+| Place in stacks of 4/4 and incubate in $37^{\circ}\text{C}$ incubator| incubate |
