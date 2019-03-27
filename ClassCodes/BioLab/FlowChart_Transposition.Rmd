@@ -1,0 +1,31 @@
+---
+title: "Transposition Mutagenesis Flow Chart"
+author: "Xun Zhao, xz2827"
+output: pdf_document
+fontsize: 12pt
+---
+
+# Step 1: Conjugation
+
+
+| What | Why |
+|:-----------------------------------------------------------|------------------------------:|
+| Resuspend doner cells by vortexing | mix with nutrient broth |
+| | |
+| Vortex recipient briefly | |
+| | |
+| Put 500$\mu L$ doner and $500\mu L$ recipient in mating tube and vortexing briefly | mate two strains |
+| | |
+| Incubate in $37^{\circ}\text{C}$ for 60 min (with balance) | start mating |
+| | |
+| Label information on the plate (name, day, medium, solution, dilution) | |
+| | |
+| Add $900\mu L$ saline to 7 tube labeled with $10^{-1} \sim 10^{-7}$ | prepare to dilute |
+| | |
+| Add $100\mu L$ recipient to $10^{-1}$, vortex | dilute |
+| | |
+| Repeat until $10 ^ {-7}$ | |
+| | |
+| Put $100\mu L$ last three tube onto nutrient agar plates and spread in circular fasion | control recipient group (without mating) |
+| | |
+| Put $100\mu L 10 ^0$ | |
