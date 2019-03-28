@@ -1,6 +1,11 @@
 train_g = function(m, data){
-    vectors = data[-ncol(data)]
-    labels = ifelse(data[,ncol(data)] == data[1,ncol(data)], 1, -1)
+    x.pos.s = as.matrix(data[data[ncol(data) == 1], -ncol(data)])
+    x.neg.s = as.matrix(data[data[ncol(data) != 1], -ncol(data)])
+    pos.index = sample(1:nrow(x.pos.s), m, replace = TRUE)
+    neg.index = sample(1:nrow(x.neg.s), m, replace = TRUE)
+    x.pos.m = x.pos.s[pos.index,]
+    x.neg.m = x.neg.s[neg.index,]
+    w.m = x.pos.m
     pairs = sapply(1:m, function(i){
         x.pos = vectors[sample(row.names(vectors[labels == 1,]), 1),]
         x.neg = vectors[sample(row.names(vectors[labels == -1,]), 1),]
@@ -22,11 +27,11 @@ classify = function(x, V, c){
 easyPlot = function(){
     x1 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
     x2 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
-    x3 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
-    x4 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
-    x5 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
-    x6 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
-    x7 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
+    # x3 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
+    # x4 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
+    # x5 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
+    # x6 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
+    # x7 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
     y = c(rep(1, 100), rep(-1, 100))
     data = data.frame(x1, x2, y)
     Vc = train_g(1, data)
@@ -52,7 +57,7 @@ hw = function(){
     data.tr = data[1:round(nrow(data) / 2),]
     data.ts = data[(round(nrow(data) / 2) + 1):nrow(data),]
 
-    m.seq = seq(1, 59, 2)
+    m.seq = seq(59, 59, 2)
     err.rates = sapply(
         m.seq, 
         function(m){
@@ -76,4 +81,4 @@ hw = function(){
     plot(graph)
 }
 
-easyPlot()
+hw()
