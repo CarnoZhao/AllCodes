@@ -1,44 +1,79 @@
-image.print <- function(x)
-{
-x.matrix <- matrix(x, 16, 16, byrow = FALSE)
-x.matrix.rotated <- t(apply(x.matrix, 1, rev))
-image(x.matrix.rotated, axes = FALSE, col = grey(seq(0, 1, length.out = 256)))
+train_g = function(m, data){
+    vectors = data[-ncol(data)]
+    labels = ifelse(data[,ncol(data)] == data[1,ncol(data)], 1, -1)
+    pairs = sapply(1:m, function(i){
+        x.pos = vectors[sample(row.names(vectors[labels == 1,]), 1),]
+        x.neg = vectors[sample(row.names(vectors[labels == -1,]), 1),]
+        w = (x.pos - x.neg) / sum((x.pos - x.neg) ^ 2)
+        c.w = sum(w * (x.pos + x.neg) / 2)
+        misc = sum(sign(as.matrix(w) %*% t(as.matrix(vectors)) - c.w) != labels)
+        s = ifelse(misc < nrow(data) / 2, 1, -1)
+        v = s * w
+        c = sum(v * (x.pos + x.neg) / 2)
+        return(c(as.matrix(v), c))
+    })
+    return(list(t(pairs[1:ncol(vectors),]), as.matrix(pairs[nrow(pairs),])))
 }
 
-pixels = as.matrix(read.table('../data/uspsdata.txt'))
-labels = as.matrix(read.table('../data/uspscl.txt'))
-nums = nrow(pixels)
-for(i in 1:4){
-	image.print(pixels[i,])
-}
-p.tr = pixels[1:round(nums * 0.6),]
-l.tr = labels[1:round(nums * 0.6),]
-p.cv = pixels[(round(nums * 0.6) + 1):round(nums * 0.8),]
-l.cv = labels[(round(nums * 0.6) + 1):round(nums * 0.8),]
-p.ts = pixels[(round(nums * 0.8) + 1):nums,]
-l.ts = labels[(round(nums * 0.8) + 1):nums,]
-
-library(class)
-estim = knn(p.tr, p.ts, cl = l.tr, k = 1)
-err.rate = sum(estim != l.ts) / length(estim)
-print(err.rate)
-
-rows = which(estim != l.ts) + round(nums * 0.6)
-for (row in rows){
-	image.print(pixels[row,])
+classify = function(x, V, c){
+    return(sign(sum(sign(V %*% as.matrix(x) - c))))
 }
 
-k.seq = seq(1, 13, 2)
-error.rates = sapply(
-	k.seq, 
-	function(k){
-		estim = knn(p.tr, p.ts, cl = l.tr, k = k)
-		sum(estim != l.ts) / length(estim)
-})
-print(rbind(k.seq, error.rates))
+easyPlot = function(){
+    x1 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
+    x2 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
+    x3 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
+    x4 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
+    x5 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
+    x6 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
+    x7 = c(rnorm(100, 0, 1), rnorm(100, 2, 1))
+    y = c(rep(1, 100), rep(-1, 100))
+    data = data.frame(x1, x2, y)
+    Vc = train_g(1, data)
+    V = Vc[[1]]
+    c = Vc[[2]]
+    esti = apply(t(as.matrix(data[,-ncol(data)])), 2, classify, V = V, c = c)
+    newdata = cbind(data, esti)
+    library(ggplot2)
+    shape = c(20, 4)
+    names(shape) = c('TRUE', 'FALSE')
+    graph = ggplot(data, aes(x = x1, y = x2, color = as.factor(esti), shape = as.factor(y == esti))) +
+        geom_point() + 
+        scale_shape_manual(values = shape)
+    print(sum(y != esti) / length(y))
+    plot(graph)
+}
 
-k.optim = k.seq[which(error.rates == min(error.rates))]
-print(k.optim)
-estim = knn(rbind(p.tr, p.ts), p.cv, cl = c(l.tr, l.ts), k = k.optim)
-error.rate = sum(estim != l.cv) / length(estim)
-print(error.rate)
+hw = function(){
+    data.d = read.csv('../Data/wdbc.data')
+    data.l = read.csv('../Data/wdbc.labels')
+    data = data.frame(data.d, data.l)
+    data = data[sample(1:nrow(data)),]
+    data.tr = data[1:round(nrow(data) / 2),]
+    data.ts = data[(round(nrow(data) / 2) + 1):nrow(data),]
+
+    m.seq = seq(1, 59, 2)
+    err.rates = sapply(
+        m.seq, 
+        function(m){
+            Vc = train_g(m, data.tr)
+            V = Vc[[1]]
+            c = Vc[[2]]
+            esti = apply(
+                t(as.matrix(data.ts[,-ncol(data.ts)])), 2, 
+                classify, V = V, c = c
+                )
+            err.rate = sum(esti != data.ts[,ncol(data.ts)]) / nrow(data.ts)
+            return(err.rate)
+            }
+        )
+    library(ggplot2)
+    graph = ggplot(
+        data.frame(cbind(m.seq, err.rates)), 
+        aes(x = m.seq, y = err.rates)
+        ) + 
+        geom_point()
+    plot(graph)
+}
+
+easyPlot()
