@@ -132,7 +132,7 @@ The mean values of two sexes are the same as the second model, `model.2`.
 
 The `a.sigma` and `b.sigma` indicate that, for `male`, $\sigma_{\text{male}} \approx 2.7$, and for `female`, $\sigma_{\text{female}} \approx 3$. It fits the jitter graph, where `female`'s values are distributed in a wider range, while `male`'s range is smaller.
 
-I am not sure which *test* I should use to judge whether the variances are different (Maybe it is *F-test*).
+I am not sure which statistical test I should use to judge whether the variances are significantly different (Maybe it is *F-test*).
 
 However, the difference between them is already $10\%$ of $\sigma_{\text{female}}$, which is a large difference. So I would interpret this as a strong effect.
 
