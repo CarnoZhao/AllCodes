@@ -1,2 +1,2 @@
-import numpy
-import tensorflow
+for i in range(10):
+    print(i)
