@@ -1,5 +1,5 @@
 time=$(date "+%y.%m.%d-%H.%M.%S")
-nowpath=$(gwd)
+nowpath=$(pwd)
 
 cd /mnt/d/Codes
 git add -A
