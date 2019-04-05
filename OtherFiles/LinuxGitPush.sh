@@ -5,5 +5,5 @@ cd /mnt/d/Codes
 git add -A
 git commit -m $time
 git push
-cd nowpath
+cd $nowpath
 
