@@ -1,9 +1,0 @@
-1. Anaconda
-2. QQ and Wechat
-3. Acrobat
-4. Visio
-5. 
-6. Tensorflow
-7. java
-8. format of terminal
-
