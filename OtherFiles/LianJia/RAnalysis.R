@@ -42,4 +42,12 @@ jitter_drawing = function(){
 	)
 	return()
 }
-jitter_drawing()
+
+roomspace_price_drawing = function(){
+	d$log.price = log10(d$price)
+	d = d[d$roomspace < 100,]
+	graph = ggplot(d, aes(x = roomspace, y = log.price, color = as.factor(is_subway_house))) + geom_point() + geom_smooth(method = 'lm', formula = y~x)
+	ggsave('roomspace_price.pdf')
+}
+
+roomspace_price_drawing()
