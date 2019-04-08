@@ -1,5 +1,5 @@
 ---
-title: "Applied Data Mining Homework 2"
+title: "Applied Data Mining Homework 3"
 author: "Xun Zhao, xz2827"
 output: pdf_document
 fontsize: 12pt
