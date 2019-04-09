@@ -1,0 +1,99 @@
+---
+title: "| EEEB UN3005/GR5005\n| Lab - Week 11 - 08 and 10 April 2019"
+author: "USE YOUR NAME HERE"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(rethinking)
+library(dplyr)
+library(ggplot2)
+```
+
+
+# Link Functions and Poisson Regression
+
+
+## Exercise 1: Importing and Visualizing the Kline Dataset
+
+Import the Kline dataset that was shown in the *Statistical Rethinking* text and lecture. Add a log population size variable (`log_pop`) to the data frame for use as a predictor variable. Now, visualize the relationship between `log_pop` and `total_tools` using a scatter plot in `ggplot()`. Make the x-axis limits of your plot span from 0 to 15 and the y-axis limits of your plot span from 0 to 80. In addition, add the layer `geom_smooth(method = "lm", se = FALSE, fullrange = TRUE)` to your plot in order to display a linear trend line on top of the raw data.
+
+```{r}
+data(Kline)
+d = Kline
+d$log_pop = log(d$population)
+graph = ggplot(d, aes(x = log_pop, y = total_tools)) + 
+	geom_point() + 
+	geom_smooth(method = 'lm', se = FALSE, fullrange = TRUE) + 
+	xlim(c(0, 15)) + 
+	ylim(c(0, 80))
+plot(graph)
+```
+
+
+## Exercise 2: Fitting a Poisson GLM and a Standard Linear Model
+
+First, fit a Poisson GLM to the Kline data (with `map()`), using `log_pop` as a predictor of total tool count. This model should replicate m10.12 from the *Statistical Rethinking* book, so reference the text if needed. After fitting the model, use `precis()` to display the 97% PIs for all model parameters.
+
+Now, fit a standard linear model (with a Gaussian outcome distribution) to the Kline data, again using `log_pop` as a predictor of total tool count. You'll likely encounter trouble getting the model to fit unless you use the following priors (or something very similar to them): intercept parameter with a prior of `dnorm(-50, 10)`, the beta coefficient for `log_pop` with a prior of   `dnorm(0, 10)`, and the standard deviation parameter with a prior of `dunif(0, 10)`. Again, use `precis()` to display the 97% PIs for all model parameters after you've fit the model.
+
+```{r}
+model.pois = map(
+	alist(
+		total_tools ~ dpois(lambda),
+		log(lambda) <- a + b * log_pop,
+		a ~ dnorm(0, 100),
+		b ~ dnorm(0, 1),
+		),
+	data = d)
+model.gaus = map(
+	alist(
+		total_tools ~ dnorm(mu, sigma),
+		mu <- a + b * log_pop,
+		a ~ dnorm(-50, 10),
+		b ~ dnorm(0, 10),
+		sigma ~ dunif(0, 10)),
+	data = d)
+# precis(model.pois, prob = 0.97)
+precis(model.gaus, prob = 0.97)
+```
+ 
+ 
+## Exercise 3: Comparing Model-based Predictions
+
+Imagine we discover a new Oceanic island with a population of 150 people (log population size of 5.01). Using `sim()`, generate predictions for total tool count on this island for both the Poisson GLM and the standard linear model. Report the mean value of the predictions generated from both models. Which model suggests a higher total tool count for this hypothetical island?
+
+```{r}
+predictor = data.frame(log_pop = 5.01)
+# pred.sim.pois = sim(model.pois, data = predictor)
+pred.sim.gaus = sim(model.gaus, data = predictor)
+# print(mean(pred.sim.pois))
+print(mean(pred.sim.gaus))
+```
+
+
+## Exercise 4: Visualizing Predictions
+
+Visualize the total tool count predictions from both models using a method of your choice. Using your visualization and the previous exercises as a guide, do you think both of these models generate sensible predictions for total tool count for a hypothetical island with a log population size of 5.01? Why or why not? 
+
+```{r}
+predictor = data.frame(log_pop = 1:15)
+pred.sim.gaus.seq = link(model.gaus, data = predictor, n = 10000)
+mu.gaus = apply(pred.sim.gaus.seq, 2, mean)
+PI.gaus = apply(pred.sim.gaus.seq, 2, PI, prob = 0.97)
+plot(total_tools ~ log_pop, data = d)
+lines(1:15, mu.gaus)
+shade(PI.gaus, 1:15)
+
+# predictor = data.frame(log_pop = 1:15)
+# pred.sim.pois.seq = link(model.pois, data = predictor, n = 10000)
+# mu.pois = apply(pred.sim.pois.seq, 2, mean)
+# PI.pois = apply(pred.sim.pois.seq, 2, PI, prob = 0.97)
+# plot(total_tools ~ log_pop, data = d)
+# lines(1:15, mu.pois)
+# shade(PI.pois, 1:15)
+```
