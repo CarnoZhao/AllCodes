@@ -47,8 +47,7 @@ model.pois = map(
 		total_tools ~ dpois(lambda),
 		log(lambda) <- a + b * log_pop,
 		a ~ dnorm(0, 100),
-		b ~ dnorm(0, 1),
-		),
+		b ~ dnorm(0, 1)),
 	data = d)
 model.gaus = map(
 	alist(
@@ -58,7 +57,7 @@ model.gaus = map(
 		b ~ dnorm(0, 10),
 		sigma ~ dunif(0, 10)),
 	data = d)
-# precis(model.pois, prob = 0.97)
+precis(model.pois, prob = 0.97)
 precis(model.gaus, prob = 0.97)
 ```
  
@@ -69,9 +68,9 @@ Imagine we discover a new Oceanic island with a population of 150 people (log po
 
 ```{r}
 predictor = data.frame(log_pop = 5.01)
-# pred.sim.pois = sim(model.pois, data = predictor)
+pred.sim.pois = sim(model.pois, data = predictor)
 pred.sim.gaus = sim(model.gaus, data = predictor)
-# print(mean(pred.sim.pois))
+print(mean(pred.sim.pois))
 print(mean(pred.sim.gaus))
 ```
 
@@ -80,7 +79,7 @@ print(mean(pred.sim.gaus))
 
 Visualize the total tool count predictions from both models using a method of your choice. Using your visualization and the previous exercises as a guide, do you think both of these models generate sensible predictions for total tool count for a hypothetical island with a log population size of 5.01? Why or why not? 
 
-```{r}
+```{r, results = 'hide'}
 predictor = data.frame(log_pop = 1:15)
 pred.sim.gaus.seq = link(model.gaus, data = predictor, n = 10000)
 mu.gaus = apply(pred.sim.gaus.seq, 2, mean)
@@ -89,11 +88,11 @@ plot(total_tools ~ log_pop, data = d)
 lines(1:15, mu.gaus)
 shade(PI.gaus, 1:15)
 
-# predictor = data.frame(log_pop = 1:15)
-# pred.sim.pois.seq = link(model.pois, data = predictor, n = 10000)
-# mu.pois = apply(pred.sim.pois.seq, 2, mean)
-# PI.pois = apply(pred.sim.pois.seq, 2, PI, prob = 0.97)
-# plot(total_tools ~ log_pop, data = d)
-# lines(1:15, mu.pois)
-# shade(PI.pois, 1:15)
+predictor = data.frame(log_pop = 1:15)
+pred.sim.pois.seq = link(model.pois, data = predictor, n = 10000)
+mu.pois = apply(pred.sim.pois.seq, 2, mean)
+PI.pois = apply(pred.sim.pois.seq, 2, PI, prob = 0.97)
+plot(total_tools ~ log_pop, data = d)
+lines(1:15, mu.pois)
+shade(PI.pois, 1:15)
 ```
