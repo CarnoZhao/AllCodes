@@ -55,9 +55,11 @@ def getTruePos(name):
 
 def main()
     getWindowPosition()
-    if getTruePos('terminal') == 'RealFull' and getTruePos('sumatra') == 'FakeFull':
+    poses = (getTruePos('terminal'), getTruePos('sumatra'))
+    if poses == ('RealFull', 'FakeFull'):
         change_1()
-    elif 
+    elif poses == ('RealFull', 'R'):
+        change_2()
 
 if __name__ == '__main__':
     getWindowPosition()
