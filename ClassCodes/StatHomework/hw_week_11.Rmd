@@ -32,8 +32,8 @@ model.pois = map(
 				 alist(
 					   SALAMAN ~ dpois(lambda),
 					   log(lambda) <- a + b * PCTCOVER,
-					   a ~ dnorm(0, 10),
-					   b ~ dnorm(0, 10)),
+					   a ~ dnorm(0, 1),
+					   b ~ dnorm(0, 1)),
 				 data = d)
 precis(model.pois, 0.97)
 ```
@@ -60,8 +60,8 @@ model.stan = map2stan(
 					  alist(
 							SALAMAN ~ dpois(lambda),
 							log(lambda) <- a + b * PCTCOVER,
-							a ~ dnorm(0, 10),
-							b ~ dnorm(0, 10)),
+							a ~ dnorm(0, 1),
+							b ~ dnorm(0, 1)),
 					  data = d,
 					  chains = 4)
 precis(model.stan, 0.97)
@@ -88,3 +88,15 @@ plot(SALAMAN ~ PCTCOVER, data = d)
 lines(pred.seq, mu.pois)
 shade(PI.pois, pred.seq)
 ```
+
+---
+
+### Answer :
+
+Considering the model, the line and shade can cover most data points, and shows that `SALAMAN` is positively correlated with `PCTCOVER`.
+
+However, when it comes to the data itself, we can see that the data can be devided into two parts, the low `PCTCOVER` part and high `PCTCOVER` part. Especially for high `PCTCOVER` one, the `SALAMAN` is distributed in a large range, from low `SALAMAN` to high `SALAMAN`. Conversely, for the low `PCTCOVER` part, the `SALAMAN` is only distributed in a small range.
+
+So I think the GLM model is wrong, and we should fit two differents parts separately.
+
+---

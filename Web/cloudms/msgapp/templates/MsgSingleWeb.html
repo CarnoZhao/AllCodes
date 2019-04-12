@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+<head>
+		<meta charset = 'UFT-8'>
+		<title>Cloud Message Board</title>
+</head>
+<body>
+		<h1>Upload Message Zone</h1>
+		<form action = '/msggate/' method = 'post'>
+				{% csrf_token %}
+				Sender <input type = 'text' name = 'userA'/> <br>
+				Reciever <input type = 'text' name = 'userB'/> <br>
+				Message <input type = 'text' name = 'msg'/> <br>
+				<input type = 'submit' value = 'Send !' />
+		</form>
+
+		<h1>Download Message Zone</h1>
+		<form action = '/msggate/' method = 'get'>
+				Reciever <input type = 'text' name = 'userC'/> <br>
+				<input type = "submit" value = "Recieve !">
+		</form>
+
+		<table border = '1'>
+				<thead>
+					<th> Time </th>
+					<th> From </th>
+					<th> Text </th>
+				</thead>
+				<br>
+				<tbody>
+						{% for line in data %}
+						<tr>
+								<td>{{ line.time}}</td>
+								<td align = "center">{{ line.userA }}</td>
+								<td>{{ line.msg }}</td>
+						</tr>
+						{% endfor %}
+				</tbody>
+		</table>
+</body>
+</html>
+
