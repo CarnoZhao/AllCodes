@@ -1,0 +1,213 @@
+---
+title: "Applied Data Mining Homework 04"
+author: "Xun Zhao, xz2827"
+output: pdf_document
+fontsize: 12pt
+---
+
+```{r setup, include = FALSE}
+library(diagram)
+```
+
+# Problem 1:
+
+The function f can be interpreted as:
+
+$$\begin{aligned}
+f(x,\,y) &= I\{g(x,\,y) > 0\}\\\
+g(x,\,y) &= \sigma(x) - \sigma(y)\\\
+\end{aligned}$$
+
+So the network is:
+
+```{r, echo = FALSE, out.width = '25em', fig.align = 'center'}
+names = c(expression(x), expression(y), expression(symbol(f)[1]), expression(symbol(f)[2]), expression(symbol(f)[3]))
+M = matrix(nrow = 5, ncol = 5, byrow = TRUE, data = 0)
+M[3, 1] = 1
+M[4, 2] = 1
+M[5, 3] = 1
+M[5, 4] = -1
+plotmat(M, pos = c(2, 2, 1), 
+		curve = 0, 
+		name = names, 
+		lwd = 1, 
+		box.size = 0.05, 
+		box.type = 'circle', 
+		box.lwd = 2, 
+		box.prop = 1,
+		shadow.size = 0, 
+		arr.type = 'simple', 
+		arr.lwd = 0.5, 
+		dtext = 1,
+		cex.txt = 0.8,
+		latex = TRUE
+		) 
+```
+
+Here, the three $\phi$ nodes are:
+
+$$\begin{aligned}
+\phi_1(\cdot) &= \sigma(\cdot) \\\
+\phi_2(\cdot) &= \sigma(\cdot) \\\
+\phi_3(\cdot) &= I\{\cdot > 0\} \\\
+\end{aligned}$$
+
+# Problem 2:
+
+According to the defination of sigmoid function, $\sigma(x) = \frac{1}{1 + e^{-x}}$, we can get:
+
+$$\begin{aligned}
+-\sigma(-x) &= -\frac{1}{1 + e^x}\\\
+&= \frac{e^x}{1 + e^x} - 1\\\
+&= \frac{1}{e^{-x} + 1} - 1\\\
+&= \sigma(x) - 1
+\end{aligned}$$
+
+So, the network is:
+
+```{r, echo = FALSE, out.width = '25em', fig.align = 'center'}
+names = c(expression(x), expression(symbol(f)[1]), expression(symbol(f)[2]), expression(symbol(f)[3]))
+M = matrix(nrow = 4, ncol = 4, byrow = TRUE, data = 0)
+M[2, 1] = 1
+M[4, 2] = 1
+M[4, 3] = -1
+plotmat(M, pos = c(1, 2, 1), 
+		curve = 0, 
+		name = names, 
+		lwd = 1, 
+		box.size = 0.05, 
+		box.type = 'circle', 
+		box.lwd = 2, 
+		box.prop = 1,
+		shadow.size = 0, 
+		arr.type = 'simple', 
+		arr.lwd = 0.5, 
+		dtext = 1,
+		cex.txt = 0.8,
+		latex = TRUE
+		) 
+```
+
+Here, the three $\phi$ nodes are:
+
+$$\begin{aligned}
+\phi_1(\cdot) &= \sigma(\cdot) \\\
+\phi_2(\cdot) &= c = 1 \\\
+\phi_3(\cdot) &= \cdot \\\
+\end{aligned}$$
+
+# Problem 3:
+
+According basic logical relationship:
+
+$$\begin{aligned}
+x\oplus y &= (x = y = 1) \vee (x = y = 0)\\\
+&= (x \wedge y) \vee (\neg x \wedge \neg y)
+\end{aligned}$$
+
+So, the network is the `or` of two `and`.
+
+The single unit of `and` can be presented as $f(x,\,y) = I\{x + y > 1\}$. And the single unit of `or` can be presented as $f(x,\,y) = I\{x + y > 0\}$
+
+So the network is:
+
+```{r, echo = FALSE, fig.height = 10, fig.width = 7, out.width = '25em', fig.align = 'center'}
+names = c(expression(x[1]), expression(x[2]), expression(c[1]), 
+		  expression(symbol(f)[1]), expression(symbol(f)[2]), expression(c[2]), expression(symbol(f)[3]))
+M = matrix(nrow = 7, ncol = 7, byrow = TRUE, data = 0)
+M[4, 1] = M[4, 2] = M[5, 3] = M[7, 4] = M[7, 5] = 1
+M[5, 1] = M[5, 2] = M[4, 3] = M[7, 6] = -1
+plotmat(M, pos = c(3, 3, 1),
+		curve = 0,
+		name = names,
+		lwd = 1,
+		box.size = 0.05,
+		box.type = 'circle',
+		box.lwd = 2,
+		box.prop = 1,
+		shadow.size = 0,
+		arr.type = 'simple',
+		arr.lwd = 0.5,
+		arr.pos = 0.8,
+		dtext = 0.4,
+		cex.txt = 0.8
+		)
+```
+
+Here, the bias nodes are:
+
+$$\begin{aligned}
+c_1 &= 1\\\
+c_2 &= 1\\\
+\end{aligned}$$
+
+And other three $\phi$ nodes are:
+
+$$\begin{aligned}
+\phi_1(\cdot) &= I\{\cdot > 0\}\\\
+\phi_2(\cdot) &= I\{\cdot > 0\}\\\
+\phi_3(\cdot) &= I\{\cdot > 0\}\\\
+\end{aligned}$$
+
+# Problem 4:
+
+Classification function is:
+
+$$\begin{aligned}
+f(\vec{x}) &= \phi(\vec{x} \cdot \vec{w} + w_c \cdot c)\\\
+&= I\{\vec{x} \cdot \vec{w} \geq c \}
+\end{aligned}$$
+
+So, the classification result of $\vec{x}$ is:
+
+$$\begin{aligned}
+f(\vec{x}) &= I\{\begin{pmatrix} -3 \\ 0 \\ \end{pmatrix} \cdot \begin{pmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \\ \end{pmatrix} - \frac{1}{2\sqrt{2}}>0\}\\\
+&= I\{-\frac{3}{\sqrt{2}} - \frac{1}{2\sqrt{2}}>0\}\\\
+&= I\{-\frac{7}{2\sqrt{2}} > 0\}\\\
+&= 0
+\end{aligned}$$
+
+And the classification reuslt of $\vec{x'}$ is:
+
+$$\begin{aligned}
+f(\vec{x'}) &= I\{\begin{pmatrix} \frac{1}{2} \\ \frac{1}{2} \\ \end{pmatrix} \cdot \begin{pmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \\ \end{pmatrix} - \frac{1}{2\sqrt{2}}>0\}\\\
+&= I\{\frac{1}{\sqrt{2}} - \frac{1}{2\sqrt{2}}>0\}\\\
+&= I\{\frac{1}{2\sqrt{2}} > 0\}\\\
+&= 1
+\end{aligned}$$
+
+# Problem 5:
+
+$$\vec{x} \cdot \vec{y} = e^{\log(x_1) + \log(y_1)} + e^{\log(x_2) + \log(y_2)}$$
+
+The network is:
+
+```{r, echo = FALSE, fig.height = 10, fig.width = 7, out.width = '25em', fig.align = 'center'}
+names = c(
+	expression(x[1]),
+	expression(x[2]),
+	expression(y[1]),
+	expression(y[2]),
+	rep(expression(log()), 4),
+	rep(expression(exp()), 2),
+	expression(output)
+	)
+M = matrix(nrow = 11, ncol = 11, byrow = TRUE, data = 0)
+M[5, 1] = M[6, 2] = M[7, 3] = M[8, 4] = M[9, 5] = M[9, 7] = M[10, 6] = M[10, 8] = M[11, 9] = M[11, 10] = 1
+plotmat(M, pos = c(4, 4, 2, 1),
+		curve = 0,
+		name = names,
+		lwd = 1,
+		box.size = 0.05,
+		box.type = 'circle',
+		box.lwd = 2,
+		box.prop = 1,
+		shadow.size = 0,
+		arr.type = 'simple',
+		arr.lwd = 0.5,
+		arr.pos = 0.5,
+		dtext = 0.8,
+		cex.txt = 0.8,
+		latex = TRUE
+		)
+```
