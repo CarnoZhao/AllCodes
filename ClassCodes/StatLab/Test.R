@@ -1,15 +1,14 @@
 library(rethinking)
-library(dplyr)
-library(ggplot2)
-data(Kline)
-d = Kline
-d$log_pop = log(d$population)
-str(d)
-model.pois = map(
+d = read.csv('../Data/eagles.csv')
+d$pirate_size = ifelse(d$pirate_size == 'large', 1, 0)
+d$victim_size = ifelse(d$victim_size == 'large', 1, 0)
+model.1 = map2stan(
 	alist(
-		total_tools ~ dpois(lambda),
-		lambda <- exp(a + b * log_pop),
-		a ~ dnorm(0, 100),
-		b ~ dnorm(0, 1)
-		),
-	data = d)
+		successes ~ dbinom(size = total_attempts, prob = p),
+		logit(p) <- a + bP * pirate_size + bV * victim_size,
+		a ~ dnorm(0, 10),
+		bP ~ dnorm(0, 5),
+		bV ~ dnorm(0, 5)),
+	data = d,
+	chains = 4)
+precis(model.1, 0.97)
