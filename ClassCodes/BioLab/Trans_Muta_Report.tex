@@ -1,9 +1,9 @@
 \documentclass{article}
-\usepackage{geometry, graphicx, float, subfigure, amsmath, bm, threeparttable,multirow, multicol, caption}
+\usepackage{geometry, graphicx, float, subfigure, amsmath, bm, threeparttable,multirow, multicol, pgffor,ifthen}
+\usepackage[justification=centering]{caption}
 \usepackage[marginal]{footmisc}
 \geometry{a4paper,scale=0.8}
 \setlength{\parindent}{2em}
-%\captionsetup{font = {small}}
 
 \title{\bf{The Analysis of Probabilities of Conjugation between E.coli and Transposition Mutagenesis of }$kan^R$}
 \author{Xun Zhao (Partner: Chase)}
@@ -92,49 +92,149 @@
 				\begin{minipage}[t]{0.24\textwidth}
 					\centering
 					\includegraphics[width = 0.9\linewidth]{Mate_0_NalCm.jpg}
-					\caption{MT $10^{0} = 508$}
+					\captionsetup{font={scriptsize}}\caption{MT $10^{0}$ Cm-Nal, 508}
 				\end{minipage}
 				\begin{minipage}[t]{0.24\textwidth}
 					\centering
 					\includegraphics[width = 0.9\linewidth]{Mate_1_NalCm.jpg}
-					\caption{MT $10^{-1} = 2$}
+					\captionsetup{font={scriptsize}}\caption{MT $10^{-1}$ Cm-Nal, 2}
 				\end{minipage}
 				\begin{minipage}[t]{0.24\textwidth}
 					\centering
 					\includegraphics[width = 0.9\linewidth]{Mate_2_NalCm.jpg}
-					\caption{MT $10 ^ {-2} = 0$}
+					\captionsetup{font={scriptsize}}\caption{MT $10 ^ {-2}$ Cm-Nal, 0}
 				\end{minipage}
 				\begin{minipage}[t]{0.24\textwidth}
 					\centering
 					\includegraphics[width = 0.9\linewidth]{Mate_3_NalCm.jpg}
-					\caption{MT $10 ^ {-3} = 0$}
+					\captionsetup{font={scriptsize}}\caption{MT $10 ^ {-3}$ Cm-Nal, 0}
 				\end{minipage}
 			\end{figure}
 			\begin{figure}[H]
 				\begin{minipage}[t]{0.32\textwidth}
 					\centering
 					\includegraphics[width = 0.675\linewidth]{Reci_5_NA.jpg}
-					\caption{R $10 ^ {-5} = 946$}
+					\captionsetup{font={scriptsize}}\caption{R $10 ^ {-5} $ NA, 946}
 				\end{minipage}
 				\begin{minipage}[t]{0.32\textwidth}
 					\centering
 					\includegraphics[width = 0.675\linewidth]{Reci_6_NA.jpg}
-					\caption{R $10 ^{-6} = 107$}
+					\captionsetup{font={scriptsize}}\caption{R $10 ^{-6} $ NA, 107}
 				\end{minipage}
 				\begin{minipage}[t]{0.32\textwidth}
 					\centering
 					\includegraphics[width = 0.675\linewidth]{Reci_7_NA.jpg}
-					\caption{R $10^{-7} = 13$}
+					\captionsetup{font={scriptsize}}\caption{R $10^{-7}$ NA, 13}
 				\end{minipage}
 			\end{figure}
 			\begin{figure}[H]
 				\begin{minipage}[t]{0.5\textwidth}
 					\centering
 					\includegraphics[width = 0.432\linewidth]{Done_0_Nal.jpg}
-					\caption{D $10^0 = 0$}
+					\captionsetup{font={scriptsize}}\caption{D $10^0$ Nal, 0}
+				\end{minipage}
+				\begin{minipage}[t]{0.5\textwidth}
+					\centering
+					\includegraphics[width = 0.432\linewidth]{Reci_0_Cm.jpg}
+					\captionsetup{font={scriptsize}}\caption{R $10 ^ 0$ Cm, 135}
 				\end{minipage}
 			\end{figure}
-			\paragraph{General Description} The colonies are white and round. The size of colonies varies at the plates with $10 ^ 0$ dilution. This phenomenon indicates that if the plate starts with higher concentration of cells, the colonies are more likely to start from several cells instead of one single cell, which makes the size of colonies different.
+			\subsubsection{General Description} 
+			The colonies are white and round. The size of colonies varies at the plates with $10 ^ 0$ dilution. This phenomenon indicates that if the plate starts with higher concentration of cells, the colonies are more likely to start from several cells instead of one single cell, which makes the size of colonies different.
 
-			\paragraph{Percent Conjugation Calculation} 
+			\subsubsection{Percent Conjugation Calculation} 
+			\paragraph{Number of Conjugation} There are three kinds of cells that can survive on Cm-Nal plates, the cells after conjugation, the mutant of recipient that is insensitive to Cm, and the mutant of donor that is insensitive to Nal. So the total number of successful conjugation is as follows. Here, I discarded the other three numbers of Cm-Nal plates, since they are too small (2 in $10 ^ {-1}$, 0 in $10^{-2}$, 0 in $10 ^ {-3}$), probably because of the wrong operation in experiment.
+			$$
+			\begin{aligned}
+			\#\text{Conjugation} &= \#\text{Colonies.of.Cm.Nal} - \#\text{Recipient.Mutant} - \#\text{Donor.Mutant}\\
+			&= 508 - 135 - 0\\
+			&= 373
+			\end{aligned}
+			$$
+
+			\paragraph{Explanation to Control Plates} Ideally, there if no mutations or contamination happened to recipient and donor cells, they should not survival on Cm plates and Nal plates, respectively. However, in Cm plates of recipient cells, there are 135 colonies. One explanation is that the mutation happened to recipient cells. The second explanation is contamination. Because of their similar shape, color, and size, I do not consider these colonies as contamination of environmental microorganism. but it can be contaminated by donor cells due to shared tips.
+
+			\paragraph{Total Number of Recipient Cells} This is calculated by the average of three recipient NA plates, and times the dilution $10 ^ {5}$.
+			$$
+			\begin{aligned}
+			\#\text{Total.Recipient} &= \frac{946 + 107 \times 10 + 13 \times 100}{3} \times 10 ^{5}\\
+			&= 1.105 \times 10 ^ 8
+			\end{aligned}
+			$$ 
+			
+			\paragraph{Percent Conjugation} This equals to conjugation number divided by total number.
+			$$
+			\begin{aligned}
+			\text{conjugation}\% &= \frac{373}{1.105 \times 10 ^ 8}\times 100 \%\\
+			&\approx 3.4 \times 10 ^ {-4}\%
+			\end{aligned}
+			$$
+
+			\paragraph{Summary} The percentage indicates that conjugation is a rare occurrence. In my opinion, this might be because the concentration of cells is not so high, causing recipient cell and donor cell cannot contact with each other easily. Moreover, this also might be because conjugation is an energy-consuming behavior, and it is used to recombine genes to deal with extreme environment. So if the environment is suitable for cells, they might be less likely to conjugate with others, instead, they will only multiply themselves.
+		\subsection{Transposition}
+			\begin{figure}[H]
+				\foreach \t in {0,...,3}{
+					\ifthenelse{\t=0}{\newcommand{\num}{-/-}}{
+					\ifthenelse{\t=1}{\newcommand{\num}{3W/8654B}}{
+					\ifthenelse{\t=2}{\newcommand{\num}{0W/728B}}{
+					\ifthenelse{\t=3}{\newcommand{\num}{0W/94B}}{}}}}
+					\begin{minipage}[t]{0.23\textwidth}
+						\centering
+						\includegraphics[width = 0.9\linewidth]{Tran_\t_Xgel.jpg}
+						\captionsetup{font = {scriptsize}}
+						\caption{IT $10 ^ {-\t}$ Xgel-Kan, \num}
+					\end{minipage}
+				}
+			\end{figure}
+			\begin{figure}[H]
+				\foreach \t in {4,...,7}{
+					\ifthenelse{\t=4}{\newcommand{\num}{-}}{
+					\ifthenelse{\t=5}{\newcommand{\num}{820}}{
+					\ifthenelse{\t=6}{\newcommand{\num}{103}}{
+					\ifthenelse{\t=7}{\newcommand{\num}{12}}{}}}}
+					\begin{minipage}[t]{0.23\textwidth}
+						\centering
+						\includegraphics[width = 0.9\linewidth]{Tran_\t_NA.jpg}
+						\captionsetup{font = {scriptsize}}
+						\caption{IT $10 ^ {-\t}$ NA, \num}
+					\end{minipage}
+				}
+			\end{figure}
+			\subsubsection{General Description}
+			On Xgel-Kan plates, most of the colonies are blue, and only a few of them are white. The white colonies indicates that the transposition happens at the \emph{lacZ} gene. On NA plates, all of them are white.
+
+			\subsubsection{Detail of Blue Colonies}
+			Most of the blue colonies are pure blue. Some of them are surrounded by a white ring, making the edge change from dark blue to light blue. This is because when the colonies grow, the transposon $kan^R$ is still in these cells. So after generations, the transposition happens, knocks out the \emph{lacZ} gene, leaving Xgel white.
+
+			\subsubsection{Calculation of Percent Transposition}
+			\paragraph{Number of Transposition} After transposition, the cells can survive on Xgel-Kan plates, because the $kan^R$ gene is activated. So the average number of colonies on Xgel-Kan plates are:
+			$$
+			\begin{aligned}
+			\#\text{Transposition} &= \frac{(3 + 8654) + (0 + 725) \times 10 + (0 + 94)\times 100}{3}\\
+			&\approx 8445
+			\end{aligned}
+			$$
+			\paragraph{Total Number} The total number of all cells is calculated from the colonies on NA plates, and multipled by the dilution $10 ^ 4$.
+			$$
+			\begin{aligned}
+			\#\text{Total} &= \frac{103 * 10 + 12 * 100}{2} \times 10 ^4\\
+			&\approx 1.115 \times 10 ^ 7
+			\end{aligned}
+			$$
+			\paragraph{Percentage of Transposition} The percentage equals to number of transposition divided by total number.
+			$$
+			\begin{aligned}
+			\text{Transposition}\% &= \frac{8445}{1.115 \times 10 ^ 7}\\
+			&= 0.076\%
+			\end{aligned}
+			$$
+			\paragraph{Summary} The percentage indicates that transposition is a rare occurrence. The transposon needs transposase to cut the DNA and then starts transposition. The transposase is regulated by lactose operon and IPTG can bind the repressor, so that the promotor can start gene expression and produce transposase. So, the transposition needs many prerequisite and it is not guaranteed that the transposase will transpose $kan^R$ gene. That is why transposition is a rare occurrence.
+
+			\subsubsection{Factors that Interfere Accuracy}
+				\begin{enumerate}
+					\item Whether $kan^R$ is transposed to a place that has start codon.
+					\item Whether $kan^R$ is transposed to a place that has promotor.
+					\item Whether $kan^R$ is transposed with right orientation (not reversed).
+					\item Whether transposition knocks out the essential gene to cell's life.
+				\end{enumerate}
 \end{document}
