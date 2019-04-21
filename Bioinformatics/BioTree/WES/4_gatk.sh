@@ -1,11 +1,11 @@
-gatk --java-options "-Xmx20G -Djava.io.tmpdir=./" \
+gatk --java-options "-Xmx6G -Djava.io.tmpdir=./" \
 		Markduplicates \
 		-I $bam \
 		-O $marked_bam \
 		-M $name_matrix 
 
 
-gatk --java-options "-Xmx20G -Djava.io.tmpdir=./" \
+gatk --java-options "-Xmx6G -Djava.io.tmpdir=./" \
 		FixMateInformation \
 		-I $marked_bam \
 		-O $marked_fixed_bam \
@@ -13,7 +13,7 @@ gatk --java-options "-Xmx20G -Djava.io.tmpdir=./" \
 
 samtools index $marked_fixed_bam
 
-gatk --java-options "-Xmx20G -Djava.io.tmpdir=./" \
+gatk --java-options "-Xmx6G -Djava.io.tmpdir=./" \
 		BaseRecalibrator \
 		-R $ref_genome \
 		-I $marked_fixed_bam \
@@ -21,14 +21,14 @@ gatk --java-options "-Xmx20G -Djava.io.tmpdir=./" \
 		--known-sites $indel_from_gatk \
 		-O $name_recal_table
 
-gatk --java-options "-Xmx20G -Djava.io.tmpdir=./" \
+gatk --java-options "-Xmx6G -Djava.io.tmpdir=./" \
 		ApplyBQSR \
 		-R $ref_genome \
 		-I $marked_fixed_bam \
 		-bqsr $name_recal_table \
 		-O $bqsr_bam
 
-gatk --java-options "-Xmx20G -Djava.io.tmpdir=./" \
+gatk --java-options "-Xmx6G -Djava.io.tmpdir=./" \
 		HaplotypeCaller \
 		-R $ref_genome \
 		-I $bqsr_bam \

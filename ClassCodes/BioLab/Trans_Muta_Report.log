@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.4)  20 APR 2019 18:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.4)  20 APR 2019 18:51
 entering extended mode
 **D:/Codes/ClassCodes/BioLab/Trans_Muta_Report.tex
 (D:/Codes/ClassCodes/BioLab/Trans_Muta_Report.tex
@@ -539,34 +539,35 @@ Package pdftex.def Info: Tran_7_NA.jpg  used on input line 201.
 (pdftex.def)             Requested size: 98.94516pt x 98.89719pt.
  [3 <./Done_0_Nal.jpg> <./Reci_0_Cm.jpg>] [4 <./Tran_0_Xgel.jpg> <./Tran_1_Xgel
 .jpg> <./Tran_2_Xgel.jpg> <./Tran_3_Xgel.jpg> <./Tran_4_NA.jpg> <./Tran_5_NA.jp
-g> <./Tran_6_NA.jpg> <./Tran_7_NA.jpg>] [5] (Trans_Muta_Report.aux) ) 
+g> <./Tran_6_NA.jpg> <./Tran_7_NA.jpg>] [5] [6] (Trans_Muta_Report.aux) ) 
 Here is how much of TeX's memory you used:
- 9518 strings out of 492945
- 170579 string characters out of 3138631
+ 9520 strings out of 492945
+ 170603 string characters out of 3138631
  226417 words of memory out of 3000000
- 13227 multiletter control sequences out of 15000+200000
- 18442 words of font info for 64 fonts, out of 3000000 for 9000
+ 13228 multiletter control sequences out of 15000+200000
+ 18801 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,13n,40p,632b,457s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/Progra
-mming/LaTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Programming/LaTeX/fon
-ts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programming/LaTeX/fonts/type1/public
-/amsfonts/cm/cmbx9.pfb><D:/Programming/LaTeX/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb><D:/Programming/LaTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Pro
-gramming/LaTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Programming/LaTeX/f
-onts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Programming/LaTeX/fonts/type1/publi
-c/amsfonts/cm/cmmi9.pfb><D:/Programming/LaTeX/fonts/type1/public/amsfonts/cm/cm
-r10.pfb><D:/Programming/LaTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Prog
-ramming/LaTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/Programming/LaTeX/fon
-ts/type1/public/amsfonts/cm/cmr7.pfb><D:/Programming/LaTeX/fonts/type1/public/a
-msfonts/cm/cmr9.pfb><D:/Programming/LaTeX/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb><D:/Programming/LaTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D:/Program
-ming/LaTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Programming/LaTeX/fonts
-/type1/public/amsfonts/cm/cmti10.pfb><D:/Programming/LaTeX/fonts/type1/public/a
-msfonts/cm/cmti9.pfb>
-Output written on Trans_Muta_Report.pdf (6 pages, 25491643 bytes).
+<D:/Pr
+ogramming/LaTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Programming/LaTeX
+/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programming/LaTeX/fonts/type1/pu
+blic/amsfonts/cm/cmbx9.pfb><D:/Programming/LaTeX/fonts/type1/public/amsfonts/cm
+/cmbxti10.pfb><D:/Programming/LaTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+D:/Programming/LaTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Programming/
+LaTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Programming/LaTeX/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb><D:/Programming/LaTeX/fonts/type1/public/amsfont
+s/cm/cmmi9.pfb><D:/Programming/LaTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+D:/Programming/LaTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Programming/L
+aTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/Programming/LaTeX/fonts/type1/
+public/amsfonts/cm/cmr7.pfb><D:/Programming/LaTeX/fonts/type1/public/amsfonts/c
+m/cmr9.pfb><D:/Programming/LaTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/
+Programming/LaTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D:/Programming/LaTe
+X/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Programming/LaTeX/fonts/type1/pu
+blic/amsfonts/cm/cmti10.pfb><D:/Programming/LaTeX/fonts/type1/public/amsfonts/c
+m/cmti9.pfb>
+Output written on Trans_Muta_Report.pdf (7 pages, 25504504 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
+ 119 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

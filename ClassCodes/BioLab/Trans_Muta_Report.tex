@@ -237,4 +237,37 @@
 					\item Whether $kan^R$ is transposed with right orientation (not reversed).
 					\item Whether transposition knocks out the essential gene to cell's life.
 				\end{enumerate}
+
+		\subsection{Mutagenesis}
+			\subsubsection{Calculation of Percent Mutagenesis}
+				The only available data of successful mutagenesis is from Figure 11, where there are 3 white colonies out of 8654 blue ones. Moreover, the average of total number of transposition has been calulated before as 8445 with dilution $10 ^ {-1}$. So the result is:
+				$$
+				\begin{aligned}
+				\text{Mutagenesis}\% &= \frac{\#\text{White}}{\#\text{Total}}\\
+				&= \frac{3}{8445} \times 100 \%\\
+				&= 0.035\%
+				\end{aligned}
+				$$
+			\subsubsection{Size of \emph{lacZ} Gene}
+				If transposition happens at any position with equally probability and there is no other side effect of transposition. Then the size of \emph{lacZ} gene is only 0.035\% of the whole chromosome, which is only a small fraction.
+			\subsubsection{Factors that Affect Determination}
+				\begin{enumerate}
+					\item Whether a white colony started from mutagenesis cell or mutagenesis happened during the growth of a colony.
+					\item If the cells had enough functional lactase before mutagenesis, they can use these remaining enzyme to digest X-gel and become blue.
+					\item If the transposon is inserted into a essential gene to cell's life, the total number of transposition (denominator) changes.
+				\end{enumerate}
+	\section{Errors}
+		\subsection{Conjugation}
+			In Table \ref{conjugation.data}, the first row data does not differ by power of 10, and the number of colonies is too low except the first data. Maybe this is because the wrong experimental operation, which did not carry enough cells between different dilutions. So, I only use the first data.
+		\subsection{Transposition}
+			Same as the error mentioned above, in Table \ref{transposition.mutagenesis.data}, 820 is far from the 10 times of 103, but the 10 times of 12 is similar with 103. So when calculating the average, I discarded 820, and only used 103 and 12.
+		\subsection{Mutagenesis}
+			The first column data is empty, because the plates are full of colonies and they are unequally distributed. So it is hard to get the right number of colonies.
+
+	\section{Conclusion}
+		All of these three biological processes are very rare during the life of bacteria. It fits the idea of inheritance and mutation in genetics, that the genes pass through generation to generation, and keep unchanged. However, there are still low probability that the gene changes, which brings the new traits or new combinations of old traits. 
+
+		The jumping gene indicates that when the environment is not suitable to the bacteria, they know how to recombine their genes with other individuals to survive, and to adapt the new environment. In some way, this is kind of natural selection. The individuals (or populations) with adaptive genes (or traits) can survive and transfer their genes to their offspring, namely, evolution.
+
+		We can use transposon and transposase to bind a new DNA fragment to bacteria's chromosome, which gives us a new method to change the genotype of a bacteria. 
 \end{document}
