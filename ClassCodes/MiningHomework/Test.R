@@ -1,19 +1,22 @@
-w1 = c(1, 1)
-w2 = c(1, 1 / 2)
-w3 = c(1, -1)
-w4 = c(1, -1 / 2)
-X = seq(-10, 10, length.out = 101)
-sigmoid = function(x) as.matrix(1 / (1 + exp(-x)))
-max0 = function(x) as.matrix(ifelse(x > 0, x, 0))
+cnt = 21
+seq = seq(-10, 10, length.out = cnt)
+X = cbind(rep(seq, each = cnt), rep(seq, cnt))
+sigmoid = function(x) 1 / (1 + exp(-x))
+max0 = function(x) ifelse(x > 0, x, 0)
 f = function(X, W, phi){
-	W = t(as.matrix(W))
-	X = as.matrix(X)
-	W2 = as.matrix(c(1, 1))
 	Z = phi(X %*% W)
-	Y_ = sigmoid(Z %*% W2)
-}
-Ws = rbind(w1, w2, w3, w4)
-par(mfrow = c(2, 2))
-apply(Ws, 1, FUN = function(w)plot(X, f(X, w, sigmoid), type = 'l'))
-par(mfrow = c(2, 2))
-apply(Ws, 1, FUN = function(w)plot(X, f(X, w, max0), type = 'l'))
+	OUT = Z %*% matrix(rep(1, dim(W)[2]), c(dim(W)[2], 1))
+	matrix(OUT, c(cnt, cnt))}
+
+sapply(1:8, function(i){
+	ws = rnorm(6, 0, 1)
+	par(mfrow = c(1, 3))
+	sapply(1:3, function(j){
+		fun = ifelse(i < 4, sigmoid, max0)
+		persp(x = seq, y = seq, f(X, matrix(ws[1:(2 * j)], c(2, j)), fun),
+		xlab = 'x', ylab = 'y', zlab = 'z',
+		main = paste(c('#HidenNodes: ', j), collapse = ''),
+		theta = 45, phi = 15, col = 'lightblue')
+
+	})	
+})
