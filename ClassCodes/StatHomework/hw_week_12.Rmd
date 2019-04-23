@@ -39,15 +39,8 @@ model = map(
 precis(model, 0.97)
 sample = extract.samples(model, 10000)
 dens(sample$a)
+dens(logistic(sample$a))
 ```
-
----
-
-### Answer:
-
-The implied probability is the value of reverse link funtion of $a$. So it is `p = logistic(a) = ` `r logistic(mean(sample$a))`.
-
----
 
 
 ## Problem 2 (3 points)
@@ -87,5 +80,5 @@ model.3 = map2stan(
 precis(model.3, 0.97)
 sample.3 = extract.samples(model.3, 10000)
 dens(sample.3$a)
-mean(logistic(sample.3$a), na.rm = TRUE)
+dens(logistic(sample.3$a))
 ```

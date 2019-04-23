@@ -1,0 +1,26 @@
+---
+title: "Applied Data Mining Homework 05"
+author: "Xun Zhao, xz2827"
+output: pdf_document
+fontsize: 12pt
+---
+
+# Problem 1
+
+```{r, results = 'hide'}
+w1 = c(1, 1)
+w2 = c(1, 1 / 2)
+w3 = c(1, -1)
+w4 = c(1, -1 / 2)
+X = as.matrix(seq(-10, 10, length.out = 101))
+sigmoid = function(x) as.matrix(1 / (1 + exp(-x)))
+max0 = function(x) as.matrix(ifelse(x > 0, x, 0))
+f = function(X, W, phi){
+	Z = phi(X %*% W)
+	Y_ = sigmoid(Z %*% as.matrix(c(1, 1)))}
+Ws = rbind(w1, w2, w3, w4)
+par(mfrow = c(2, 2))
+apply(Ws, 1, FUN = function(w)plot(X, f(X, t(w), sigmoid), type = 'l'))
+par(mfrow = c(2, 2))
+apply(Ws, 1, FUN = function(w)plot(X, f(X, t(w), max0), type = 'l'))
+```
