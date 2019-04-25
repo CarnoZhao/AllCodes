@@ -11,7 +11,7 @@ library(diagram)
 
 # Problem 1:
 
-The function f can be interpreted as:
+The function $f$ can be interpreted as:
 
 $$\begin{aligned}
 f(x,\,y) &= I\{g(x,\,y) > 0\}\\\
@@ -54,7 +54,7 @@ $$\begin{aligned}
 
 # Problem 2:
 
-According to the defination of sigmoid function, $\sigma(x) = \frac{1}{1 + e^{-x}}$, we can get:
+According to the definition of sigmoid function, $\sigma(x) = \frac{1}{1 + e^{-x}}$, we can get:
 
 $$\begin{aligned}
 -\sigma(-x) &= -\frac{1}{1 + e^x}\\\
@@ -105,19 +105,31 @@ x\oplus y &= (x = y = 1) \vee (x = y = 0)\\\
 &= (x \wedge y) \vee (\neg x \wedge \neg y)
 \end{aligned}$$
 
-So, the network is the `or` of two `and`.
+It indicates that "`XOR`" is the "`or`" of two "`and`".
 
-The single unit of `and` can be presented as $f(x,\,y) = I\{x + y > 1\}$. And the single unit of `or` can be presented as $f(x,\,y) = I\{x + y > 0\}$
+The single unit of "`and`" can be presented as $f(x,\,y) = I\{x + y > 1\}$. The single unit of "`or`" can be presented as $f(x,\,y) = I\{x + y > 0\}$. The single unit of "`not`" can be presented as $f(x) = 1 - x$.
+
+Therefore,	
+
+$$
+\begin{aligned}
+x\oplus y &= \text{or}(\text{and}(x,\,y),\,\text{and}(\text{not}(x),\,\text{not}(y)))\\\
+\text{and}(x,\,y) &= I\{x + y - 1 > 0\}\\\
+\text{or}(x,\,y) &= I\{x + y > 0\}\\\
+\text{not}(x) &= 1 - x\\\
+\text{and}(\text{not}(x),\,\text{not}(y)) &= I\{- x - y + 1 > 0\}
+\end{aligned}
+$$
 
 So the network is:
 
 ```{r, echo = FALSE, fig.height = 10, fig.width = 7, out.width = '25em', fig.align = 'center'}
 names = c(expression(x[1]), expression(x[2]), expression(c[1]), 
-		  expression(symbol(f)[1]), expression(symbol(f)[2]), expression(c[2]), expression(symbol(f)[3]))
-M = matrix(nrow = 7, ncol = 7, byrow = TRUE, data = 0)
-M[4, 1] = M[4, 2] = M[5, 3] = M[7, 4] = M[7, 5] = 1
-M[5, 1] = M[5, 2] = M[4, 3] = M[7, 6] = -1
-plotmat(M, pos = c(3, 3, 1),
+		  expression(symbol(f)[1]), expression(symbol(f)[2]), expression(symbol(f)[3]))
+M = matrix(nrow = 6, ncol = 6, byrow = TRUE, data = 0)
+M[4, 1] = M[4, 2] = M[5, 3] = M[6, 4] = M[6, 5] = 1
+M[5, 1] = M[5, 2] = M[4, 3] = -1
+plotmat(M, pos = c(3, 2, 1),
 		curve = 0,
 		name = names,
 		lwd = 1,
@@ -138,7 +150,6 @@ Here, the bias nodes are:
 
 $$\begin{aligned}
 c_1 &= 1\\\
-c_2 &= 1\\\
 \end{aligned}$$
 
 And other three $\phi$ nodes are:

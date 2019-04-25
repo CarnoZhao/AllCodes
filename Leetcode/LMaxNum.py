@@ -1,57 +1,23 @@
 class Solution():
     def maxNumber(self, nums1, nums2, k):
-        methods = []
-        ret = []
-        for K in range(k, 0, -1):
-            if not methods:
-                num, methods = self.findMax(nums1, nums2, K)
-                ret.append(num)
-            else:
-                maxx = -1
-                temp = []
-                for method in methods:
-                    print(len(methods))
-                    num, newmethods = self.findMax(nums1[method[0] + 1:], nums2[method[1] + 1:], K)
-                    for which in range(len(newmethods)):
-                        newmethods[which] = (newmethods[which][0] + method[0] + 1, newmethods[which][1] + method[0] + 1)
-                    if num > maxx:
-                        maxx = num
-                        temp = set(newmethods)
-                    elif num == maxx:
-                        temp.update(newmethods)
-                ret.append(maxx)
-                methods = temp
-        return ret
-        
-    def findMax(self, nums1, nums2, k):
-        lens = len(nums1) + len(nums2)
-        maxx = -1
-        ret = -1
-        methods = []
-        for i, num in enumerate(nums1):
-            if num <= maxx:
-                continue
-            if lens - i >= k:
-                maxx = num
-                ret = num
-                methods = [(i, -1)]
-            else:
-                break
-        found = False
-        for i, num in enumerate(nums2):
-            if num < maxx or (num == maxx and found):
-                continue
-            elif lens - i >= k:
-                if num == maxx:
-                    methods.append((-1, i))
-                    found = True
-                else:
-                    maxx = num
-                    ret = num
-                    methods = [(-1, i)]
-            else:
-                break
-        return ret, methods
+        l1, l2 = len(nums1), len(nums2)
+        for num in range(9, -1, -1):
+            list1 = [-1] + [i for i in range(l1) if nums1[i] == num]
+            list2 = [-1] + [i for i in range(l2) if nums2[i] == num]
+            maxx = 0
+            methods = set()
+            for i, idx1 in enumerate(list1):
+                for j, idx2 in enumerate(list2):
+                    if i + j < maxx:
+                        continue
+                    elif i + j == maxx:
+                        if l1 + l2 - idx1 - idx2 > k:
+                            methods.add((idx1, idx2))
+                    else:
+                        if l1 + l2 - idx1 - idx2 > k:
+                            methods = {(idx1, idx2)}
+                            maxx = i + j
+
 
 
 sol = Solution()
