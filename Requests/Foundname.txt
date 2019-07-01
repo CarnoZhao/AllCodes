@@ -1,6 +1,6 @@
-dongtao##ZX
-hanjian##ZX
-huangjizu##ZX
-qiushi##YDH
-zhangmiman##YDH
-zhouyang##ZX
+dongtao ZX  1
+hanjian ZX  1
+huangjizu ZX  1
+qiushi  YDH
+zhangmiman  YDH
+zhouyang  ZX  1
